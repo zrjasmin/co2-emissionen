@@ -1,0 +1,47 @@
+.werte {}
+
+.werte-heading {
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+
+.grid-item {
+    margin-bottom: 2.5rem;
+}
+
+.wert-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.wert-header>img {
+    width: 56px;
+    background-color: rgb(217, 223, 229);
+    padding: 0.8rem;
+    border-radius: 9px;
+    margin-right: 1rem;
+}
+
+
+.wert-header>h3 {}
+
+.grid-item>p {}
+
+
+@media screen and (min-width: 768px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

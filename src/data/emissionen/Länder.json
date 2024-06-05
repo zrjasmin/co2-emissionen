@@ -1,0 +1,32 @@
+{
+    "table": [
+        {
+            "id": "1",
+            "name": "Zalando",
+            "branche": "Unternehmen",
+            "land": "Deutschland",
+            "emissionen": "8 175"
+        },
+        {
+            "id": 2,
+            "name": "Gardena",
+            "branche": "Unternehmen",
+            "emissionen": "Deutschland",
+            "land": "11 385"
+        },
+        {
+            "id": 3,
+            "name": "Barmenia",
+            "branche": "Land",
+            "land": "England",
+            "emissionen": "421"
+        },
+        {
+            "id": 4,
+            "name": "Ceconomy",
+            "branche": "Land",
+            "land": "Spanien",
+            "emissionen": "3000"
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+body {
+  font-family: 'Inter';
+  background-color: #F6F7F7;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+h1 {
+  font-size: 3.75rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+
+}
+
+h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+
+}
+
+p {
+  line-height: 27px;
+}
+
+button {
+  width: 10rem;
+  font-family: 'Inter';
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  border: none;
+  height: 40px;
+  border-radius: 9px;
+}
+
+
+
+/* Tablet und größer */
+/* @media only screen and (min-width: 700px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.375rem;
+  }
+} */
+
+
+/*Desktop*/
+@media only screen and (min-width: 1024px) {}

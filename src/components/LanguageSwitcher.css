@@ -1,0 +1,97 @@
+.LanguageSwitcher {
+    color: black;
+    margin-right: 1.875rem;
+    padding-top: 2.5rem;
+}
+
+
+.LanguageSwitcher>img {
+    width: 25px;
+
+}
+
+.language:hover {
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.1s ease-in-out;
+}
+
+.selected-language {
+    text-align: center;
+    padding-bottom: 1rem;
+
+}
+
+.globe-icon {
+    width: 20px;
+    margin-right: 0.5rem;
+}
+
+.current-language {
+    display: inline;
+    vertical-align: top;
+
+
+}
+
+
+#options {
+    background-color: #ECECEC;
+    border-radius: 7px;
+    padding: 5px 0px 15px 10px;
+    text-align: left;
+}
+
+.language {
+    padding-top: 10px;
+}
+
+
+
+.flag {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.language>p {
+    display: inline;
+}
+
+
+
+.langHidden {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .LanguageSwitcher {
+        padding: 7px 0 0 0;
+
+    }
+
+    .selected-language {
+        padding: 0;
+        float: right;
+    }
+
+    #options {
+        position: absolute;
+        width: 155px;
+        right: 5%;
+        margin-top: 30px;
+        padding-left: 15px;
+        background-color: rgb(35, 35, 36, .8);
+        color: white;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .LanguageSwitcher {
+        width: 155px;
+    }
+
+    #options {
+        position: static;
+    }
+}
