@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useGlobalFilter, useFilters} from "react-table";
 import dataLaender from "../../data/emissionen/Länder.json"
-import GlobalFilter from "./GlobalFilter";
 
 
 const Tabelle = () => {  
@@ -11,28 +10,27 @@ const Tabelle = () => {
 
     const [filteredData, setFilteredData] = useState(data)
     const [search, setSearch] = useState("");
-    const [category, setCategory] = useState("Alle")
-  
-    const [filters, setFilters] = useState({
-        name: "",
-        land: "",
-        branche: ""
-    })
+    const [searchValue, setSearchValue] = useState("")
 
+    const [category, setCategory] = useState("Alle")
+    const [categoryValue, setCategoryValue] = useState("")
+   
 
     const handleFilterChange = (e)=> {
-        const {name, value} = e.target;
-        setFilters((prevFilters) => ({
-            ...prevFilters,
-            [name]: value,
-        }))}
+        filterTextIput(e);
+        filteringCategories(e);
+
+        let updateList = [...data];
+        updateList = updateList.filter((itemList) => {
+            return itemList.typ.toLowerCase().includes(categoryValue) &&
+            itemList.name.toLowerCase().includes(search.toLowerCase())});
+        setFilteredData(updateList);
+    }
 
 
     const filterTextIput = (e) => {
         let input = e.target.value;
-        if(input != "Untenehmen" || input != "Alle" || input != "Land") {
-            setSearch(input);
-        }
+
 
         
         let updatedList = [...data];
@@ -42,14 +40,8 @@ const Tabelle = () => {
                 itemList.land.toLowerCase().includes(input.toLowerCase()) 
 
         });
-
-        // if(categoryData) {
-        //     updatedList = updatedList.filter((itemList) => {
-        //         return itemList.toLowerCase().includes(categoryData.toLowerCase())
-        //     })
-            
-        // }
-        setFilteredData(updatedList);
+        setSearchValue(updatedList);
+        console.log("menge an search results" + searchValue)
     }
 
     
@@ -59,14 +51,14 @@ const Tabelle = () => {
         let updatedList = [...data];
 
         updatedList = updatedList.filter((itemList) =>  {
-            return itemList.branche.toLowerCase().includes(query.toLowerCase());
+            return itemList.typ.toLowerCase().includes(query.toLowerCase());
         })
         if(query === "Alle") {
             updatedList = [...data];
         }
         
         //Data filterd with categories
-        setFilteredData(updatedList);
+        setCategoryValue(updatedList);
     
     }
 
@@ -100,11 +92,11 @@ const Tabelle = () => {
 
             <table >
                 <tr key="">
-                    <th {column.render("Filter")}>Name</th>
+                    <th>Name</th>
+                    <th>Branche</th>
+                    <th>Land</th>
                     <th>Typ</th>
-                    <th>2020</th>
-                    <th>2021</th>
-                    <th>2022</th>
+                    <th>Emissionswerte</th>
                 </tr>
 
                  
@@ -113,6 +105,7 @@ const Tabelle = () => {
                     <td>{item.name}</td>
                     <td>{item.branche}</td>
                      <td>{item.land}</td>
+                     <td>{item.typ}</td>
                     <td>{item.emissionen}</td>
                  </tr>
                     ))}
