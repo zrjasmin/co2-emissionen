@@ -1,7 +1,8 @@
 import React, {useMemo} from "react";
 import DATA from "../../../data/emissionen/Länder2.json"
 import { COLUMNS } from "./colums";
-import {useTable, useSortBy} from "react-table";
+import {useTable, useSortBy, useFilters} from "react-table";
+import ColumnFilter from "./ColumnFilter";
 
 const Table = () => {
     const columns = useMemo(()=> COLUMNS, []);
@@ -11,6 +12,7 @@ const Table = () => {
         columns,
         data
     },
+    useFilters,
     useSortBy);
 
     const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = tableInstance;
@@ -22,8 +24,14 @@ const Table = () => {
                     {headerGroups.map((headerGroup) => (
                             <tr {...headerGroup.getHeaderGroupProps()}>
                                 {headerGroup.headers.map((column) =>(
-                                     <th {...column.getHeaderProps()}>
+                                     <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                                         {column.render('Header')}
+                                        <div>{column.canFilter ? column.render('Filter') : null}</div>
+                                        <span>
+                                            {
+                                                column.isSorted ? (column.isSortedDesc ? ">": "<") : ""
+                                            }
+                                        </span>
                                      </th>
                                 ))}
                         	</tr>

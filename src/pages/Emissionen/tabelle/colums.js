@@ -1,23 +1,30 @@
+import ColumnFilter from "./ColumnFilter";
+
 export const COLUMNS = [
     {
         Header: "Name",
-        accessor:   "name"  
+        accessor:   "name" ,
+        Filter: ColumnFilter       
     },
     {
         Header: "Typ",
-        accessor:   "typ"  
+        accessor:   "typ",
+        Filter: ColumnFilter  
     },
     {
         Header: "Branche",
-        accessor:   "branche"  
+        accessor:   "branche",
+        Filter: ColumnFilter 
     }, 
     {
         Header: "Land",
-        accessor:   "land"  
+        accessor:   "land",
+        Filter: ColumnFilter   
     }, 
     {
         Header: "Emissionswerte",
-        accessor:   "emissionen"  
+        accessor:   "emissionen",
+        Filter: ColumnFilter   
     }
 
 ]
