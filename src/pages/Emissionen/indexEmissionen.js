@@ -3,6 +3,7 @@ import Navbar from "../../components/Nav";
 import HeroSectionEmissionen from "./hero";
 import Tabelle from "./Tabelle";
 import Table from "./tabelle/TabelleNeu";
+import StackTable from "./tabelle/TanStackTable";
 
 
 function IndexEmissionen() {
@@ -12,7 +13,7 @@ function IndexEmissionen() {
                 <Navbar/>
             </HeroSectionEmissionen>
 
-            <Table/>
+            <StackTable/>
         </>
     )
 }

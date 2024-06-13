@@ -1,30 +1,28 @@
-import ColumnFilter from "./ColumnFilter";
-
-export const COLUMNS = [
+export const columnDef = [
     {
-        Header: "Name",
-        accessor:   "name" ,
-        Filter: ColumnFilter       
+        header: "Name",
+        accessorKey:   "name"
+             
     },
     {
-        Header: "Typ",
-        accessor:   "typ",
-        Filter: ColumnFilter  
+     
+        header: "Typ",
+        accessorKey:   "typ"
     },
     {
-        Header: "Branche",
-        accessor:   "branche",
-        Filter: ColumnFilter 
+      
+        header: "Branche",
+        accessorKey:   "branche"
     }, 
     {
-        Header: "Land",
-        accessor:   "land",
-        Filter: ColumnFilter   
+        
+        header: "Land",
+        accessorKey:   "land"
     }, 
     {
-        Header: "Emissionswerte",
-        accessor:   "emissionen",
-        Filter: ColumnFilter   
+        
+        header: "Emissionswerte",
+        accessorKey:   "emissionen"
     }
 
 ]
