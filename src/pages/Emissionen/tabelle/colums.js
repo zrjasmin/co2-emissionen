@@ -1,7 +1,10 @@
 export const columnDef = [
     {
         header: "Name",
-        accessorKey:   "name"
+        accessorKey:   "name",
+        meta: {
+            filterVariant: 'select',
+          }
              
     },
     {

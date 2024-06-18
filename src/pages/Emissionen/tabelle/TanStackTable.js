@@ -1,19 +1,51 @@
-import React, {useMemo} from "react";
-import { flexRender, useReactTable, getCoreRowModel } from '@tanstack/react-table'
+import React, {useMemo, useState} from "react";
+import { flexRender, useReactTable, getCoreRowModel, getFacetedMinMaxValues,
+    getFacetedRowModel,
+    getFacetedUniqueValues,
+    getSortedRowModel,
+    SortingFn,
+    getFilteredRowModel, } from '@tanstack/react-table'
 import {columnDef} from "./colums"
 import DATA from "../../../data/emissionen/Länder2.json"
+import DebouncedInput from "./DebounceFunction";
+import FilterFunction from "./FilterFunction";
+
 
 const StackTable = () => {
     const columns = React.useMemo(() => columnDef);
     const data = React.useMemo(()=> DATA)
 
+    // global filter
+    const [filtering, setFiltering] = React.useState("") 
+
+    const [columnFilter, setColumnFilter] = React.useState([])
+
+    const [sorting, setSorting] = React.useState([])
+
     const tableInstance = useReactTable({ 
         columns: columns,
         data: data,
-        getCoreRowModel: getCoreRowModel()});
+        getCoreRowModel: getCoreRowModel(),
+        getFilteredRowModel: getFilteredRowModel(),
+        getSortedRowModel: getSortedRowModel(),
+        state: {
+            globalFilter: filtering,
+            columnFilter: columnFilter,
+            sorting: sorting,
+        },
+        onGlobalFiltersChange: setFiltering,
+        onColumnFiltersChange: setColumnFilter,
+        onSortingChange: setSorting,
+        getFacetedRowModel: getFacetedRowModel(),
+        getFacetedUniqueValues: getFacetedUniqueValues()
+    
+    });
 
     console.log(tableInstance.getHeaderGroups())
     return (
+
+        <>
+        <input type="text"  value={filtering} onChange={(e)=> setFiltering(e.target.value)}/>
         <table>
             <thead>
                {tableInstance.getHeaderGroups().map((header) => {
@@ -21,11 +53,18 @@ const StackTable = () => {
                     <tr key={header.id}>
                         {header.headers.map((column) => {
                             return (
-                                <th key={column.id} colSpan={column.colSpan}>
+                                <th key={column.id} colSpan={column.colSpan} onClick={column.column.getToggleSortingHandler()}>
                                     {flexRender(
                                         column.column.columnDef.header,
-                                        column.getContext()
+                                        column.getContext(),
+                                        
                                     )}
+                                    {{asc: " 🔼", desc: " 🔽"} [
+                                        column.column.getIsSorted() ?? null
+                                    ]}
+                                    <div>
+                                        <FilterFunction column={column.column} table={tableInstance}/>
+                                    </div>
                                 </th>
                             )
                         })}
@@ -51,6 +90,7 @@ const StackTable = () => {
                 })}
             </tbody>
         </table>
+        </>
     )
 }
 
