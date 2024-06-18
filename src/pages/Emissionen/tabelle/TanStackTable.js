@@ -13,7 +13,7 @@ import FilterFunction from "./FilterFunction";
 
 const StackTable = () => {
     const columns = React.useMemo(() => columnDef);
-    const data = React.useMemo(()=> DATA)
+    const data = React.useMemo(()=> DATA, [])
 
     // global filter
     const [filtering, setFiltering] = React.useState("") 
@@ -22,6 +22,7 @@ const StackTable = () => {
 
     const [sorting, setSorting] = React.useState([])
 
+    
     const tableInstance = useReactTable({ 
         columns: columns,
         data: data,
@@ -37,11 +38,15 @@ const StackTable = () => {
         onColumnFiltersChange: setColumnFilter,
         onSortingChange: setSorting,
         getFacetedRowModel: getFacetedRowModel(),
-        getFacetedUniqueValues: getFacetedUniqueValues()
     
     });
+    
+    function inputType() {
+    }
+   
+    console.log(columnDef.filter((column) => column.filterVariant === "select"))
 
-    console.log(tableInstance.getHeaderGroups())
+    
     return (
 
         <>
@@ -62,9 +67,11 @@ const StackTable = () => {
                                     {{asc: " 🔼", desc: " 🔽"} [
                                         column.column.getIsSorted() ?? null
                                     ]}
-                                    <div>
+                                    {column.column.getCanFilter() ? (
+                                        <div>
                                         <FilterFunction column={column.column} table={tableInstance}/>
-                                    </div>
+                                    </div>):null}
+
                                 </th>
                             )
                         })}
@@ -82,6 +89,7 @@ const StackTable = () => {
                                     {flexRender(
                                         cellItem.column.columnDef.cell,
                                         cellItem.getContext()
+                                        
                                     )}
                                 </td>
                             })}
@@ -93,5 +101,7 @@ const StackTable = () => {
         </>
     )
 }
+
+
 
 export default StackTable;

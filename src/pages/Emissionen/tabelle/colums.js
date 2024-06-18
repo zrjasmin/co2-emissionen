@@ -2,30 +2,32 @@ export const columnDef = [
     {
         header: "Name",
         accessorKey:   "name",
-        meta: {
-            filterVariant: 'select',
-          }
-             
+         filterVariant: "number"
+       
     },
     {
      
         header: "Typ",
-        accessorKey:   "typ"
+        accessorKey:   "typ",
+        filterVariant: "select"
     },
     {
       
         header: "Branche",
-        accessorKey:   "branche"
+        accessorKey:   "branche",
+         filterVariant: "text"
     }, 
     {
         
         header: "Land",
-        accessorKey:   "land"
+        accessorKey:   "land",
+        enableColumnFilter: false
     }, 
     {
         
         header: "Emissionswerte",
-        accessorKey:   "emissionen"
+        accessorKey:   "emissionen",
+         filterVariant: "text"
     }
 
 ]
