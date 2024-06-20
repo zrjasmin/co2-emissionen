@@ -2,7 +2,7 @@ export const columnDef = [
     {
         header: "Name",
         accessorKey:   "name",
-         filterVariant: "number"
+         filterVariant: "text"
        
     },
     {
@@ -21,13 +21,12 @@ export const columnDef = [
         
         header: "Land",
         accessorKey:   "land",
-        enableColumnFilter: false
     }, 
     {
         
         header: "Emissionswerte",
         accessorKey:   "emissionen",
-         filterVariant: "text"
+        enableColumnFilter: false    
     }
 
 ]

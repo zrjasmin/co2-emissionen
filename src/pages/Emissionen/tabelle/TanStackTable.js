@@ -1,24 +1,27 @@
 import React, {useMemo, useState} from "react";
-import { flexRender, useReactTable, getCoreRowModel, getFacetedMinMaxValues,
+import { flexRender, useReactTable, getCoreRowModel,
     getFacetedRowModel,
-    getFacetedUniqueValues,
     getSortedRowModel,
-    SortingFn,
     getFilteredRowModel, } from '@tanstack/react-table'
 import {columnDef} from "./colums"
 import DATA from "../../../data/emissionen/Länder2.json"
-import DebouncedInput from "./DebounceFunction";
 import FilterFunction from "./FilterFunction";
 
 
 const StackTable = () => {
     const columns = React.useMemo(() => columnDef);
     const data = React.useMemo(()=> DATA, [])
+    const defaultColumn = React.useMemo(() => {
+        return {
+          youTubeProp: "hello world",
+        };
+      }, []);
 
     // global filter
     const [filtering, setFiltering] = React.useState("") 
 
-    const [columnFilter, setColumnFilter] = React.useState([])
+    const [columnFilters, setColumnFilters] = React.useState([]);
+
 
     const [sorting, setSorting] = React.useState([])
 
@@ -26,26 +29,22 @@ const StackTable = () => {
     const tableInstance = useReactTable({ 
         columns: columns,
         data: data,
+        defaultColumn: defaultColumn,
+
         getCoreRowModel: getCoreRowModel(),
         getFilteredRowModel: getFilteredRowModel(),
         getSortedRowModel: getSortedRowModel(),
         state: {
             globalFilter: filtering,
-            columnFilter: columnFilter,
+            columnFilters: columnFilters,
             sorting: sorting,
         },
         onGlobalFiltersChange: setFiltering,
-        onColumnFiltersChange: setColumnFilter,
+        onColumnFiltersChange: setColumnFilters,
         onSortingChange: setSorting,
-        getFacetedRowModel: getFacetedRowModel(),
+        getFacetedRowModel: getFacetedRowModel()
     
     });
-    
-    function inputType() {
-    }
-   
-    console.log(columnDef.filter((column) => column.filterVariant === "select"))
-
     
     return (
 
@@ -53,27 +52,35 @@ const StackTable = () => {
         <input type="text"  value={filtering} onChange={(e)=> setFiltering(e.target.value)}/>
         <table>
             <thead>
-               {tableInstance.getHeaderGroups().map((header) => {
+               {tableInstance.getHeaderGroups().map((headerEl) => {
                 return (
-                    <tr key={header.id}>
-                        {header.headers.map((column) => {
-                            return (
-                                <th key={column.id} colSpan={column.colSpan} onClick={column.column.getToggleSortingHandler()}>
-                                    {flexRender(
-                                        column.column.columnDef.header,
-                                        column.getContext(),
-                                        
-                                    )}
-                                    {{asc: " 🔼", desc: " 🔽"} [
-                                        column.column.getIsSorted() ?? null
-                                    ]}
-                                    {column.column.getCanFilter() ? (
-                                        <div>
-                                        <FilterFunction column={column.column} table={tableInstance}/>
-                                    </div>):null}
+                    <tr key={headerEl.id}>
+                        {headerEl.headers.map((columnEl) => {
 
+                            return (
+                                <th key={columnEl.id} colSpan={columnEl.colSpan} onClick={columnEl.column.getToggleSortingHandler()}>
+                                    {columnEl.isPlaceholder ? null : (
+                                        <>
+                                        {flexRender(
+                                            columnEl.column.columnDef.header,
+                                            columnEl.getContext(),
+                                            
+                                        )}
+                                        {{asc: " 🔼", desc: " 🔽"} [
+                                            columnEl.column.getIsSorted() ?? null
+                                        ]}
+                                        {columnEl.column.getCanFilter() ? (
+                                             <div>
+                                                <FilterFunction
+                                                column={columnEl.column}
+                                                table={tableInstance}
+                                                />
+                                            </div>
+                                        ) : null}
+                                        </>
+                                    )}
                                 </th>
-                            )
+                            );
                         })}
                     </tr>
                 )
@@ -85,13 +92,15 @@ const StackTable = () => {
                     return (
                         <tr key={rowItem.id}>
                             {rowItem.getVisibleCells().map((cellItem) => {
-                                return <td key={cellItem.id}>
+                                return (
+                                <td key={cellItem.id}>
                                     {flexRender(
                                         cellItem.column.columnDef.cell,
                                         cellItem.getContext()
                                         
                                     )}
                                 </td>
+                                )
                             })}
                         </tr>
                     )
@@ -105,3 +114,4 @@ const StackTable = () => {
 
 
 export default StackTable;
+

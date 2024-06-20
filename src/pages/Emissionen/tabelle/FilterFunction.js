@@ -1,6 +1,7 @@
 import React from "react";
-import DebouncedInput from "./DebounceFunction";
+import DebouncedInput from "./DebouncedInput";
 import { columnDef } from "./colums";
+
 
 function FilterFunction({ column, table }) {
   const filterVariant = column.columnDef.filterVariant;
