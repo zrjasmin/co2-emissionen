@@ -4,13 +4,13 @@
             "id": 1,
             "name": "USA",
             "typ": "Land",
-            "branche": "",
-            "land": "",
+            "kontinent": "Amerika",
             "emissionen": 6340000000
         },
         {
             "id": 2,
             "name": "China",
+            "kontinent": "Asien",
             "typ": "Land",
             "branche": "",
             "land": "",
@@ -19,6 +19,7 @@
         {
             "id": 3,
             "name": "Japan",
+            "kontinent": "Asien",
             "typ": "Land",
             "branche": "",
             "land": "",
@@ -27,6 +28,7 @@
         {
             "id": 4,
             "name": "Deutschland",
+            "kontinent": "Europa",
             "typ": "Land",
             "branche": "",
             "land": "",
@@ -35,6 +37,7 @@
         {
             "id": 5,
             "name": "Kanada",
+            "kontinent": "Amerika",
             "typ": "Land",
             "branche": "",
             "land": "",
@@ -43,6 +46,7 @@
         {
             "id": 6,
             "name": "Australien",
+            "kontinent": "Australien",
             "typ": "Land",
             "branche": "",
             "land": "",
@@ -51,6 +55,7 @@
         {
             "id": 7,
             "name": "Türkei",
+            "kontinent": "Europa",
             "typ": "Land",
             "branche": "",
             "land": "",
@@ -59,6 +64,7 @@
         {
             "id": 8,
             "name": "Vereinigtes Königreich",
+            "kontinent": "Europa",
             "typ": "Land",
             "branche": "",
             "land": "",
@@ -67,6 +73,7 @@
         {
             "id": 9,
             "name": "Frankreich",
+            "kontinent": "Europa",
             "typ": "Land",
             "branche": "",
             "land": "",
@@ -75,6 +82,7 @@
         {
             "id": 10,
             "name": "Italien",
+            "kontinent": "Europa",
             "typ": "Land",
             "branche": "",
             "land": "",
@@ -82,6 +90,7 @@
         },{
             "id": 11,
             "name": "Polen",
+            "kontinent": "Europa",
             "typ": "Land",
             "branche": "",
             "land": "",
@@ -90,6 +99,7 @@
         {
             "id": 12,
             "name": "Ukraine",
+            "kontinent": "Europa",
             "typ": "Land",
             "branche": "",
             "land": "",
@@ -98,6 +108,7 @@
         {
             "id": 13,
             "name": "Spanien",
+            "kontinent": "Europa",
             "typ": "Land",
             "branche": "",
             "land": "",
@@ -106,34 +117,47 @@
         {
             "id": 14,
             "name": "Tech Innovation Inc.",
+            "kontinent": "Europa",
             "typ": "Unternehmen",
-            "branche": "Technologie",
-            "land": "USA",
+            "subRows": {
+                "branche": "Technologie",
+                "land": "USA"
+            },
             "emissionen": 150000
         },
         {
             "id": 15,
             "name": "Global Food Enterprise Ltd.",
+            "kontinent": "Asien",
             "typ": "Unternehmen",
-            "branche": "Lebensmittelproduktion",
-            "land": "Brasilien",
+            "subRows": {
+                "branche": "Lebensmittelproduktion",
+                "land": "Brasilien"
+            },
             "emissionen": 80000
         },
         {
             "id": 16,
             "name": "Fashion Forward Group",
+            "kontinent": "Afrika",
             "typ": "Unternehmen",
-            "branche": "Modebranche",
-            "land": "Frankreich",
+            "subRows": {
+                "branche": "Modebranche",
+                "land": "Frankreich"
+            },
             "emissionen": 120000
         },
         {
             "id": 17,
             "name": "Engery Solution Co.",
+            "kontinent": "Europa",
             "typ": "Unternehmen",
-            "branche": "Energieversorgung",
-            "land": "Russland",
+            "subRows": {
+                "branche": "Energieversorgung",
+                "land": "Russland"
+            },
             "emissionen": 200000
+            
         }
         
     ]

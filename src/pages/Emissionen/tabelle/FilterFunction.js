@@ -7,6 +7,7 @@ function FilterFunction({ column, table }) {
   const filterVariant = column.columnDef.filterVariant;
   const columnFilterValue = column.getFilterValue();
 
+  const inputLable = 
   
   console.log(columnFilterValue)
 
@@ -45,15 +46,32 @@ function FilterFunction({ column, table }) {
         />
       </div>
     </div>
-    ) :  filterVariant === "select" ? (
+    ) :  filterVariant === "select-typ" ? (
     <select
       onChange={e => column.setFilterValue(e.target.value)}
       value={columnFilterValue?.toString()}
     >
-      <option value="">All</option>
+      <option value="">Alle</option>
       <option value="land">Land</option>
       <option value="unternehmen">Unternehmen</option>
     </select>
+      
+
+    ) : filterVariant === "select-kontinent"?(
+      
+      <select
+      onChange={e => column.setFilterValue(e.target.value)}
+      value={columnFilterValue?.toString()}
+    >
+      <option value="">Alle</option>
+      <option value="Europa">Europa</option>
+      <option value="Afrika">Afrika</option>
+      <option value="Amerika">Amerika</option>
+      <option value="Asien">Asien</option>
+      <option value="Australien">Australien</option>
+      <option value="Antarktika">Antarktika</option>
+    </select>
+      
     ) : (
     <>
       <datalist id={column.id + "list"}>
@@ -65,7 +83,7 @@ function FilterFunction({ column, table }) {
         type="text"
         value={columnFilterValue ?? ""}
         onChange={(value) => column.setFilterValue(value)}
-        placeholder={`Search... `}
+        placeholder={`Suche... `}
         list={column.id + "list"}
       />
     </>
