@@ -1,4 +1,3 @@
-import { isSubRowSelected } from "@tanstack/react-table"
 
 export const columnDef = [
     
@@ -7,19 +6,21 @@ export const columnDef = [
         header: "Name",
         accessorKey:   "name",
          filterVariant: "text",
-       
+        
     },
     {
         id: "2",
         header: "Typ",
         accessorKey:   "typ",
-        filterVariant: "select-typ"
+        filterVariant: "select-typ",
+   
     },
     {
         id: "3",
         header: "Kontinent",
         accessorKey: "kontinent",
-        filterVariant: "select-kontinent"
+        filterVariant: "select-kontinent",
+
     },
     
 
@@ -28,8 +29,8 @@ export const columnDef = [
         id: "4",
         header: "Branche",
         accessorKey:   "branche",
-         filterVariant: "select",
-         columnVisibility: false
+        filterVariant: "select",
+      
          
     }, 
     
@@ -37,8 +38,7 @@ export const columnDef = [
         id: "5",
         header: "Land",
         accessorKey:   "land",
-        enableColumnFilter: false,
-        columnVisibility: false
+     
 
     }, 
     {

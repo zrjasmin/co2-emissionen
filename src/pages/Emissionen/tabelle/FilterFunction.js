@@ -3,13 +3,12 @@ import DebouncedInput from "./DebouncedInput";
 import { columnDef } from "./colums";
 
 
-function FilterFunction({ column, table }) {
+function FilterFunction({ column, table, ref }) {
   const filterVariant = column.columnDef.filterVariant;
   const columnFilterValue = column.getFilterValue();
 
-  const inputLable = 
+
   
-  console.log(columnFilterValue)
 
 
   const sortedUniqueValues = React.useMemo(
@@ -50,6 +49,7 @@ function FilterFunction({ column, table }) {
     <select
       onChange={e => column.setFilterValue(e.target.value)}
       value={columnFilterValue?.toString()}
+      ref={ref} 
     >
       <option value="">Alle</option>
       <option value="land">Land</option>
@@ -61,7 +61,8 @@ function FilterFunction({ column, table }) {
       
       <select
       onChange={e => column.setFilterValue(e.target.value)}
-      value={columnFilterValue?.toString()}
+      value={columnFilterValue?.toString()} 
+      ref={ref} 
     >
       <option value="">Alle</option>
       <option value="Europa">Europa</option>
