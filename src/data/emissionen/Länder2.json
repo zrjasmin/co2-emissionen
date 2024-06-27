@@ -119,10 +119,10 @@
             "name": "Tech Innovation Inc.",
             "kontinent": "Europa",
             "typ": "Unternehmen",
-            "subRows": {
+           
                 "branche": "Technologie",
-                "land": "USA"
-            },
+                "land": "USA",
+            
             "emissionen": 150000
         },
         {
@@ -130,10 +130,10 @@
             "name": "Global Food Enterprise Ltd.",
             "kontinent": "Asien",
             "typ": "Unternehmen",
-            "subRows": {
+            
                 "branche": "Lebensmittelproduktion",
-                "land": "Brasilien"
-            },
+                "land": "Brasilien",
+            
             "emissionen": 80000
         },
         {
@@ -141,10 +141,10 @@
             "name": "Fashion Forward Group",
             "kontinent": "Afrika",
             "typ": "Unternehmen",
-            "subRows": {
+            
                 "branche": "Modebranche",
-                "land": "Frankreich"
-            },
+                "land": "Frankreich",
+            
             "emissionen": 120000
         },
         {
@@ -152,10 +152,10 @@
             "name": "Engery Solution Co.",
             "kontinent": "Europa",
             "typ": "Unternehmen",
-            "subRows": {
+            
                 "branche": "Energieversorgung",
-                "land": "Russland"
-            },
+                "land": "Russland",
+            
             "emissionen": 200000
             
         }

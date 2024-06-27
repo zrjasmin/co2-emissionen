@@ -1,23 +1,7 @@
 import { isSubRowSelected } from "@tanstack/react-table"
 
 export const columnDef = [
-    {   
-        id: "expander",
-        accessorKey: "unternehmen-infos",
-        cell: ({row}) => {
-          // console.log(row)
-            return row.getCanExpand ? (
-                <button
-                  onClick={row.getToggleExpandedHandler()}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {row.isExpanded ? '👇' : '👉'}
-                </button>
-              ) : (
-                '🔵'
-              )
-        }
-    },
+    
     {
         id: "1",
         header: "Name",
@@ -43,8 +27,9 @@ export const columnDef = [
     {
         id: "4",
         header: "Branche",
-        accessorKey:   "subRows",
+        accessorKey:   "branche",
          filterVariant: "select",
+         columnVisibility: false
          
     }, 
     
@@ -52,7 +37,8 @@ export const columnDef = [
         id: "5",
         header: "Land",
         accessorKey:   "land",
-        enableColumnFilter: false    
+        enableColumnFilter: false,
+        columnVisibility: false
 
     }, 
     {

@@ -6,7 +6,7 @@ import {
     getFacetedRowModel,
     getSortedRowModel,
     getFilteredRowModel,
-    getExpandedRowModel
+    
     } from '@tanstack/react-table'
 import {columnDef} from "./colums"
 import DATA from "../../../data/emissionen/Länder2.json"
@@ -36,7 +36,7 @@ const StackTable = () => {
 
 
     const [sorting, setSorting] = React.useState([])
-    const [expanded, setExpanded] = React.useState({})
+    const [columnVisibility, setColumnVisibility] = React.useState({})
 
     
     const tableInstance = useReactTable({ 
@@ -47,28 +47,30 @@ const StackTable = () => {
         getCoreRowModel: getCoreRowModel(),
         getFilteredRowModel: getFilteredRowModel(),
         getSortedRowModel: getSortedRowModel(),
-        getExpandedRowModel: getExpandedRowModel(),
-        renderSubComponent,
-        getRowCanExpand,
         state: {
             globalFilter: filtering,
             columnFilters: columnFilters,
             sorting: sorting,
-            expanded: expanded
+            columnVisibility
+            
+
         },
         onGlobalFiltersChange: setFiltering,
         onColumnFiltersChange: setColumnFilters,
         onSortingChange: setSorting,
-        onExpandedChange: setExpanded,
-        getSubRows: row => row.subRows,
-        getFacetedRowModel: getFacetedRowModel()
+        getFacetedRowModel: getFacetedRowModel(),
+        onColumnVisibilityChange: setColumnVisibility
+
     
     });
     
     return (
     <>
     <input type="text"  value={filtering} onChange={(e)=> setFiltering(e.target.value)}/>
+   
+    
     <table>
+
         <thead>
             {tableInstance.getHeaderGroups().map((headerEl) => {
             return (
@@ -107,72 +109,37 @@ const StackTable = () => {
         </thead>
         <tbody>
             {tableInstance.getRowModel().rows.map((rowItem, index) => {
-                
-                
                 return (
-                    <tr key={rowItem.id}>
-                    { 
-                        rowItem.getValue(2) === "Unternehmen" ? (
-                            
-                               
-                                    // <td>{rowItem.getValue(1)}</td>
-                                    // <td>{rowItem.getValue(2)}</td>
-                                    // <td>{rowItem.getValue(3)}</td>
-                            <>  
-                            {rowItem.getVisibleCells().map((cellItem) => {
-                                return ( 
-                                    <td key={cellItem.id} >
-                                        {flexRender(
-                                        cellItem.column.columnDef.cell,
-                                        cellItem.getContext()
-                                        )}
-                                    
-                                    </td>
-                                )
-                            })}
-                            </>
-
-
-
-                            // <>
-                           
-                            // {rowItem.getVisibleCells().map((cellItem) => {
-                            //     return ( 
-                            //         <>
-                            //         <td key={cellItem.id}>
-                            //         {flexRender(
-                            //         cellItem.column.columnDef.cell,
-                            //          cellItem.getContext(),
-                                     
-                            //          )}
-                            //         </td>
-
-                            //         </>
-                            //     )})
-                            // }
-                            // {
-                            // }
-                          
-
-                            // </>
-                        ) : (
-                            <>
-                            {rowItem.getVisibleCells().map((cellItem) => {
-                        return ( 
+                    <>
+                    <tr key={index}>
+                        {rowItem.getVisibleCells().map((cellItem) => {
+                            return ( 
                             <td key={cellItem.id} >
                                 {flexRender(
-                                    cellItem.column.columnDef.cell,
-                                    cellItem.getContext()
-                                    )}
+                                cellItem.column.columnDef.cell,
+                                cellItem.getContext()
+                                )}
                             
-                        </td>
-                        )
-                    })}
-                            </>
-                        )
-                    }
-                        
-                    </tr>
+                            </td>
+                            )
+                        })}
+                    </tr>   
+
+                    
+
+
+                    
+                    {rowItem.getValue(2) === "Unternehmen" ? (
+                        <tr className="subrow">
+                            <p>{rowItem.getValue(4)}</p>
+                            <p>{rowItem.getValue(5)}</p>
+                        </tr>
+                    ): null}   
+
+                  
+                    </>
+
+
                 )
             })}
         </tbody>
