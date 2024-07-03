@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import DebouncedInput from "./DebouncedInput";
 import { columnDef } from "./colums";
+import { use } from "i18next";
 
 
-function FilterFunction({ column, table, ref }) {
+
+function FilterFunction({ column, initial}) {
   const filterVariant = column.columnDef.filterVariant;
+
+
   const columnFilterValue = column.getFilterValue();
 
+  const [typFilter, setTypFilter] = React.useState();
+  // const typFilter = getFilter
 
-  
+  const handleSelectChange = (e) => {
+    column.setFilterValue(e)
+    setTypFilter(e)
+  }
 
+  function deleteFilter () {
+    setTypFilter("");
+    column.setFilterValue("")
+  }
 
   const sortedUniqueValues = React.useMemo(
     () =>
@@ -19,7 +32,11 @@ function FilterFunction({ column, table, ref }) {
     [column.getFacetedUniqueValues()]
 
   );
-    return filterVariant === "number" ? (
+
+
+    return (
+      <>
+      {filterVariant === "number" ? (
       
        <div>
         <div>
@@ -46,32 +63,34 @@ function FilterFunction({ column, table, ref }) {
       </div>
     </div>
     ) :  filterVariant === "select-typ" ? (
+      <>
     <select
-      onChange={e => column.setFilterValue(e.target.value)}
-      value={columnFilterValue?.toString()}
-      ref={ref} 
+      onChange={e => handleSelectChange(e.target.value)}
+      value={typFilter}
+      className="select"
     >
       <option value="">Alle</option>
       <option value="land">Land</option>
       <option value="unternehmen">Unternehmen</option>
-    </select>
-      
+    </select> 
+    </>
 
     ) : filterVariant === "select-kontinent"?(
-      
+      <>
       <select
-      onChange={e => column.setFilterValue(e.target.value)}
-      value={columnFilterValue?.toString()} 
-      ref={ref} 
+      onChange={e => handleSelectChange(e.target.value)}
+      value={typFilter?.toString()} 
     >
+
       <option value="">Alle</option>
-      <option value="Europa">Europa</option>
+      <option value="Europa" >Europa</option>
       <option value="Afrika">Afrika</option>
       <option value="Amerika">Amerika</option>
       <option value="Asien">Asien</option>
       <option value="Australien">Australien</option>
       <option value="Antarktika">Antarktika</option>
     </select>
+    </>
       
     ) : (
     <>
@@ -86,9 +105,14 @@ function FilterFunction({ column, table, ref }) {
         onChange={(value) => column.setFilterValue(value)}
         placeholder={`Suche... `}
         list={column.id + "list"}
+        
       />
+
     </>
-  );
+  )}
+  
+  </>
+  )
    
   
 }

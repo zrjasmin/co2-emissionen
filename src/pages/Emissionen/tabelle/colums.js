@@ -1,3 +1,4 @@
+import { defaultColumn } from "react-table";
 
 export const columnDef = [
     
@@ -6,13 +7,13 @@ export const columnDef = [
         header: "Name",
         accessorKey:   "name",
          filterVariant: "text",
-        
     },
     {
         id: "2",
         header: "Typ",
         accessorKey:   "typ",
         filterVariant: "select-typ",
+   
    
     },
     {
