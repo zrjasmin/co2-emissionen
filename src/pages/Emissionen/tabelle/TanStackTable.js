@@ -13,6 +13,7 @@ import {
 import {columnDef} from "./colums"
 import DATA from "../../../data/emissionen/Länder2.json"
 import FilterFunction from "./FilterFunction"
+import ResetFunction from "./ResetFunction";
 
 
 
@@ -22,13 +23,15 @@ const StackTable = () => {
     const columns = React.useMemo(() => columnDef);
     const data = React.useMemo(()=> DATA, []);
     
+    const [columnFilter, setColumFilter] = React.useState()
    
-  
+    const [dataFromChild, setDataFromChild] = React.useState()
+    
 
-
-    const [columnFilters, setColumnFilters] = React.useState([]);
-
-
+    function handleDataFromChild(data) {
+        setDataFromChild(data)
+    }
+    
     const [sorting, setSorting] = React.useState([])
 
    
@@ -40,24 +43,34 @@ const StackTable = () => {
         getFilteredRowModel: getFilteredRowModel(),
         getSortedRowModel: getSortedRowModel(),
         state: {
-            columnFilters: columnFilters,
+            columnFilters: columnFilter,
             sorting: sorting,
             columnVisibility: {
                 4: false,
                 5: false
             }
-            
-        },    
-        onColumnFiltersChange: setColumnFilters,
+        },   
+        defaultColumn: {
+            columnFilters: [""]
+        }, 
+        onColumnFiltersChange: setColumFilter,
         onSortingChange: setSorting,
         getFacetedRowModel: getFacetedRowModel(),
-
+        
     
     });
     
+    function handleReset ()  {
+        tableInstance.resetColumnFilters();
+        tableInstance.resetSorting()
+        tableInstance.getPreFilteredRowModel();
+        setDataFromChild("")
+        
+    }
     
     return (
     <>
+    <h1>{dataFromChild}</h1>
     
     <table>
        
@@ -65,25 +78,20 @@ const StackTable = () => {
             {tableInstance.getHeaderGroups().map((headerEl) => {
             return (
                 <>
-
-                <button onClick={tableInstance.resetColumnFilters}>Löschen</button>
-
-
-
+                <button onClick={handleReset}>Löschen</button>
                 <tr key={headerEl.id}>
-               
+                    
                     {headerEl.headers.map((columnEl) => {
                         return (
                             <>
-                            
-                            <th key={columnEl.id} colSpan={columnEl.colSpan} 
+                             <th key={columnEl.id} colSpan={columnEl.colSpan} 
                             >
                                 {columnEl.isPlaceholder ? null : (
                                     <>
                                     {columnEl.column.getCanFilter() ? (      
                                             <FilterFunction
                                             column={columnEl.column}
-                                            table={tableInstance}
+                                            reset={handleReset}
                                             />
                                     ) : null}
 
@@ -105,8 +113,6 @@ const StackTable = () => {
                             
                         );
                     })}
-                    
-                    {/* <button onClick={tableInstance.resetColumnFilters}>Löschen</button> */}
 
                 </tr>
                 </>

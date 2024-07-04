@@ -5,24 +5,28 @@ import { use } from "i18next";
 
 
 
-function FilterFunction({ column, initial}) {
-  const filterVariant = column.columnDef.filterVariant;
+function FilterFunction({ column, reset}) {
 
+  const filterVariant = column.columnDef.filterVariant;
 
   const columnFilterValue = column.getFilterValue();
 
-  const [typFilter, setTypFilter] = React.useState();
-  // const typFilter = getFilter
+  const [typ, setTyp] = React.useState()
 
-  const handleSelectChange = (e) => {
-    column.setFilterValue(e)
-    setTypFilter(e)
-  }
+  
 
-  function deleteFilter () {
-    setTypFilter("");
-    column.setFilterValue("")
-  }
+  // const handelTypChange = (e) => {
+  //   column.setFilterValue(e)
+  //   setTyp(e)
+  // }
+
+  // const resetFilter = () => {
+  //   column.setFilterValue("")
+  //   setTyp("")
+    
+  // }
+
+  
 
   const sortedUniqueValues = React.useMemo(
     () =>
@@ -65,8 +69,8 @@ function FilterFunction({ column, initial}) {
     ) :  filterVariant === "select-typ" ? (
       <>
     <select
-      onChange={e => handleSelectChange(e.target.value)}
-      value={typFilter}
+      onChange={e => column.setFilterValue( e.target.value)}
+      value={columnFilterValue} 
       className="select"
     >
       <option value="">Alle</option>
@@ -74,12 +78,13 @@ function FilterFunction({ column, initial}) {
       <option value="unternehmen">Unternehmen</option>
     </select> 
     </>
+    
 
     ) : filterVariant === "select-kontinent"?(
       <>
       <select
-      onChange={e => handleSelectChange(e.target.value)}
-      value={typFilter?.toString()} 
+      onChange={e => column.setFilterValue(e.target.value)}
+      value={columnFilterValue} 
     >
 
       <option value="">Alle</option>

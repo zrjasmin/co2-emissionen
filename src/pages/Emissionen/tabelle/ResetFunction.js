@@ -1,10 +1,12 @@
 import React from "react";
 
-const ResetFunction = ({table}) => {
-  
-
+const ResetFunction = ({sendDataToParent}) => {
+    
+ 
     return (
-        <button>Löschen</button>
+        <>
+         
+        </>
     )
 }
 export default ResetFunction;
