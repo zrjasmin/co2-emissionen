@@ -1,4 +1,4 @@
-import React, {useMemo, useRef, useState, Component} from "react";
+import React, {useMemo, useRef, useState, Component, useEffect} from "react";
 import { 
     flexRender, 
     useReactTable, 
@@ -6,14 +6,16 @@ import {
     getFacetedRowModel,
     getSortedRowModel,
     getFilteredRowModel,
-    ColumnVisibility,
     _getVisibleLeafColumns,
+    getPaginationRowModel 
     
     } from '@tanstack/react-table'
 import {columnDef} from "./colums"
 import DATA from "../../../data/emissionen/Länder2.json"
 import FilterFunction from "./FilterFunction"
-import ResetFunction from "./ResetFunction";
+import { TableHead, TableRow, Table, TableCell, TableBody, Button } from "@mui/material";
+import "./table.css"
+
 
 
 
@@ -26,16 +28,42 @@ const StackTable = () => {
     const [columnFilter, setColumFilter] = React.useState()
    
     const [dataFromChild, setDataFromChild] = React.useState()
-    
+    const [openRows, setOpenRows] = React.useState([])    
 
-    function handleDataFromChild(data) {
-        setDataFromChild(data)
+    function handelToggle({row, index}) {        
+        console.log(openRows)
+        // adding to array
+        if(openRows != index) {
+            setOpenRows([...openRows, index])         
+        } 
+       
+        // deleting from array
+        if(openRows.includes(index)) {
+            setOpenRows(openRows.filter(element => element !== index))
+         
+        }
     }
-    
+
+
     const [sorting, setSorting] = React.useState([])
 
+    const [collapse, setCollapse] = React.useState({})
+
    
+
+    function toggleCollaps(rowId) {
+       console.log(rowId)
+       
+       
+        if(collapse === "open") {
+            
+            setCollapse("close")
+        } else {
+            setCollapse("open")
+        }
+    }
     
+
     const tableInstance = useReactTable({ 
         columns: columns,
         data: data,
@@ -47,8 +75,10 @@ const StackTable = () => {
             sorting: sorting,
             columnVisibility: {
                 4: false,
-                5: false
-            }
+                5: false,
+                
+            },
+            
         },   
         defaultColumn: {
             columnFilters: [""]
@@ -56,6 +86,7 @@ const StackTable = () => {
         onColumnFiltersChange: setColumFilter,
         onSortingChange: setSorting,
         getFacetedRowModel: getFacetedRowModel(),
+        getPaginationRowModel: getPaginationRowModel(),
         
     
     });
@@ -69,9 +100,7 @@ const StackTable = () => {
     }
     
     return (
-    <>
-    <h1>{dataFromChild}</h1>
-    
+    <>   
     <table>
        
         <thead>
@@ -84,8 +113,7 @@ const StackTable = () => {
                     {headerEl.headers.map((columnEl) => {
                         return (
                             <>
-                             <th key={columnEl.id} colSpan={columnEl.colSpan} 
-                            >
+                             <td key={columnEl.id} colSpan={columnEl.colSpan} >
                                 {columnEl.isPlaceholder ? null : (
                                     <>
                                     {columnEl.column.getCanFilter() ? (      
@@ -100,15 +128,16 @@ const StackTable = () => {
                                         columnEl.column.columnDef.header,
                                         columnEl.getContext(),  
                                     )}
-                                   </td>
-                                   
                                     {{asc: " 🔼", desc: " 🔽"} [
                                         columnEl.column.getIsSorted() ?? null
                                     ]}
+                                   </td>
+                            
+                                    
                                     
                                     </>
                                 )}
-                            </th>
+                            </td>
                             </>
                             
                         );
@@ -123,36 +152,80 @@ const StackTable = () => {
             {tableInstance.getRowModel().rows.map((rowItem, index) => {
                 return (
                     <>
-                    <tr key={index}>
-                        {rowItem.getVisibleCells().map((cellItem) => {
-                            return ( 
-                            <td key={cellItem.id} >
-                                {flexRender(
-                                cellItem.column.columnDef.cell,
-                                cellItem.getContext()
-                                )}
-                            </td>
-                            )
-                        })}
-                    </tr>   
-
                     {rowItem.getValue(2) === "Unternehmen" ? (
-                        <>
-                        <tr className="subrow collapsible">
-                            <p>{rowItem.getValue(4)}</p>
-                            <p>{rowItem.getValue(5)}</p>
+                        <tr key={index} className="collapsible" onClick={() => handelToggle(rowItem, index)}>
+                            {rowItem.getVisibleCells().map(cellItem => {
+                                return (
+                                    <>
+                                    
+                                    <td>
+                                        {flexRender(
+                                        cellItem.column.columnDef.cell,
+                                        cellItem.getContext()
+                                        )}
+                                    </td>
+                                    </>
+                                )
+                            })}
+                            
                         </tr>
-                        </>
-                    ): null}   
+                    ): (
+                        <tr key={index}>
+                            {rowItem.getVisibleCells().map(cellItem => {
+                                return (
+                                    <td>
+                                        {flexRender(
+                                        cellItem.column.columnDef.cell,
+                                        cellItem.getContext()
+                                        )}
+                                    </td>
+                                )
+                            })}
+                        </tr>
+                    )
+                    }
 
-                  
+
+                        {rowItem.getValue(4) === "Unternehmen" ? (
+                        <div className="subRow">
+                            {openRows.includes(index) ? (
+                                   <td key={index} >
+                                   <p>{rowItem.getValue(4)}</p>
+                                   <p>{rowItem.getValue(5)}</p>
+                               </td>
+                            ): null}
+
+
+
+                     
+                        </div>
+                        ): null}
                     </>
-
-
                 )
             })}
         </tbody>
     </table>
+    {/* <div>
+        <button onClick={() => tableInstance.firstPage()} disabled={!tableInstance.getCanPreviousPage()}>First Page</button>
+        <button onClick={() => tableInstance.previousPage()} disabled={!tableInstance.getCanPreviousPage()}>Previous Page</button>
+        <button onClick={() => tableInstance.nextPage()} disabled={!tableInstance.getCanNextPage()}>Next Page</button>
+
+        <button onClick={() => tableInstance.lastPage()} disabled={!tableInstance.getCanNextPage()}>Last Page</button>
+
+    </div>
+    <span>
+        <p>Page</p>
+        <p>
+            {tableInstance.getState().pagination.pageIndex + 1} of{" "}
+            {tableInstance.getPageCount().toLocaleString()}
+
+            {(tableInstance.getState().pagination.pageIndex + 1) = (tableInstance.getPageCount().toLocaleString()) ? "last page": "not last page"}
+
+            {}
+
+        </p>
+    </span> */}
+    
     </>
     )
 }

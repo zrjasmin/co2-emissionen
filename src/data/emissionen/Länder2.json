@@ -1,151 +1,395 @@
 [
-        
-        {
-            "id": 1,
-            "name": "USA",
-            "typ": "Land",
-            "kontinent": "Amerika",
-            "emissionen": 6340000000
-        },
-        {
-            "id": 2,
-            "name": "China",
-            "kontinent": "Asien",
-            "typ": "Land",
-        
-            "emissionen": 2157000000
-        },
-        {
-            "id": 3,
-            "name": "Japan",
-            "kontinent": "Asien",
-            "typ": "Land",
-        
-            "emissionen": 1168000000
-        },
-        {
-            "id": 4,
-            "name": "Deutschland",
-            "kontinent": "Europa",
-            "typ": "Land",
-         
-            "emissionen":760000000
-        },
-        {
-            "id": 5,
-            "name": "Kanada",
-            "kontinent": "Amerika",
-            "typ": "Land",
-          
-            "emissionen": 670000000
-        },
-        {
-            "id": 6,
-            "name": "Australien",
-            "kontinent": "Australien",
-            "typ": "Land",
-           
-            "emissionen": 528000000
-        },
-        {
-            "id": 7,
-            "name": "Türkei",
-            "kontinent": "Europa",
-            "typ": "Land",
-           
-            "emissionen": 564000000
-        },
-        {
-            "id": 8,
-            "name": "Vereinigtes Königreich",
-            "kontinent": "Europa",
-            "typ": "Land",
-           
-            "emissionen": 429000000
-        },
-        {
-            "id": 9,
-            "name": "Frankreich",
-            "kontinent": "Europa",
-            "typ": "Land",
-          
-            "emissionen": 420000000
-        },
-        {
-            "id": 10,
-            "name": "Italien",
-            "kontinent": "Europa",
-            "typ": "Land",
-         
-            "emissionen": 418000000
-        },{
-            "id": 11,
-            "name": "Polen",
-            "kontinent": "Europa",
-            "typ": "Land",
-       
-            "emissionen": 399000000
-        },
-        {
-            "id": 12,
-            "name": "Ukraine",
-            "kontinent": "Europa",
-            "typ": "Land",
-   
-            "emissionen": 327000000
-        },
-        {
-            "id": 13,
-            "name": "Spanien",
-            "kontinent": "Europa",
-            "typ": "Land",
-            
-            "emissionen": 289000000
-        },
-        {
-            "id": 14,
-            "name": "Tech Innovation Inc.",
-            "kontinent": "Europa",
-            "typ": "Unternehmen",
-           
-                "branche": "Technologie",
-                "land": "USA",
-            
-            "emissionen": 150000
-        },
-        {
-            "id": 15,
-            "name": "Global Food Enterprise Ltd.",
-            "kontinent": "Asien",
-            "typ": "Unternehmen",
-            
-                "branche": "Lebensmittelproduktion",
-                "land": "Brasilien",
-            
-            "emissionen": 80000
-        },
-        {
-            "id": 16,
-            "name": "Fashion Forward Group",
-            "kontinent": "Afrika",
-            "typ": "Unternehmen",
-            
-                "branche": "Modebranche",
-                "land": "Frankreich",
-            
-            "emissionen": 120000
-        },
-        {
-            "id": 17,
-            "name": "Engery Solution Co.",
-            "kontinent": "Europa",
-            "typ": "Unternehmen",
-            
-                "branche": "Energieversorgung",
-                "land": "Russland",
-            
-            "emissionen": 200000
-            
-        }
-        
+    {
+        "id":1,
+        "name":"Frankreich",
+        "kontinent":"Europa",
+        "typ":"Land",
+        "emissionen":400000000
+     },
+     {
+        "id":2,
+        "name":"Deutschland",
+        "kontinent":"Europa",
+        "typ":"Land",
+        "emissionen":450000000
+     },
+     {
+        "id":3,
+        "name":"Italien",
+        "kontinent":"Europa",
+        "typ":"Land",
+        "emissionen":350000000
+     },
+     {
+        "id":4,
+        "name":"Spanien",
+        "kontinent":"Europa",
+        "typ":"Land",
+        "emissionen":300000000
+     },
+     {
+        "id":5,
+        "name":"Schweden",
+        "kontinent":"Europa",
+        "typ":"Land",
+        "emissionen":200000000
+     },
+     {
+        "id":6,
+        "name":"Norwegen",
+        "kontinent":"Europa",
+        "typ":"Land",
+        "emissionen":150000000
+     },
+     {
+        "id":7,
+        "name":"Griechenland",
+        "kontinent":"Europa",
+        "typ":"Land",
+        "emissionen":180000000
+     },
+     {
+        "id":8,
+        "name":"Portugal",
+        "kontinent":"Europa",
+        "typ":"Land",
+        "emissionen":120000000
+     },
+     {
+        "id":9,
+        "name":"Niederlande",
+        "kontinent":"Europa",
+        "typ":"Land",
+        "emissionen":160000000
+     },
+     {
+        "id":10,
+        "name":"Belgien",
+        "kontinent":"Europa",
+        "typ":"Land",
+        "emissionen":140000000
+     },
+     {
+        "id":11,
+        "name":"USA",
+        "kontinent":"Nordamerika",
+        "typ":"Land",
+        "emissionen":550000000
+     },
+     {
+        "id":12,
+        "name":"Kanada",
+        "kontinent":"Nordamerika",
+        "typ":"Land",
+        "emissionen":300000000
+     },
+     {
+        "id":13,
+        "name":"Mexiko",
+        "kontinent":"Nordamerika",
+        "typ":"Land",
+        "emissionen":250000000
+     },
+     {
+        "id":14,
+        "name":"Kuba",
+        "kontinent":"Nordamerika",
+        "typ":"Land",
+        "emissionen":80000000
+     },
+     {
+        "id":15,
+        "name":"Jamaika",
+        "kontinent":"Nordamerika",
+        "typ":"Land",
+        "emissionen":60000000
+     },
+     {
+        "id":16,
+        "name":"Brasilien",
+        "kontinent":"Südamerika",
+        "typ":"Land",
+        "emissionen":480000000
+     },
+     {
+        "id":17,
+        "name":"Argentinien",
+        "kontinent":"Südamerika",
+        "typ":"Land",
+        "emissionen":220000000
+     },
+     {
+        "id":18,
+        "name":"Kolumbien",
+        "kontinent":"Südamerika",
+        "typ":"Land",
+        "emissionen":150000000
+     },
+     {
+        "id":19,
+        "name":"Peru",
+        "kontinent":"Südamerika",
+        "typ":"Land",
+        "emissionen":100000000
+     },
+     {
+        "id":20,
+        "name":"Chile",
+        "kontinent":"Südamerika",
+        "typ":"Land",
+        "emissionen":130000000
+     },
+     {
+        "id":21,
+        "name":"China",
+        "kontinent":"Asien",
+        "typ":"Land",
+        "emissionen":900000000
+     },
+     {
+        "id":22,
+        "name":"Indien",
+        "kontinent":"Asien",
+        "typ":"Land",
+        "emissionen":700000000
+     },
+     {
+        "id":23,
+        "name":"Japan",
+        "kontinent":"Asien",
+        "typ":"Land",
+        "emissionen":400000000
+     },
+     {
+        "id":24,
+        "name":"Südkorea ",
+        "kontinent":"Asien ",
+        "typ":"Land ",
+        "emissionen":300000000
+     },
+     {
+        "id":25,
+        "name":"Saudi-Arabien ",
+        "kontinent":"Asien ",
+        "typ":"Land ",
+        "emissionen":35000000
+     },
+     {
+        "id":26,
+        "name":"Südafrika ",
+        "kontinent":"Afrika ",
+        "typ":"Land ",
+        "emissionen":20000000
+     },
+     {
+        "id":27,
+        "name":"Ägypten ",
+        "kontinent":"Afrika ",
+        "typ":"Land ",
+        "emissionen":18000000
+     },
+     {
+        "id":28,
+        "name":"Nigeria",
+        "kontinent":"Afrika",
+        "typ":"Land",
+        "emissionen":25000
+     },
+     {
+        "id":29,
+        "name":"Tansania",
+        "kontinent":"Afrika",
+        "typ":"Land",
+        "emissionen":12000
+     },
+     {
+        "id":30,
+        "name":"Mosambik",
+        "kontinent":"Afrika",
+        "typ":"Land",
+        "emissionen":8000
+     },
+     {
+        "id":31,
+        "name":"EcoTech Innovations",
+        "kontinent":"Europa",
+        "typ":"Unternehmen",
+        "branche":"Umwelttechnologie",
+        "land":"Deutschland",
+        "emissionen":80000
+     },
+     {
+        "id":32,
+        "name":"Zenith Global Solutions",
+        "kontinent":"Nordamerika",
+        "typ":"Unternehmen",
+        "branche":"IT-Dienstleistungen",
+        "land":"USA",
+        "emissionen":60000
+     },
+     {
+        "id":33,
+        "name":"AquaLux Marine Adventures",
+        "kontinent":"Asien",
+        "typ":"Unternehmen",
+        "branche":"Tourismus und Freizeit",
+        "land":"Thailand",
+        "emissionen":70000
+     },
+     {
+        "id":34,
+        "name":"Solaris Energy Solutions",
+        "kontinent":"Australien",
+        "typ":"Unternehmen",
+        "branche":"Erneuerbare Energien",
+        "land":"Australien",
+        "emissionen":50000
+     },
+     {
+        "id":35,
+        "name":"BioHarvest Health Foods",
+        "kontinent":"Afrika",
+        "typ":"Unternehmen",
+        "branche":"Gesundheitswesen",
+        "land":"Südafrika",
+        "emissionen":40000
+     },
+     {
+        "id":36,
+        "name":"InnovaTech Robotics",
+        "kontinent":"Europa",
+        "typ":"Unternehmen",
+        "branche":"Robotik und Automatisierung ",
+        "land":"Schweden",
+        "emissionen":30000
+     },
+     {
+        "id":37,
+        "name":"Oceanic Ventures",
+        "kontinent":"Nordamerika",
+        "typ":"Unternehmen",
+        "branche":"Meeresforschung",
+        "land":"Kanada",
+        "emissionen":25000
+     },
+     {
+        "id":38,
+        "name":"Skyline Creations ",
+        "kontinent":"Asien",
+        "typ":"Unternehmen",
+        "branche":"Architektur und Design ",
+        "land":" Japan ",
+        "emissionen":35000
+     },
+     {
+        "id":39,
+        "name":"Safari Spirit Safaris",
+        "kontinent":"Australien",
+        "typ":"Unternehmen",
+        "branche":"Tourismus und Abenteuer",
+        "land":" Neuseeland ",
+        "emissionen":20000
+     },
+     {
+        "id":40,
+        "name":"Health Harmony Pharmaceuticals",
+        "kontinent":"Afrika",
+        "typ":"Unternehmen",
+        "branche":"Pharmazeutika und Gesundheit",
+        "land":" Nigeria",
+        "emissionen":18000
+     },
+     {
+        "id":41,
+        "name":"GreenTech Solutions",
+        "kontinent":"Europa",
+        "typ":"Unternehmen",
+        "branche":"Umwelttechnologie",
+        "land":"Spanien",
+        "emissionen":75000
+     },
+     {
+        "id":42,
+        "name":"InnovateIT Consulting",
+        "kontinent":"Nordamerika",
+        "typ":"Unternehmen",
+        "branche":"IT-Beratung",
+        "land":"Kanada",
+        "emissionen":60000
+     },
+     {
+        "id":43,
+        "name":"ZenGarden Wellness Retreats",
+        "kontinent":"Asien",
+        "typ":"Unternehmen",
+        "branche":"Wellness und Gesundheit",
+        "land":"Indonesien",
+        "emissionen":70000
+     },
+     {
+        "id":44,
+        "name":"AquaVista EcoTours",
+        "kontinent":"Australien",
+        "typ":"Unternehmen",
+        "branche":"Nachhaltiger Tourismus",
+        "land":"Neuseeland",
+        "emissionen":50000
+     },
+     {
+        "id":45,
+        "name":"BioTech Solutions",
+        "kontinent":"Afrika",
+        "typ":"Unternehmen",
+        "branche":"Biotechnologie",
+        "land":"Kenia",
+        "emissionen":40000
+     },
+     {
+        "id":46,
+        "name":"FutureTech Innovations ",
+        "kontinent":"Europa",
+        "typ":"Unternehmen",
+        "branche":"Technologie und Innovation",
+        "land":" Vereinigtes Königreich",
+        "emissionen":30000
+     },
+     {
+        "id":47,
+        "name":"Harmony Health Foods",
+        "kontinent":"Nordamerika",
+        "typ":"Unternehmen",
+        "branche":"Gesunde Ernährung",
+        "land":"USA",
+        "emissionen":25000
+     },
+     {
+        "id":48,
+        "name":"Skyline Architects",
+        "kontinent":"Asien",
+        "typ":"Unternehmen",
+        "branche":"Architektur und Bauwesen",
+        "land":" China",
+        "emissionen":35000
+     },
+     {
+        "id":49,
+        "name":"Wilderness Adventures",
+        "kontinent":"Australien",
+        "typ":"Unternehmen",
+        "branche":"Abenteuertourismus",
+        "land":" Australien ",
+        "emissionen":20000
+     },
+     {
+        "id":50,
+        "name":"MediCare Pharmaceuticals",
+        "kontinent":"Afrika",
+        "typ":"Unternehmen",
+        "branche":"Pharmazeutika und Medizinprodukte",
+        "land":" Ägypten ",
+        "emissionen":18000
+     }
+     
+
+      
     ]

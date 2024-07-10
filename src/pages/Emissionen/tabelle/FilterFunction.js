@@ -2,6 +2,11 @@ import React, { useEffect } from "react";
 import DebouncedInput from "./DebouncedInput";
 import { columnDef } from "./colums";
 import { use } from "i18next";
+import TextField from '@mui/material/TextField';
+import MenuItem from '@mui/material/MenuItem';
+import { FormControl, FormLabel, InputLabel, Select } from "@mui/material";
+
+
 
 
 
@@ -10,22 +15,6 @@ function FilterFunction({ column, reset}) {
   const filterVariant = column.columnDef.filterVariant;
 
   const columnFilterValue = column.getFilterValue();
-
-  const [typ, setTyp] = React.useState()
-
-  
-
-  // const handelTypChange = (e) => {
-  //   column.setFilterValue(e)
-  //   setTyp(e)
-  // }
-
-  // const resetFilter = () => {
-  //   column.setFilterValue("")
-  //   setTyp("")
-    
-  // }
-
   
 
   const sortedUniqueValues = React.useMemo(
@@ -40,61 +29,47 @@ function FilterFunction({ column, reset}) {
 
     return (
       <>
-      {filterVariant === "number" ? (
-      
-       <div>
-        <div>
-        <DebouncedInput
-          type="number"
-          min={Number(column.getFacetedMinMaxValues()?.[0] ?? "")}
-          max={Number(column.getFacetedMinMaxValues()?.[1] ?? "")}
-          value={columnFilterValue?.[0] ?? ""}
-          onChange={(value) =>
-            column.setFilterValue((old) => [value, old?.[1]])
-          }
-          placeholder="min"
-        />
-        <DebouncedInput
-          type="number"
-          min={Number(column.getFacetedMinMaxValues()?.[0] ?? "")}
-          max={Number(column.getFacetedMinMaxValues()?.[1] ?? "")}
-          value={columnFilterValue?.[1] ?? ""}
-          onChange={(value) =>
-            column.setFilterValue((old) => [old?.[0], value])
-          }
-          placeholder="max"
-        />
-      </div>
-    </div>
-    ) :  filterVariant === "select-typ" ? (
+     {filterVariant === "select-typ" ? (
       <>
-    <select
-      onChange={e => column.setFilterValue( e.target.value)}
-      value={columnFilterValue} 
-      className="select"
-    >
-      <option value="">Alle</option>
-      <option value="land">Land</option>
-      <option value="unternehmen">Unternehmen</option>
-    </select> 
+    <FormControl fullWidth> 
+        <InputLabel id="typ-select" >Typ</InputLabel>
+        <Select 
+            defaultValue={"Alle"}
+            id="typ-select" 
+            label="Typ"
+            onChange={e => {e.target.value === "Alle" ? column.setFilterValue("") : column.setFilterValue(e.target.value)}}
+            value={columnFilterValue} 
+        >
+            <MenuItem  value="Alle" >Alle</MenuItem >
+            <MenuItem  value="land">Land</MenuItem >
+            <MenuItem  value="unternehmen">Unternehmen</MenuItem >
+        </Select> 
+    </FormControl>
     </>
     
 
     ) : filterVariant === "select-kontinent"?(
       <>
-      <select
-      onChange={e => column.setFilterValue(e.target.value)}
-      value={columnFilterValue} 
-    >
+      <FormControl fullWidth>
+        <InputLabel id="kontinent-select">Kontinent</InputLabel>
 
-      <option value="">Alle</option>
-      <option value="Europa" >Europa</option>
-      <option value="Afrika">Afrika</option>
-      <option value="Amerika">Amerika</option>
-      <option value="Asien">Asien</option>
-      <option value="Australien">Australien</option>
-      <option value="Antarktika">Antarktika</option>
-    </select>
+        <Select
+        label="Kontinent"
+        id="kontinent-select"
+        defaultValue={"Alle"}
+        onChange={e => {e.target.value === "Alle" ? column.setFilterValue("") : column.setFilterValue(e.target.value)}}        
+        value={columnFilterValue} 
+      >
+
+        <MenuItem value="Alle">Alle</MenuItem>
+        <MenuItem value="Europa" >Europa</MenuItem>
+        <MenuItem value="Afrika">Afrika</MenuItem>
+        <MenuItem value="Amerika">Amerika</MenuItem>
+        <MenuItem value="Asien">Asien</MenuItem>
+        <MenuItem value="Australien">Australien</MenuItem>
+        <MenuItem value="Antarktika">Antarktika</MenuItem>
+    </Select>
+    </FormControl>
     </>
       
     ) : (

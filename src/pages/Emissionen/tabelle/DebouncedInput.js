@@ -1,4 +1,6 @@
 import React from "react";
+import OutlinedInput from '@mui/material/OutlinedInput';
+
 
 function DebouncedInput({
   value: initialValue,
@@ -22,7 +24,7 @@ function DebouncedInput({
 
   return (
     <>
-    <input
+    <OutlinedInput
       {...props}
       value={value}
       onChange={(e) => setValue(e.target.value)}

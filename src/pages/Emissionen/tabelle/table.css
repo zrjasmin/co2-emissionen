@@ -1,0 +1,19 @@
+select, input {
+    height: 50px;
+}
+
+.open{
+display: block;
+background-color: pink;}
+
+.close{
+background-color: blue;
+display: none;}
+
+.subRow {
+    background: green;
+}
+
+.subRow > p {
+
+}
