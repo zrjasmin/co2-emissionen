@@ -1,4 +1,4 @@
-import React, {useMemo, useRef, useState, Component, useEffect} from "react";
+import React from "react";
 import { 
     flexRender, 
     useReactTable, 
@@ -7,7 +7,7 @@ import {
     getSortedRowModel,
     getFilteredRowModel,
     _getVisibleLeafColumns,
-    getPaginationRowModel 
+     
     
     } from '@tanstack/react-table'
 import {columnDef} from "./colums"
@@ -22,47 +22,45 @@ import "./table.css"
 
 
 const StackTable = () => {
+    // Definition of columns and data
     const columns = React.useMemo(() => columnDef);
     const data = React.useMemo(()=> DATA, []);
     
+
+    // filtering und sorting
     const [columnFilter, setColumFilter] = React.useState()
+    const [sorting, setSorting] = React.useState([])
    
-    const [dataFromChild, setDataFromChild] = React.useState()
+
+
+    // toggle for hididng/showing details
     const [openRows, setOpenRows] = React.useState([])    
 
     function handelToggle({row, index}) {        
         console.log(openRows)
-        // adding to array
+        // adding active row to array
         if(openRows != index) {
             setOpenRows([...openRows, index])         
         } 
        
-        // deleting from array
+        // deleting active row from array
         if(openRows.includes(index)) {
             setOpenRows(openRows.filter(element => element !== index))
          
         }
     }
 
+    const [currentColumn, setCurrentColumn] = React.useState([])
 
-    const [sorting, setSorting] = React.useState([])
-
-    const [collapse, setCollapse] = React.useState({})
-
-   
-
-    function toggleCollaps(rowId) {
-       console.log(rowId)
-       
-       
-        if(collapse === "open") {
-            
-            setCollapse("close")
-        } else {
-            setCollapse("open")
-        }
+    function handleColumn(column) {
+        setCurrentColumn(column)
+        console.log("active column")
     }
-    
+
+
+
+
+
 
     const tableInstance = useReactTable({ 
         columns: columns,
@@ -74,9 +72,9 @@ const StackTable = () => {
             columnFilters: columnFilter,
             sorting: sorting,
             columnVisibility: {
+                0: false,
                 4: false,
-                5: false,
-                
+                5: false
             },
             
         },   
@@ -86,7 +84,6 @@ const StackTable = () => {
         onColumnFiltersChange: setColumFilter,
         onSortingChange: setSorting,
         getFacetedRowModel: getFacetedRowModel(),
-        getPaginationRowModel: getPaginationRowModel(),
         
     
     });
@@ -95,19 +92,39 @@ const StackTable = () => {
         tableInstance.resetColumnFilters();
         tableInstance.resetSorting()
         tableInstance.getPreFilteredRowModel();
-        setDataFromChild("")
         
     }
     
     return (
     <>   
+    <div>
+        {tableInstance.getHeaderGroups().map((headerEl) => {
+        return (
+        <div>
+            {headerEl.headers.map((columnEl => {
+                return (
+                <>
+                {columnEl.column.getCanFilter() ? (   
+                    <>
+                    <FilterFunction
+                    column={columnEl.column}
+                    reset={handleReset}
+                    />
+                    </>
+                ) : null}
+                </>)
+
+            }))}
+            <button onClick={handleReset}>Löschen</button>
+        </div>
+       )})}
+    </div>
+
     <table>
-       
         <thead>
             {tableInstance.getHeaderGroups().map((headerEl) => {
             return (
                 <>
-                <button onClick={handleReset}>Löschen</button>
                 <tr key={headerEl.id}>
                     
                     {headerEl.headers.map((columnEl) => {
@@ -116,14 +133,8 @@ const StackTable = () => {
                              <td key={columnEl.id} colSpan={columnEl.colSpan} >
                                 {columnEl.isPlaceholder ? null : (
                                     <>
-                                    {columnEl.column.getCanFilter() ? (      
-                                            <FilterFunction
-                                            column={columnEl.column}
-                                            reset={handleReset}
-                                            />
-                                    ) : null}
 
-                                   <td className="header-text"onClick={columnEl.column.getToggleSortingHandler()}>
+                                   <p className="header-text"  onClick={columnEl.column.getToggleSortingHandler()}>
                                    {flexRender(
                                         columnEl.column.columnDef.header,
                                         columnEl.getContext(),  
@@ -131,10 +142,7 @@ const StackTable = () => {
                                     {{asc: " 🔼", desc: " 🔽"} [
                                         columnEl.column.getIsSorted() ?? null
                                     ]}
-                                   </td>
-                            
-                                    
-                                    
+                                   </p>
                                     </>
                                 )}
                             </td>
@@ -142,7 +150,6 @@ const StackTable = () => {
                             
                         );
                     })}
-
                 </tr>
                 </>
             )
@@ -185,11 +192,11 @@ const StackTable = () => {
                     )
                     }
 
-
-                        {rowItem.getValue(4) === "Unternehmen" ? (
+                        {/* company details */}
+                        {rowItem.getValue(2) === "Unternehmen" ? (
                         <div className="subRow">
-                            {openRows.includes(index) ? (
-                                   <td key={index} >
+                              {openRows.includes(rowItem.getValue(0)-1) ? (   
+                                   <td key={rowItem.getValue(0)}>
                                    <p>{rowItem.getValue(4)}</p>
                                    <p>{rowItem.getValue(5)}</p>
                                </td>

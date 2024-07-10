@@ -12,6 +12,7 @@ import { FormControl, FormLabel, InputLabel, Select } from "@mui/material";
 
 function FilterFunction({ column, reset}) {
 
+  console.log(column)
   const filterVariant = column.columnDef.filterVariant;
 
   const columnFilterValue = column.getFilterValue();

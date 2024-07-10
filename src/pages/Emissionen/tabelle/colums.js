@@ -1,7 +1,13 @@
 import { defaultColumn } from "react-table";
 
 export const columnDef = [
-    
+    {
+        id: "0",
+        header: "Id",
+        accessorKey: "id",
+        
+    },
+
     {
         id: "1",
         header: "Name",
