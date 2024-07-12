@@ -1,6 +1,7 @@
 aside {
     background-color: var(--darker-grey);
     font-weight: 500;
+    font-size: 1.125rem;
     padding: 20px 20px 10px 20px;
     border-radius: 7px;
  
@@ -12,25 +13,27 @@ aside {
 }
 
 .sidebar-heading {
-    text-align: center;
-    font-size: 
+    text-align: left;
 }
-
 
 
 .sidebar-item {
     list-style-type: none;
     margin-bottom: 15px;
+    color: var( --text-color-dark);
 }
 
-@media screen and (min-width: 768px) {
+@media  screen and (min-width: 768px) and (max-width: 992px) {
+    aside {
+        padding: 30px 50px;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
     aside {
         background-color: transparent;
         box-shadow: none;
-    }
-
-    .sidebar-heading {
-        text-align: left;
     }
 
     .sidebar-item {

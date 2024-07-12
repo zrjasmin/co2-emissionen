@@ -1,25 +1,23 @@
 import React from "react";
-import Navbar from "../../components/Nav";
-import HeroSectionHome from "../Home/hero";
-import Quote from "./quote";
 import {Link, animateScroll as scroll} from "react-scroll";
 import { t } from "i18next";
 
+import HeroSectionAboutUs from "./hero";
+import Navbar from "../../components/Nav";
+import Welcome from "./welcome";
+import OurMission from "./mission";
+import OurValues from "./value";
 
-import "../../pages/sidebar.css"
-import "../../pages/layout.css"
+import  "../layout.css"
+import  "../sidebar.css"
 
-
-const IndexHome = () => {
-
+const IndexAboutUs = () => {
     return (
-        
-        <div className="home">
-            
-            <HeroSectionHome page="home">
+        <>
+            <HeroSectionAboutUs page="aboutUs">
                 <Navbar/>
-            </HeroSectionHome>
-            
+            </HeroSectionAboutUs>
+
             <div className="page-content">
             <aside>
                 <h4 className="sidebar-heading">Auf dieser Seite</h4>
@@ -41,17 +39,17 @@ const IndexHome = () => {
                 </ul>
             </aside>
 
+
             <main id="main">
-                <Quote></Quote>
+                <Welcome/>
+                <OurMission/>
+                <OurValues/>
                
             
             </main>
             </div>
+        </>
+    )
+}
 
-
-        </div>
-        
-    );
-};
- 
-export default IndexHome;
+export default IndexAboutUs

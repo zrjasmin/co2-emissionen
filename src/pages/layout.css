@@ -16,10 +16,10 @@
 
     aside {
         
-        min-width: 200px;
+        min-width: 220px;
         margin-right: 10px;
         height: 100%;
-        background-color: green;
+        
 
     }
 
@@ -33,6 +33,14 @@
 /* big monitors */
 
 @media screen and (min-width: 1200px) {
+    aside {
+        
+        min-width: 250px;
+        margin-right: 10px;
+        height: 100%;
+        
+
+    }
     .page-content {
         width: 95%;
         max-width: 1300px;

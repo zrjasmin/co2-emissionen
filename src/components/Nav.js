@@ -37,7 +37,7 @@ const Navbar = () => {
             <img onClick={toggleNavItems} src={hamburgermenu} alt="menu" className="hamburger"/>
             <div  className={showNav}>
                 <div className="Navlinks">
-                    <img src={close} onClick={toggleNavItems} className="close" alt="close"/>
+                    <img src={close} onClick={toggleNavItems} className="menu-close" alt="close"/>
                     <Link to="/" onClick={toggleNavItems}>Home</Link>
                     <Link to="/emissionen" onClick={toggleNavItems}>Emissionen</Link>
                     <Link to="/aboutUs" onClick={toggleNavItems}>Über uns</Link>

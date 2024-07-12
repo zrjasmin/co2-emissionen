@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./LanguageSwitcher.css"
 
-import globe from "../assets/images/globe.png"
+import globeMobile from "../assets/images/globe-mobile.png"
+import globeDesktop from "../assets/images/globe-desktop.png"
+
 
 import germanFlag from "../assets/images/german.png";
 import englandFlag from "../assets/images/united-kingdom.png";
@@ -60,7 +62,9 @@ const LanguageSwitcher = () => {
 
             {/* zeigt aktuelle Sprache */}
             <div className="selected-language" onClick={toggleLanguageMenu}>
-                <img className="globe-icon" src={globe} alt="Welt icon"/>
+                <img className="globe-icon mobile" src={globeMobile} alt="Welt icon"/>                
+                <img className="globe-icon desktop" src={globeDesktop} alt="Welt icon"/>
+
                 <p className="current-language">{language}</p>
 
             </div>
