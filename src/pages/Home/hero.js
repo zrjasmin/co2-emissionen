@@ -5,6 +5,7 @@ import "../../App.css"
 import Navbar from "../../components/Nav";
 import { t } from "i18next";
 import { type } from "@testing-library/user-event/dist/type";
+import Quote from "./quote";
 
 
 
@@ -15,13 +16,15 @@ const HeroSectionHome = ({children, page}) => {
           {children}
           <div class="hero-overlay"></div>
           <div className="wrapper">
-            <h1 className="hero-heading">emissionen natur</h1>
-            <p className="hero-text">Wir sind eine Klimaorganisation, die sich leidenschaftlich für die Reduzierung von Emissionen von Unternehmen einsetzt.</p>
+            <h1 className="hero-heading">{t("home.hero-heading")}</h1>
 
 
             {/* ändern damit es innerhalb der Seite scrollt*/}
              <Link to="/contact">  
-               <button className="hero-button">Erfahre mehr</button>
+               <button className="hero-button">
+                {t("home.hero-btn")}
+               
+               </button>
               </Link>
             </div>
             

@@ -1,33 +1,41 @@
 .page-content {
-    margin: auto;
-    width: 90%;
+    margin: 0 16px;
     padding-top: 50px;
 }
 
 
-
+/* ab landscape tablet */
 @media screen and (min-width:992px) {
     .page-content {
         position: relative;
         display: flex;
         justify-content: space-between;
-        max-width: 1300px;
-
+        max-width: 1140px;
+        margin: 0 20px;
     }
 
     aside {
-        width: 15%;
+        
         min-width: 200px;
         margin-right: 10px;
         height: 100%;
-
+        background-color: green;
 
     }
 
     main {
-        width: 85%;
+        width: 100%;
+        background-color: pink;
 
     }
 }
 
-@media screen and (min-width: 992px) {}
+/* big monitors */
+
+@media screen and (min-width: 1200px) {
+    .page-content {
+        width: 95%;
+        max-width: 1300px;
+        margin: auto;
+    }
+}

@@ -31,7 +31,7 @@ const Navbar = () => {
 
             <div className="logo">
                 <img src={logo} alt="logo"/>
-                <p className="name">ClimateImpact</p>
+                <p className="name">EcoTransparency</p>
             </div>
             
             <img onClick={toggleNavItems} src={hamburgermenu} alt="menu" className="hamburger"/>
@@ -40,7 +40,9 @@ const Navbar = () => {
                     <img src={close} onClick={toggleNavItems} className="close" alt="close"/>
                     <Link to="/" onClick={toggleNavItems}>Home</Link>
                     <Link to="/emissionen" onClick={toggleNavItems}>Emissionen</Link>
+                    <Link to="/aboutUs" onClick={toggleNavItems}>Über uns</Link>
                     <Link to="/contact" onClick={toggleNavItems}>Kontakt</Link>
+                    
                 </div>
                 
                 <div className="language-selection mobile">

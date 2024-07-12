@@ -1,10 +1,9 @@
 aside {
-    background-color: white;
+    background-color: var(--darker-grey);
     font-weight: 500;
     padding: 20px 20px 10px 20px;
     border-radius: 7px;
-    -webkit-box-shadow: 1px 1px 11px 4px rgba(0, 0, 0, 0.07);
-    box-shadow: 1px 1px 11px 4px rgba(0, 0, 0, 0.07);
+ 
     margin-bottom: 3.75rem;
 }
 
@@ -14,6 +13,7 @@ aside {
 
 .sidebar-heading {
     text-align: center;
+    font-size: 
 }
 
 

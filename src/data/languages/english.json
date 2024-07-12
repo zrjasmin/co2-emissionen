@@ -1,27 +1,52 @@
 {
     "home": {
-        "emissionen natur": "natural emissions",
-        "hero beschreibung": "We are a climate organization that is passionately committed to reducing emissions from companies.",
-        "Wilkommen Heading": "Together for a green future - Transparency creates responsibility!",
-        "Wilkommen text": "We are a climate organization that is passionately committed to disclosing emissions from companies and countries. Our goal is to contribute to responsible decision-making by providing comprehensive data and information on the impact on the climate.",
-        "Unser Werte": "Our Values",
-        "Transparenz": "Transparency",
-        "Transparenz-Beschr": "By disclosing emissions from companies and countries, we advocate for an honest and comprehensive assessment.",
-        "Integrität": "Integrity",
-        "Integrität-Beschr": "We conduct our assessments with the highest accuracy and objectivity to provide reliable data and strengthen trust in our work.",
-        "Innovation": "Innovation",
-        "Innovation-Bechr": "Innovation drives us to find new ways to address climate change. We constantly seek creative solutions to bring about positive change.",
-        "Emissionen": "Emissions",
-        "Emissione-Text": "We conduct our assessments with the highest accuracy and objectivity to provide reliable data and strengthen trust in our work.",
-        "Bereit, etwas zu bewegen?": "Ready to make a difference?",
-        "Kontakt-Text": "Do you have questions, suggestions or would you like to collaborate with us? Feel free to contact us! We look forward to hearing from you and working together to make a difference for climate protection.",
-        "Mehr-erfahren": "learn more"
-    },
+      "local-nav": [
+        "01 Welcome",
+        "02 Our Values",
+        "03 Emissions",
+        "04 Contact"
+      ],
+      "hero-heading": "For a greener future: Fighting CO2 emissions together!",
+      "hero-btn": "Learn more",
+      "quote": "Nature is our most precious asset, Let's protect it with heart and courage.",
+      "quote-subtext": "We actively advocate for sustainable practices to create a healthier future for all.",
+      "motivation-heading": "02 Our Motivation",
+      "motivation-text": "Our company is passionately committed to environmental protection and sustainability to create a healthier future and take responsibility. With our commitment, we aim not only to reduce our ecological footprint but also to raise awareness of environmental issues and promote sustainable development.",
+      "motivation-btn": "More about us",
+      "solution-heading": "03 Our Solution",
+      "solution-text": "Learn more about the emissions of countries and companies in our interactive table. Visit our page for detailed information and analysis.",
+      "solution-btn": "To the table",
+      "contact-heading": "Ready to make a difference?",
+      "contact-text": "Do you have questions, suggestions, or want to collaborate with us? Feel free to contact us!",
+      "contact-btn": "Contact"
+    }, 
     "emissionen": {
-        "Hero-Heading": "Transparency in Action:",
-        "Hero-text": "Focus on emissions data from companies and countries",
-        "Quote": "We publish emissions data from companies and countries to create transparency and raise awareness of the impact on the climate",
-        "Kontakt-Heading": "Ready to make a difference? ",
-        "Kontakt-text": "Do you have questions, suggestions, or would you like to collaborate with us? Feel free to contact us! We look forward to hearing from you and working together to make a difference for climate protection."
-    }
-}
+        "Hero-Heading": "Understanding Climate Change, Acting Together: Get Informed Here",
+        "hero-btn": "Learn more",
+        "intro-heading": "Welcome to our information page on climate change and CO2 emissions",
+        "intro-text": "Climate change is one of the greatest challenges of our time and has far-reaching impacts on our planet. To provide a better understanding of this important issue, we would like to share some basic information with you about climate change and the associated CO2 emissions.",
+        "info1-heading": "Causes of Climate Change",
+        "info1-text": "One of the main causes of climate change is the increasing CO2 emissions, primarily caused by human activities such as burning fossil fuels, deforestation, and industrial processes. These emissions lead to an increase in greenhouse gases in the atmosphere, which in turn leads to planetary warming.",
+        "info2-heading": "Impacts of Climate Change",
+        "info2-text": "Climate change has already had noticeable impacts on our environment, including more frequent extreme weather events, melting glaciers and ice sheets, rising sea levels, and shifts in ecosystems. These changes not only threaten wildlife but also the livelihoods of many people worldwide.",
+        "table-heading": "Emissions Table",
+        "table-text": "The following table lists the annual CO2 emissions of leading companies and countries to provide an overview of their environmental impacts."
+    },
+
+    "about-us": {
+        "hero-heading": "Unsere Mission: Transparenz schaffen, den Klimawandel bekämpfen",
+        "welcome-heading": "Willkommen bei EcoTransparency ",
+        "welcome-text": "Wir sind eine führende Non-Profit-Organisation, die sich leidenschaftlich für den Kampf gegen den Klimawandel einsetzt. Unser Ziel ist es, durch Transparenz und Datenvisualisierung das Bewusstsein für die Auswirkungen von CO²-Emissionen zu schärfen und Maßnahmen zur Reduzierung von Treibhausgasen zu fördern",
+        "mission-heading": "Unsere Mission",
+        "mission-text": "Bei ClimateWatch glauben wir an die Kraft der Information. Indem wir Daten über CO²-Emissionen von Unternehmen und Ländern sammeln, analysieren und veröffentlichen, möchten wir eine informierte Diskussion über den Klimawandel anregen. Unsere Mission ist es, Entscheidungsträger zu ermutigen, verantwortungsbewusste Maßnahmen zu ergreifen und gemeinsam an nachhaltigen Lösungen zu arbeiten.",
+        "values-heading": "Unsere Werte",
+        "values1-heading": "Transparenz",
+        "values1-text": "Wir setzen uns für offene und transparente Kommunikation ein, um die Öffentlichkeit über die Umweltauswirkungen von CO²-Emissionen aufzuklären.",
+        "values2-heading": "Innovation",
+        "values2-text": "Nutzung innovativer Technologien und Datenvisualisierungen, um komplexe Umweltdaten zugänglich und verständlich zu machen und neue Wege im Kampf gegen den Klimawandel zu finden.",
+        "values3-heading": "Zusammenarbeit",
+        "values3-text": "Glaube an die Bedeutung von Partnerschaften und Zusammenarbeit, um gemeinsam einen positiven Einfluss auf den Klimawandel auszuüben.",
+        "values4-heading": "Nachhaltigkeit",
+        "values4-text": "Wir streben danach, langfristige Lösungen zu fördern, die den Schutz unseres Planeten und das Wohlergehen zukünftiger Generationen sicherstellen"
+      }
+  }

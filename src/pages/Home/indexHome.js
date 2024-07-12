@@ -1,8 +1,7 @@
 import React, {useRef} from "react";
 import Navbar from "../../components/Nav";
 import HeroSectionHome from "../Home/hero";
-import WilkommenSection from "./willkommen";
-import UnsereWerte from "./unsereWerte";
+import Quote from "./quote";
 import {Link, animateScroll as scroll} from "react-scroll";
 
 
@@ -23,7 +22,7 @@ const IndexHome = () => {
             
             <div className="page-content">
             <aside>
-                <p className="sidebar-heading">Auf dieser Seite</p>
+                <h4 className="sidebar-heading">Auf dieser Seite</h4>
                 <ul className="sidebar">
                     <Link to="section1">
                         <li className="sidebar-item" >{t("home.local-nav.0")}</li>
@@ -43,14 +42,9 @@ const IndexHome = () => {
             </aside>
 
             <main id="main">
-
-                <section id="section1">
-                    <WilkommenSection />
-                </section>
-                <section id="section2">
-                    <UnsereWerte/>
-                </section>
-                <h1 id="section3">sedf</h1>
+                <Quote></Quote>
+               
+            
             </main>
             </div>
 

@@ -1,33 +1,51 @@
 {
-    "home": {
-        "local-nav": [
-            "01 Wilkommen",
-            "02 Unsere Werte",
-            "03 Emissionen",
-            "04 Kontakt"
-        ],
-        "emissionen natur": "emissionen        natur",
-        "hero beschreibung": "Wir sind eine Klimaorganisation, die sich leidenschaftlich für die Reduzierung von Emissionen von Unternehmen einsetzt.",
-        "Wilkommen Heading": "Gemeinsam für eine grüne Zukunft - Transparenz schafft Verantwortung!",
-        "Wilkommen text": "Wir sind eine Klimaorganisation, die sich leidenschaftlich für die Offenlegung von Emissionen von Unternehmen und Ländern einsetzt. Unser Ziel ist es, durch die Bereitstellung von umfassenden Daten und Informationen zu den Auswirkungen auf das Klima dazu beizutragen, dass verantwortungsbewusste Entscheidungen getroffen werden können.",
-        "Unser Werte": "Unser Werte",
-        "Transparenz": "Transparenz",
-        "Transparenz-Beschr": "Durch die Offenlegung von Emissionen von Unternehmen und Ländern setzen wir uns für eine ehrliche und umfassende Bewertung ein.",
-        "Integrität": "Integrität",
-        "Integrität-Beschr": "Wir führen unsere Bewertungen mit höchster Genauigkeit und Objektivität durch, um verlässliche Daten bereitzustellen und das Vertrauen in unsere Arbeit zu stärken.",
-        "Innovation": "Innovation",
-        "Innovation-Beschr": "Innovation treibt uns an, neue Wege zu finden, um den Klimawandel anzugehen. Wir suchen stets nach kreativen Lösungen, um positive Veränderungen zu bewirken.",
-        "Emissionen": "Emissionen",
-        "Emissione-Text": "Wir führen unsere Bewertungen mit höchster Genauigkeit und Objektivität durch, um verlässliche Daten bereitzustellen und das Vertrauen in unsere Arbeit zu stärken.",
-        "Bereit, etwas zu bewegen?": "Bereit, etwas zu bewegen?",
-        "Kontakt-Text": "Haben Sie Fragen, Anregungen oder möchten Sie mit uns zusammenarbeiten? Zögern Sie nicht, uns zu kontaktieren! Wir freuen uns darauf, von Ihnen zu hören und gemeinsam etwas für den Klimaschutz zu bewirken.",
-        "Mehr-erfahren": "mehr erfahren"
-    },
-    "emissionen": {
-        "Hero-Heading": "Transparenz in Aktion: ",
-        "Hero-text": "Emissionsdaten von Unternehmen und Ländern im Fokus",
-        "Quote": "Wir veröffentlichen Emissionsdaten von Unternehmen und Ländern, um Transparenz zu schaffen und das Bewusstsein für die Auswirkungen  auf das Klima zu schärfen",
-        "Kontakt-Heading": "Bereit, etwas zu bewegen? ",
-        "Kontakt-text": "Haben Sie Fragen, Anregungen oder möchten Sie mit uns zusammenarbeiten? Zögern Sie nicht, uns zu kontaktieren! Wir freuen uns darauf, von Ihnen zu hören und gemeinsam etwas für den Klimaschutz zu bewirken."
-    }
+  "home": {
+    "local-nav": [
+      "01 Wilkommen",
+      "02 Unsere Werte",
+      "03 Emissionen",
+      "04 Kontakt"
+    ],
+    "hero-heading": "Für eine grünere Zukunft: Gemeinsam gegen CO2-Emissionen kämpfen!",
+    "hero-btn": "Mehr erfahren",
+    "quote": "Die Natur ist unser kostbarstes Gut, Schützen wir sie, mit Herz und Mut.",
+    "quote-subtext": "Wir setzen uns aktiv für nachhaltige Praktiken ein, um eine gesündere Zukunft für alle zu schaffen.",
+    "motivation-heading": "02 Unsere Motivation",
+    "motivation-text": "Unser Unternehmen setzt sich leidenschaftlich für Umweltschutz und Nachhaltigkeit ein, um eine gesündere Zukunft zu schaffen und Verantwortung zu übernehmen. Mit unserem Engagement möchten wir nicht nur unseren ökologischen Fußabdruck reduzieren, sondern auch dazu beitragen, das Bewusstsein für Umweltfragen zu stärken und eine nachhaltige Entwicklung voranzutreiben.",
+    "motivation-btn": "Mehr über uns",
+    "solution-heading": "03 Unsere Lösung",
+    "solution-text": "Erfahren Sie mehr über die Emissionen von Ländern und Unternehmen in unserer interaktiven Tabelle. Besuchen Sie unsere Seite für detaillierte Informationen und Analysen.",
+    "solution-btn": "Zur Tabelle",
+    "contact-heading": "Bereit, etwas zu bewegen?",
+    "contact-text": "Haben Sie Fragen, Anregungen oder möchten Sie mit uns zusammenarbeiten? Zögern Sie nicht, uns zu kontaktieren!",
+    "contact-btn": "Kontakt"
+  },
+  "emissionen": {
+    "Hero-Heading": "Klimawandel verstehen, gemeinsam handeln: Informieren Sie sich hier",
+    "hero-btn": "Mehr erfahren",
+    "intro-heading": "Willkommen auf unserer Informationsseite zum Klimawandel und CO²-Emissionen",
+    "intro-text": "Der Klimawandel ist eine der größten Herausforderungen unserer Zeit und hat weitreichende Auswirkungen auf unseren Planeten. Um ein besseres Verständnis für dieses wichtige Thema zu schaffen, möchten wir Ihnen hier einige grundlegende Informationen über den Klimawandel und die damit verbundenen CO²-Emissionen näherbringen.",
+    "info1-heading": "Ursachen des Klimawandels",
+    "info1-text": "Eine der Hauptursachen des Klimawandels sind die steigenden CO²-Emissionen, die hauptsächlich durch menschliche Aktivitäten wie Verbrennung fossiler Brennstoffe, Entwaldung und industrielle Prozesse verursacht werden. Diese Emissionen führen zu einem Anstieg von Treibhausgasen in der Atmosphäre, was wiederum zu einer Erwärmung des Planeten führt.",
+    "info2-heading": "Auswirkungen des Klimawandels",
+    "info2-text": "Der Klimawandel hat bereits spürbare Auswirkungen auf unsere Umwelt, darunter häufigere Extremwetterereignisse, das Abschmelzen von Gletschern und Eisflächen, den Anstieg des Meeresspiegels und die Verschiebung von Ökosystemen. Diese Veränderungen bedrohen nicht nur die Tier- und Pflanzenwelt, sondern auch die Lebensgrundlagen vieler Menschen weltweit.",
+    "table-heading": "Emissionen-Tabelle",
+    "table-text": "In der folgenden Tabelle sind die jährlichen CO²-Emissionen der führenden Unternehmen und Länder aufgeführt, um einen Überblick über ihre Umweltauswirkungen zu geben."
+  },
+  "about-us": { 
+    "hero-heading": "Unsere Mission: Transparenz schaffen, den Klimawandel bekämpfen",
+    "welcome-heading": "Willkommen bei EcoTransparency ",
+    "welcome-text": "Wir sind eine führende Non-Profit-Organisation, die sich leidenschaftlich für den Kampf gegen den Klimawandel einsetzt. Unser Ziel ist es, durch Transparenz und Datenvisualisierung das Bewusstsein für die Auswirkungen von CO²-Emissionen zu schärfen und Maßnahmen zur Reduzierung von Treibhausgasen zu fördern",
+    "mission-heading": "Unsere Mission",
+    "mission-text": "Bei ClimateWatch glauben wir an die Kraft der Information. Indem wir Daten über CO²-Emissionen von Unternehmen und Ländern sammeln, analysieren und veröffentlichen, möchten wir eine informierte Diskussion über den Klimawandel anregen. Unsere Mission ist es, Entscheidungsträger zu ermutigen, verantwortungsbewusste Maßnahmen zu ergreifen und gemeinsam an nachhaltigen Lösungen zu arbeiten.",
+    "values-heading": "Unsere Werte",
+    "values1-heading": "Transparenz",
+    "values1-text": "Wir setzen uns für offene und transparente Kommunikation ein, um die Öffentlichkeit über die Umweltauswirkungen von CO²-Emissionen aufzuklären.",
+    "values2-heading": "Innovation",
+    "values2-text": "Nutzung innovativer Technologien und Datenvisualisierungen, um komplexe Umweltdaten zugänglich und verständlich zu machen und neue Wege im Kampf gegen den Klimawandel zu finden.",
+    "values3-heading": "Zusammenarbeit",
+    "values3-text": "Glaube an die Bedeutung von Partnerschaften und Zusammenarbeit, um gemeinsam einen positiven Einfluss auf den Klimawandel auszuüben.",
+    "values4-heading": "Nachhaltigkeit",
+    "values4-text": "Wir streben danach, langfristige Lösungen zu fördern, die den Schutz unseres Planeten und das Wohlergehen zukünftiger Generationen sicherstellen"
+  }
 }

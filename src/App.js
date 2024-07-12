@@ -12,6 +12,7 @@ import Navbar from "./components/Nav";
 import IndexHome from "./pages/Home/indexHome";
 import IndexContact from "./pages/Contact/indexContact";
 import IndexEmissionen from "./pages/Emissionen/indexEmissionen"
+import IndexAboutUs from './pages/About us/indexAboutUs';
 
 
 const resources = {
@@ -46,7 +47,7 @@ function App() {
           <Route exact path="/"  element={<IndexHome/>} />
           <Route path="/emissionen"  element={<IndexEmissionen />}/>
           <Route path="/contact"  element={<IndexContact/>}/>
-
+          <Route path="/abotUs" element={<IndexAboutUs/>}/>
         </Routes>
        
         </div>

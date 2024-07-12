@@ -7,7 +7,7 @@ import {
     getSortedRowModel,
     getFilteredRowModel,
     _getVisibleLeafColumns,
-     
+    getPaginationRowModel
     
     } from '@tanstack/react-table'
 import {columnDef} from "./colums"
@@ -84,6 +84,7 @@ const StackTable = () => {
         onColumnFiltersChange: setColumFilter,
         onSortingChange: setSorting,
         getFacetedRowModel: getFacetedRowModel(),
+        getPaginationRowModel: getPaginationRowModel()
         
     
     });
@@ -120,17 +121,17 @@ const StackTable = () => {
        )})}
     </div>
 
-    <table>
-        <thead>
+    <Table>
+        <TableHead stickyHeader >
             {tableInstance.getHeaderGroups().map((headerEl) => {
             return (
                 <>
-                <tr key={headerEl.id}>
+                <TableRow key={headerEl.id}>
                     
                     {headerEl.headers.map((columnEl) => {
                         return (
                             <>
-                             <td key={columnEl.id} colSpan={columnEl.colSpan} >
+                             <TableCell key={columnEl.id} colSpan={columnEl.colSpan} >
                                 {columnEl.isPlaceholder ? null : (
                                     <>
 
@@ -145,50 +146,50 @@ const StackTable = () => {
                                    </p>
                                     </>
                                 )}
-                            </td>
+                            </TableCell>
                             </>
                             
                         );
                     })}
-                </tr>
+                </TableRow>
                 </>
             )
             })}
-        </thead>
-        <tbody>
+        </TableHead>
+        <TableBody>
             {tableInstance.getRowModel().rows.map((rowItem, index) => {
                 return (
                     <>
                     {rowItem.getValue(2) === "Unternehmen" ? (
-                        <tr key={index} className="collapsible" onClick={() => handelToggle(rowItem, index)}>
+                        <TableRow key={index} className="collapsible" onClick={() => handelToggle(rowItem, index)}>
                             {rowItem.getVisibleCells().map(cellItem => {
                                 return (
                                     <>
                                     
-                                    <td>
+                                    <TableCell>
                                         {flexRender(
                                         cellItem.column.columnDef.cell,
                                         cellItem.getContext()
                                         )}
-                                    </td>
+                                    </TableCell>
                                     </>
                                 )
                             })}
                             
-                        </tr>
+                        </TableRow>
                     ): (
-                        <tr key={index}>
+                        <TableRow key={index}>
                             {rowItem.getVisibleCells().map(cellItem => {
                                 return (
-                                    <td>
+                                    <TableCell>
                                         {flexRender(
                                         cellItem.column.columnDef.cell,
                                         cellItem.getContext()
                                         )}
-                                    </td>
+                                    </TableCell>
                                 )
                             })}
-                        </tr>
+                        </TableRow>
                     )
                     }
 
@@ -210,9 +211,9 @@ const StackTable = () => {
                     </>
                 )
             })}
-        </tbody>
-    </table>
-    {/* <div>
+        </TableBody>
+    </Table>
+    <div>
         <button onClick={() => tableInstance.firstPage()} disabled={!tableInstance.getCanPreviousPage()}>First Page</button>
         <button onClick={() => tableInstance.previousPage()} disabled={!tableInstance.getCanPreviousPage()}>Previous Page</button>
         <button onClick={() => tableInstance.nextPage()} disabled={!tableInstance.getCanNextPage()}>Next Page</button>
@@ -226,12 +227,12 @@ const StackTable = () => {
             {tableInstance.getState().pagination.pageIndex + 1} of{" "}
             {tableInstance.getPageCount().toLocaleString()}
 
-            {(tableInstance.getState().pagination.pageIndex + 1) = (tableInstance.getPageCount().toLocaleString()) ? "last page": "not last page"}
+            {/* {(tableInstance.getState().pagination.pageIndex + 1) = (tableInstance.getPageCount().toLocaleString()) ? "last page": "not last page"} */}
 
             {}
 
         </p>
-    </span> */}
+    </span>
     
     </>
     )
