@@ -3,9 +3,9 @@ import React from "react";
 
 const OurValues = () => {
     return (
-        <>
-            <h1>{t("about-us.values-heading")}</h1>
-            <div className="grid values">
+        <div className="value-section">
+            <h2>{t("about-us.values-heading")}</h2>
+            <div className="v-grid values">
                 <div className="card">
                     <h4>{t("about-us.values1-heading")}</h4>
                     <p>{t("about-us.values1-text")}</p>
@@ -23,7 +23,7 @@ const OurValues = () => {
                     <p>{t("about-us.values4-text")}</p>
                 </div>
             </div>
-        </>
+        </div>
     )
 
 }
