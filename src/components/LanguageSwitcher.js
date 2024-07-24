@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { useTranslation } from "react-i18next";
 
 import globeMobile from "../assets/images/globe-mobile.png";
@@ -12,8 +11,7 @@ import arabicFlag from "../assets/images/united-arab-emirates.png";
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState("DE");
-  const [visibility, setVisibility] = useState("langHidden");
-  let changingVisiblity = { visibility };
+  const [isVisible, setVisibility] = useState(false);
 
   //wechselt die Sprache
   const handleLanguageChange = (newLanguage) => {
@@ -36,51 +34,67 @@ const LanguageSwitcher = () => {
   };
 
   const toggleLanguageMenu = () => {
-    const selectedLang = document.getElementsByClassName("selected-language");
-
-    if (visibility === "langHidden") {
-      setVisibility("langVisible");
-      changingVisiblity = { visibility };
-    } else {
-      setVisibility("langHidden");
-      changingVisiblity = { visibility };
-    }
+    setVisibility(!isVisible);
   };
 
   return (
-    <div className="LanguageSwitcher">
+    <div className="languageSwitcher">
       {/* zeigt aktuelle Sprache */}
-      <div className="selected-language" onClick={toggleLanguageMenu}>
-        <img className="globe-icon mobile" src={globeMobile} alt="Welt icon" />
+      <div className="activeLanguage" onClick={toggleLanguageMenu}>
         <img
-          className="globe-icon desktop"
+          className="activeLanguage__globeImg mobile"
+          src={globeMobile}
+          alt="Welt icon"
+        />
+        <img
+          className="activeLanguage__globeImg desktop"
           src={globeDesktop}
           alt="Welt icon"
         />
 
-        <p className="current-language">{language}</p>
+        <p className="activeLanguage__text">{language}</p>
       </div>
 
       {/* zeigt alle Sprachoptionen */}
-      <div className={visibility} id="options">
-        <div className="language" onClick={() => handleLanguageChange("de")}>
-          <img src={germanFlag} className="flag" alt="deutsche Flagge" />
-          <p>DE Deutsch</p>
+
+      {isVisible && (
+        <div className="options">
+          <div
+            className="options__language"
+            onClick={() => handleLanguageChange("de")}
+          >
+            <img
+              src={germanFlag}
+              className="options__flag"
+              alt="deutsche Flagge"
+            />
+            <p>DE Deutsch</p>
+          </div>
+          <div
+            className="options__language"
+            onClick={() => handleLanguageChange("en")}
+          >
+            <img
+              value="en"
+              src={englandFlag}
+              className="options__flag"
+              alt="united Kingdom Flagge"
+            ></img>
+            <p value="en">EN english</p>
+          </div>
+          <div
+            className="options__language"
+            onClick={() => handleLanguageChange("ar")}
+          >
+            <img
+              src={arabicFlag}
+              className="options__flag"
+              alt="Arabische Flagge"
+            ></img>
+            <p>AR arabic</p>
+          </div>
         </div>
-        <div className="language" onClick={() => handleLanguageChange("en")}>
-          <img
-            value="en"
-            src={englandFlag}
-            className="flag"
-            alt="united Kingdom Flagge"
-          ></img>
-          <p value="en">EN english</p>
-        </div>
-        <div className="language" onClick={() => handleLanguageChange("ar")}>
-          <img src={arabicFlag} className="flag" alt="Arabische Flagge"></img>
-          <p>AR arabic</p>
-        </div>
-      </div>
+      )}
     </div>
   );
 };

@@ -30,4 +30,26 @@ body {
   }
   
   
-  
+.hidden {
+  display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+
+@media screen and (min-width: 992px) {
+  .mobile {
+    display: none;
+
+}
+
+.desktop {
+    display: block;
+}
+}

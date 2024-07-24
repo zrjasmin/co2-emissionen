@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import logo from "../assets/images/leaf.png";
 import hamburgermenu from "../assets/images/menu.png";
-import close from "../assets/images/close.png";
+import closeImg from "../assets/images/close.png";
 
 const Navbar = () => {
   let [showNav, setShowNav] = useState("hidden");
@@ -18,24 +18,25 @@ const Navbar = () => {
   }
 
   return (
-    <div className="Nav">
-      <div className="logo">
+    <div className="nav">
+      <div className="nav__logo">
         <img src={logo} alt="logo" />
-        <p className="name">EcoTransparency</p>
+        <p className="logo__name">EcoTransparency</p>
       </div>
 
       <img
         onClick={toggleNavItems}
         src={hamburgermenu}
         alt="menu"
-        className="hamburger"
+        className="nav__hamburger mobile"
       />
-      <div className={showNav}>
-        <div className="Navlinks">
+
+      <div className={showNav} id="menu">
+        <div className="nav__links">
           <img
-            src={close}
+            src={closeImg}
             onClick={toggleNavItems}
-            className="menu-close"
+            className="nav-closeImg mobile"
             alt="close"
           />
           <Link to="/" onClick={toggleNavItems}>
