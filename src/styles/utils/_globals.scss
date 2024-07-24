@@ -1,0 +1,33 @@
+
+body {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    background-color: rgb(241, 241, 241);
+  }
+  
+  html {
+    font-size: 100%;
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::after,
+  *::before {
+    box-sizing: inherit;
+  }
+  
+  
+  button {
+    width: 10rem;
+    font-family: 'Montserrat';
+    font-size: 1.125rem;
+    font-weight: 400;
+    background-color: transparent;
+    color: var(--text-color-dark);
+    border: 1px solid var(--text-color-dark);
+    height: 40px;
+    border-radius: 20px;
+  }
+  
+  
+  

@@ -1,0 +1,51 @@
+.sidebar {
+    background-color: var(--darker-grey);
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding: 20px 20px 10px 20px;
+    border-radius: 7px;
+    margin-bottom: 3.75rem;
+
+    &__heading {
+        text-align: left;
+    }
+
+    &__list {
+        padding: 0;
+
+    }
+
+    &__item {
+        list-style-type: none;
+        margin-bottom: 15px;
+        color: var( --text-color-dark);
+    }
+
+}
+
+@media  screen and (min-width: 768px) and (max-width: 992px) {
+    .sidebar {
+        padding: 30px 50px;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    .sidebar {
+        background-color: transparent;
+        box-shadow: none;
+
+        &__item {
+            list-style-type: none;
+            margin-bottom: 15px;
+        }
+    
+        &__item:active,
+        &__item:focus {
+            background-color: #282828;
+            color: white;
+        }
+    }
+
+  
+}

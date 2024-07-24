@@ -1,4 +1,4 @@
-import './App.css';
+import "./styles/styles.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { I18nextProvider, useTranslation } from "react-i18next";
 
@@ -11,21 +11,20 @@ import translationAR from "./data/languages/arabic.json";
 import Navbar from "./components/Nav";
 import IndexHome from "./pages/Home/indexHome";
 import IndexContact from "./pages/Contact/indexContact";
-import IndexEmissionen from "./pages/Emissionen/indexEmissionen"
-import IndexAboutUs from './pages/AboutUs/indexAboutUs';
-
+import IndexEmissionen from "./pages/Emissionen/indexEmissionen";
+import IndexAboutUs from "./pages/AboutUs/indexAboutUs";
 
 const resources = {
   de: {
     translation: translationDE,
   },
   en: {
-    translation : translationEN,
-  }, 
+    translation: translationEN,
+  },
   ar: {
-    translation : translationAR,
-  }
-}
+    translation: translationAR,
+  },
+};
 
 i18next.use(initReactI18next).init({
   resources,
@@ -34,25 +33,23 @@ i18next.use(initReactI18next).init({
   interpolation: {
     escapeValue: false,
   },
-})
+});
 
 function App() {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className="App">
       <I18nextProvider i18n={i18next}>
         <div>
-        <Routes>        
-          <Route exact path="/"  element={<IndexHome/>} />
-          <Route path="/emissionen"  element={<IndexEmissionen />}/>
-          <Route path="/contact"  element={<IndexContact/>}/>
-          <Route path="/aboutUs" element={<IndexAboutUs/>}/>
-        </Routes>
-       
+          <Routes>
+            <Route exact path="/" element={<IndexHome />} />
+            <Route path="/emissionen" element={<IndexEmissionen />} />
+            <Route path="/contact" element={<IndexContact />} />
+            <Route path="/aboutUs" element={<IndexAboutUs />} />
+          </Routes>
         </div>
-
-        </I18nextProvider>
+      </I18nextProvider>
     </div>
   );
 }

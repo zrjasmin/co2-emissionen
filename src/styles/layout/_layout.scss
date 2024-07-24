@@ -32,6 +32,8 @@
 /* big monitors */
 
 @media screen and (min-width: 1200px) {
+    
+
     aside {
         
         min-width: 250px;
@@ -42,7 +44,6 @@
     }
     .page-content {
         width: 95%;
-        max-width: 1300px;
         margin: auto;
     }
 }
