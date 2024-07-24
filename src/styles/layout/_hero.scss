@@ -1,14 +1,4 @@
-.hero-section {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    position: relative;
-    top: 0px;
-    z-index: 1;
-    width: 100%;
-}
-
+// changing background for pages
 #home {
     background-image: url(../../assets/images/home-image.jpg);
 
@@ -31,8 +21,20 @@
     background-position: center;}
 
 
-.hero-overlay {
-    position: absolute;
+//hero styles
+.hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+
+
+    &__overlay {
+        position: absolute;
     top: 0px;
     left: 0;
     padding: 150px 15px 0px 15px;
@@ -40,33 +42,32 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.35);
+    }
+
+    &__wrapper {
+        padding: 100px 23px;
+    
+    }
+
+    &__heading {
+        color: var(--text-color-light);
+        position: relative;
+        z-index: 3;
+        padding-bottom: 35px;
+    }
+
+    &__button {
+        color: var(--text-color-light);
+        border: 1px solid var(--text-color-light);
+    
+        position: relative;
+        z-index: 3;
+    }
 }
-
-.wrapper {
-    padding: 100px 23px;
-}
-
-.hero-heading {
-    color: var(--text-color-light);
-    position: relative;
-    z-index: 3;
-    padding-bottom: 35px;
-}
-
-
-
-.hero-button {
-    color: var(--text-color-light);
-    border: 1px solid var(--text-color-light);
-
-    position: relative;
-    z-index: 3;
-}
-
 
 
 @media screen and (min-width: 768px) {
-    .wrapper {
+    .hero__wrapper {
         width: 90%;
         margin: auto;
         padding: 70px 23px;
@@ -74,27 +75,18 @@
 }
 
 @media screen and (min-width: 992px) {
-    .hero-section {
+    .hero {
         min-height: 600px;
+
+
+        &__wrapper{
+            max-width: 1300px;
+            padding: 130px 0px 210px 1.875rem;
+            height: 100%;
+        }
+
+        &__button{
+            float: left;
+        }
     }
-
-    .wrapper {
-        max-width: 1300px;
-        padding: 130px 0px 210px 1.875rem;
-        height: 100%;
-
-    }
-
-    h1 {
-    }
-
-    p {
-        text-align: left;
-        width: 80%;
-    }
-
-    .hero-button {
-        float: left;
-    }
-
 }
