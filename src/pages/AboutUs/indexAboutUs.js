@@ -17,21 +17,21 @@ const IndexAboutUs = () => {
         <Navbar />
       </HeroSectionAboutUs>
 
-      <div className="page-content">
-        <aside>
-          <h4 className="sidebar-heading">Auf dieser Seite</h4>
-          <ul className="sidebar">
+      <div className="pageContent">
+        <aside className="sidebar">
+          <h4 className="sidebar__heading">Auf dieser Seite</h4>
+          <ul className="sidebar__list">
             <Link to="section1">
-              <li className="sidebar-item">{t("home.local-nav.0")}</li>
+              <li className="sidebar__item">{t("home.local-nav.0")}</li>
             </Link>
             <Link to="section2">
-              <li className="sidebar-item">{t("home.local-nav.1")}</li>
+              <li className="sidebar__item">{t("home.local-nav.1")}</li>
             </Link>
             <Link to="section3">
-              <li className="sidebar-item">{t("home.local-nav.2")}</li>
+              <li className="sidebar__item">{t("home.local-nav.2")}</li>
             </Link>
             <Link to="section2">
-              <li className="sidebar-item">{t("home.local-nav.3")}</li>
+              <li className="sidebar__item">{t("home.local-nav.3")}</li>
             </Link>
           </ul>
         </aside>

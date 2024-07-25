@@ -9,16 +9,15 @@ import { type } from "@testing-library/user-event/dist/type";
 
 const HeroSectionEmissionen = ({ children, page }) => {
   return (
-    <div className="hero-section" id={page}>
+    <div className="hero" id={page}>
       {children}
-      <div class="hero-overlay"></div>
-      <div className="wrapper">
-        <h1 className="hero-heading">{t("emissionen.Hero-Heading")}</h1>
-        <h2 className="hero-text">{t("emissionen.Hero-text")}</h2>
+      <div class="hero__overlay"></div>
+      <div className="hero__wrapper">
+        <h1 className="hero__heading">{t("emissionen.Hero-Heading")}</h1>
 
         {/* ändern damit es innerhalb der Seite scrollt*/}
         <Link to="/contact">
-          <button className="hero-button">Erfahre mehr</button>
+          <button className="hero__button">Erfahre mehr</button>
         </Link>
       </div>
     </div>

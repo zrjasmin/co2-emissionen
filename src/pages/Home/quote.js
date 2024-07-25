@@ -12,10 +12,10 @@ const Quote = () => {
       <p>{t("home.quote-subtext")}</p>
 
       <div className="gallery">
-        <img src={gallery1} alt="Wald" />
+        {/* <img src={gallery1} alt="Wald" />
         <img src={gallery2} alt="Wald" />
         <img src={gallery3} alt="Wald" />
-        <img src={gallery4} alt="Wald" />
+        <img src={gallery4} alt="Wald" /> */}
       </div>
     </>
   );

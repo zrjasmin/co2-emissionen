@@ -12,7 +12,7 @@ const IndexHome = () => {
         <Navbar />
       </HeroSectionHome>
 
-      <div className="page-content">
+      <div className="pageContent">
         <aside className="sidebar">
           <h4 className="sidebar__heading">Auf dieser Seite</h4>
           <ul className="sidebar__list">

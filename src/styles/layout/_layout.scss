@@ -1,4 +1,4 @@
-.page-content {
+.pageContent {
     margin: 0 16px;
     padding-top: 50px;
 }
@@ -6,44 +6,32 @@
 
 /* ab landscape tablet */
 @media screen and (min-width:992px) {
-    .page-content {
+    .pageContent {
         position: relative;
         display: flex;
-        justify-content: space-between;
-        max-width: 1140px;
+        justify-content: space-evenly;
         margin: 0 20px;
     }
 
     .sidebar {
-        
         min-width: 220px;
         margin-right: 10px;
         height: 100%;
-        
-
     }
 
     main {
-        width: 100%;
-
+        width: calc(100% - 220px)
     }
 }
 
 /* big monitors */
 
 @media screen and (min-width: 1200px) {
-    
 
-    .sidebar {
-        
-        min-width: 250px;
-        margin-right: 10px;
-        height: 100%;
-        
-
-    }
-    .page-content {
-        width: 95%;
+    .pageContent {
+        width: calc(100% - 100px);
         margin: auto;
+        max-width: 1300px;
     }
+ 
 }
