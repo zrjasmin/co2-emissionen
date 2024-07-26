@@ -12,14 +12,6 @@ import {
 import { columnDef } from "./colums";
 import DATA from "../../../data/emissionen/Länder2.json";
 import FilterFunction from "./FilterFunction";
-import {
-  TableHead,
-  TableRow,
-  Table,
-  TableCell,
-  TableBody,
-  Button,
-} from "@mui/material";
 
 const StackTable = () => {
   // Definition of columns and data
@@ -85,157 +77,170 @@ const StackTable = () => {
 
   return (
     <>
-      <div>
-        {tableInstance.getHeaderGroups().map((headerEl) => {
-          return (
-            <div>
-              {headerEl.headers.map((columnEl) => {
-                return (
-                  <>
-                    {columnEl.column.getCanFilter() ? (
-                      <>
-                        <FilterFunction
-                          column={columnEl.column}
-                          reset={handleReset}
-                        />
-                      </>
-                    ) : null}
-                  </>
-                );
-              })}
-              <button onClick={handleReset}>Löschen</button>
-            </div>
-          );
-        })}
-      </div>
+      {tableInstance.getHeaderGroups().map((headerEl) => {
+        return (
+          <div className="filter">
+            {headerEl.headers.map((columnEl) => {
+              return (
+                <>
+                  {columnEl.column.getCanFilter() ? (
+                    <>
+                      <FilterFunction
+                        column={columnEl.column}
+                        reset={handleReset}
+                      />
+                    </>
+                  ) : null}
+                </>
+              );
+            })}
+            <button onClick={handleReset} className="filter__delete">
+              Löschen
+            </button>
+          </div>
+        );
+      })}
 
-      <Table>
-        <TableHead stickyHeader>
-          {tableInstance.getHeaderGroups().map((headerEl) => {
-            return (
-              <>
-                <TableRow key={headerEl.id}>
-                  {headerEl.headers.map((columnEl) => {
-                    return (
-                      <>
-                        <TableCell key={columnEl.id} colSpan={columnEl.colSpan}>
-                          {columnEl.isPlaceholder ? null : (
-                            <>
-                              <p
-                                className="header-text"
-                                onClick={columnEl.column.getToggleSortingHandler()}
-                              >
-                                {flexRender(
-                                  columnEl.column.columnDef.header,
-                                  columnEl.getContext()
-                                )}
-                                {
-                                  { asc: " 🔼", desc: " 🔽" }[
-                                    columnEl.column.getIsSorted() ?? null
-                                  ]
-                                }
-                              </p>
-                            </>
-                          )}
-                        </TableCell>
-                      </>
-                    );
-                  })}
-                </TableRow>
-              </>
-            );
-          })}
-        </TableHead>
-        <TableBody>
-          {tableInstance.getRowModel().rows.map((rowItem, index) => {
-            return (
-              <>
-                {rowItem.getValue(2) === "Unternehmen" ? (
-                  <TableRow
-                    key={index}
-                    className="collapsible"
-                    onClick={() => handelToggle(rowItem, index)}
-                  >
-                    {rowItem.getVisibleCells().map((cellItem) => {
+      <div className="mobile-scroll">
+        <table>
+          <thead className="tHead">
+            {tableInstance.getHeaderGroups().map((headerEl) => {
+              return (
+                <>
+                  <tr key={headerEl.id} className="tHead__row">
+                    {headerEl.headers.map((columnEl) => {
                       return (
                         <>
-                          <TableCell>
+                          <td
+                            className="tHead__column"
+                            key={columnEl.id}
+                            colSpan={columnEl.colSpan}
+                          >
+                            {columnEl.isPlaceholder ? null : (
+                              <>
+                                <p
+                                  className="tHead__text"
+                                  onClick={columnEl.column.getToggleSortingHandler()}
+                                >
+                                  {flexRender(
+                                    columnEl.column.columnDef.header,
+                                    columnEl.getContext()
+                                  )}
+                                  {
+                                    { asc: " 🔼", desc: " 🔽" }[
+                                      columnEl.column.getIsSorted() ?? null
+                                    ]
+                                  }
+                                </p>
+                              </>
+                            )}
+                          </td>
+                        </>
+                      );
+                    })}
+                  </tr>
+                </>
+              );
+            })}
+          </thead>
+          <tbody className="tBody">
+            {tableInstance.getRowModel().rows.map((rowItem, index) => {
+              return (
+                <>
+                  {rowItem.getValue(2) === "Unternehmen" ? (
+                    <tr
+                      key={index}
+                      className="collapsible tBody__row"
+                      onClick={() => handelToggle(rowItem, index)}
+                    >
+                      {rowItem.getVisibleCells().map((cellItem) => {
+                        return (
+                          <>
+                            <td className="tBody__data">
+                              {flexRender(
+                                cellItem.column.columnDef.cell,
+                                cellItem.getContext()
+                              )}
+                            </td>
+                          </>
+                        );
+                      })}
+                    </tr>
+                  ) : (
+                    <tr key={index} className="tBody__row">
+                      {rowItem.getVisibleCells().map((cellItem) => {
+                        return (
+                          <td className="tBody__data">
                             {flexRender(
                               cellItem.column.columnDef.cell,
                               cellItem.getContext()
                             )}
-                          </TableCell>
-                        </>
-                      );
-                    })}
-                  </TableRow>
-                ) : (
-                  <TableRow key={index}>
-                    {rowItem.getVisibleCells().map((cellItem) => {
-                      return (
-                        <TableCell>
-                          {flexRender(
-                            cellItem.column.columnDef.cell,
-                            cellItem.getContext()
-                          )}
-                        </TableCell>
-                      );
-                    })}
-                  </TableRow>
-                )}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  )}
 
-                {/* company details */}
-                {rowItem.getValue(2) === "Unternehmen" ? (
-                  <div className="subRow">
-                    {openRows.includes(rowItem.getValue(0) - 1) ? (
-                      <td key={rowItem.getValue(0)}>
-                        <p>{rowItem.getValue(4)}</p>
-                        <p>{rowItem.getValue(5)}</p>
-                      </td>
-                    ) : null}
-                  </div>
-                ) : null}
-              </>
-            );
-          })}
-        </TableBody>
-      </Table>
-      <div>
-        <button
-          onClick={() => tableInstance.firstPage()}
-          disabled={!tableInstance.getCanPreviousPage()}
-        >
-          First Page
-        </button>
-        <button
-          onClick={() => tableInstance.previousPage()}
-          disabled={!tableInstance.getCanPreviousPage()}
-        >
-          Previous Page
-        </button>
-        <button
-          onClick={() => tableInstance.nextPage()}
-          disabled={!tableInstance.getCanNextPage()}
-        >
-          Next Page
-        </button>
-
-        <button
-          onClick={() => tableInstance.lastPage()}
-          disabled={!tableInstance.getCanNextPage()}
-        >
-          Last Page
-        </button>
+                  {/* company details */}
+                  {rowItem.getValue(2) === "Unternehmen" ? (
+                    <>
+                      {openRows.includes(rowItem.getValue(0) - 1) ? (
+                        <div
+                          key={rowItem.getValue(0)}
+                          className="subRow tBody__subrow"
+                        >
+                          <p>{rowItem.getValue(4)}</p>
+                          <p>{rowItem.getValue(5)}</p>
+                        </div>
+                      ) : null}
+                    </>
+                  ) : null}
+                </>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
-      <span>
-        <p>Page</p>
-        <p>
-          {tableInstance.getState().pagination.pageIndex + 1} of{" "}
-          {tableInstance.getPageCount().toLocaleString()}
-          {/* {(tableInstance.getState().pagination.pageIndex + 1) = (tableInstance.getPageCount().toLocaleString()) ? "last page": "not last page"} */}
-          {}
-        </p>
-      </span>
+
+      <div className="pagination">
+        <span className="pagination__pageInfo">
+          <p>
+            Page {tableInstance.getState().pagination.pageIndex + 1} of{" "}
+            {tableInstance.getPageCount().toLocaleString()}
+          </p>
+        </span>
+        <div className="pagination__container">
+          <button
+            onClick={() => tableInstance.firstPage()}
+            disabled={!tableInstance.getCanPreviousPage()}
+            className="pagination__btn"
+          >
+            {"<<"}
+          </button>
+          <button
+            onClick={() => tableInstance.previousPage()}
+            disabled={!tableInstance.getCanPreviousPage()}
+            className="pagination__btn"
+          >
+            {"<"}
+          </button>
+          <button
+            onClick={() => tableInstance.nextPage()}
+            disabled={!tableInstance.getCanNextPage()}
+            className="pagination__btn"
+          >
+            {">"}
+          </button>
+
+          <button
+            onClick={() => tableInstance.lastPage()}
+            disabled={!tableInstance.getCanNextPage()}
+            className="pagination__btn"
+          >
+            {">>"}
+          </button>
+        </div>
+      </div>
     </>
   );
 };

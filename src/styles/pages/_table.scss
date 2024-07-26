@@ -1,0 +1,163 @@
+
+
+.filter {
+    background-color: var(--darker-grey);
+    gap: 20px;
+    margin-block: 70px 30px;
+    padding: 30px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ 
+    row-gap: 15px;
+
+
+
+    &__container {
+        &_text {
+            grid-column-end: span 2;
+        }       
+    }
+
+    &__delete {
+        width: 100%;
+        grid-column-end: span 2;
+    }
+    &__textInput {
+        width: 100%;
+        
+    }
+
+    label {
+        font-size: 14px;
+        color: var(--text-color-dark); 
+        margin-bottom: 10px;
+    }
+
+    select, &__textInput {
+        display: flex;
+        padding: 8px;
+        font-size: 1rem;
+        border-radius: 8px;
+        background-color: var(--bg-light-grey);
+        border: 1px solid #b9b9b9;
+        color: var(--text-color-dark);
+        width: 100%;
+        margin-top: 7px;
+    }
+
+    option {
+        color: var(--text-color-dark); 
+    }
+    
+}
+
+.mobile-scroll {
+    overflow-x: auto;
+}
+
+table { 
+    table-layout: fixed;
+    border-collapse: collapse;
+
+    width: 100%;
+    // border: 1px solid #b9b9b9;
+}
+
+
+.tHead {
+    background-color: var(--darker-grey);
+    height: 50px;
+    
+    
+    font-size: 50px;
+  
+    
+
+    &__column {
+        background-color: var(--darker-grey);
+
+       
+    }
+   &__row {
+    td:nth-child(1) {
+        
+        width: 200px;
+    }
+    td:nth-child(2) {
+        
+        width: 150px;
+    }
+    td:nth-child(3) {
+        
+        width: 150px;
+    }
+    td:nth-child(4) {
+        
+        width: 150px;
+    }
+    
+   }
+   &__text {
+    
+   }
+}
+
+.tBody {
+    width: fit-content;
+    
+    &__row {
+        border-bottom: 1px solid #b9b9b9;
+        
+    }
+    &__data{
+        height: 20px;
+        padding-block: 17px;
+
+    }
+
+
+    .collapsible > &__data:nth-child(1)::before {
+        content: "";
+        background-image: url("./../../assets/images/arrow-down-grey.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+
+        width: 20px;
+        height: 15px;
+        margin-right: 5px;
+    }
+
+    &__subrow {
+        background-color: pink;
+        p {
+            
+           
+           display: inline-block;
+        }
+    }
+
+}
+
+
+
+
+.pagination {
+
+    display: flex;
+
+
+    &__pageInfo {
+
+    }
+
+    &__container {
+     
+    }
+
+    &__btn {
+
+    }
+
+    
+}

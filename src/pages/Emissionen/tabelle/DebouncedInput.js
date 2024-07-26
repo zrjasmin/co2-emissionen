@@ -1,6 +1,5 @@
 import React from "react";
-import OutlinedInput from '@mui/material/OutlinedInput';
-
+import searchTable from "../../../assets/images/search-table.png";
 
 function DebouncedInput({
   value: initialValue,
@@ -24,11 +23,12 @@ function DebouncedInput({
 
   return (
     <>
-    <OutlinedInput
-      {...props}
-      value={value}
-      onChange={(e) => setValue(e.target.value)}
-    />
+      <input
+        {...props}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        className="filter__textInput"
+      />
     </>
   );
 }
