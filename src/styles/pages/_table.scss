@@ -7,7 +7,6 @@
     padding: 30px 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
- 
     row-gap: 15px;
 
 
@@ -58,23 +57,23 @@
 table { 
     table-layout: fixed;
     border-collapse: collapse;
+    
 
     width: 100%;
-    // border: 1px solid #b9b9b9;
 }
 
 
 .tHead {
     background-color: var(--darker-grey);
     height: 50px;
-    
-    
+    padding: 30px;
     font-size: 50px;
   
     
 
     &__column {
         background-color: var(--darker-grey);
+        padding-left: 20px;
 
        
     }
@@ -93,7 +92,7 @@ table {
     }
     td:nth-child(4) {
         
-        width: 150px;
+        width: 100px;
     }
     
    }
@@ -104,16 +103,22 @@ table {
 
 .tBody {
     width: fit-content;
+   
+
     
     &__row {
         border-bottom: 1px solid #b9b9b9;
+        
         
     }
     &__data{
         height: 20px;
         padding-block: 17px;
-
+        padding-left: 20px;
+        
+       
     }
+
 
 
     .collapsible > &__data:nth-child(1)::before {
@@ -129,11 +134,14 @@ table {
     }
 
     &__subrow {
-        background-color: pink;
+        background-color: var(--darker-grey);
+
         p {
-            
+            font-size: 1rem;  
+            margin-left: 2rem;
+            margin-bottom: 5px;
+            line-height: 1.4;
            
-           display: inline-block;
         }
     }
 
@@ -143,21 +151,62 @@ table {
 
 
 .pagination {
-
+    margin-top: 30px;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
 
 
     &__pageInfo {
 
     }
 
-    &__container {
-     
+    &__btnContainer {
+        float: right;
     }
 
     &__btn {
+        font-size: 25px;
+        padding-inline: 12px;
+        width: auto;
+        border: none;
+    }
+
+    &__btn:disabled {
+        opacity: 0.5;
+    }
+
+    
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .filter {
+        grid-template-columns: 1fr 1fr 1fr;
+        &__container {
+            &_text {
+                grid-column-end: span 3;
+            }       
+        }
+    
+        &__delete {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            width: 100%;
+            align-self: end;
+
+        }
+       
 
     }
 
+    .pagination  {
+        justify-content: center;
+        
+   
+
+    }
     
 }

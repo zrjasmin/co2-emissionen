@@ -185,13 +185,13 @@ const StackTable = () => {
                   {rowItem.getValue(2) === "Unternehmen" ? (
                     <>
                       {openRows.includes(rowItem.getValue(0) - 1) ? (
-                        <div
+                        <tr
                           key={rowItem.getValue(0)}
                           className="subRow tBody__subrow"
                         >
                           <p>{rowItem.getValue(4)}</p>
                           <p>{rowItem.getValue(5)}</p>
-                        </div>
+                        </tr>
                       ) : null}
                     </>
                   ) : null}
@@ -209,7 +209,7 @@ const StackTable = () => {
             {tableInstance.getPageCount().toLocaleString()}
           </p>
         </span>
-        <div className="pagination__container">
+        <div className="pagination__btnContainer">
           <button
             onClick={() => tableInstance.firstPage()}
             disabled={!tableInstance.getCanPreviousPage()}
