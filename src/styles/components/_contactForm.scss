@@ -1,0 +1,55 @@
+.contactForm {
+    margin-top: 70px;
+    
+    &__container {
+        color:pink;
+        
+
+        h1, p {
+            margin-bottom: 20px;
+        }
+        
+
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+    
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    .desktop { 
+        display: none;
+    }
+
+
+
+@media  screen and (min-width: 576px) {
+
+    display: flex;
+    background-color: var(--darker-grey);
+    padding: 30px;
+    border-radius: 20px;
+    align-items: center;
+
+
+    .mobile {
+        display: none;
+    }
+
+    &__container {
+    }
+    &__img {
+        width: 30%;
+        margin: 0;
+    }
+
+    
+    
+}
+}

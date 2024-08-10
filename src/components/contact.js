@@ -1,21 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import contactImg from "../assets/images/aboutUs-image.jpg"
 import { t } from "i18next";
 
+import serviceMobile from "../assets/images/service-mobile.jpg";
+import serviceDesktop from "../assets/images/service-desktop.jpg";
+
 const Contact = () => {
-    return (
-        <div className="contact-container">
-            <div className="contact-text">
-                <h1>{t("home.contact-heading")}</h1>
-                <p>{t("home.contact-text")}</p>
-                <button>
-                    <Link  to="/contact">{t("home.contact-btn")}</Link>
-                </button>
-            </div>
-            <img src={contactImg} alt="Bild von einer Frau vor ihren Computer" />
-        </div>
-    )
-}
+  return (
+    <div className="contactForm">
+      <img
+        src={serviceMobile}
+        className="contactForm__img mobile"
+        alt="Bild von einer Frau vor ihren Computer"
+      />
+      <div className="contactForm__container">
+        <h1>{t("home.contact-heading")}</h1>
+        <p>{t("home.contact-text")}</p>
+        <button>
+          <Link to="/contact">{t("home.contact-btn")}</Link>
+        </button>
+      </div>
+
+      <img
+        src={serviceDesktop}
+        className="contactForm__img desktop"
+        alt="Bild von einer Frau vor ihren Computer"
+      />
+    </div>
+  );
+};
 
 export default Contact;

@@ -39,7 +39,7 @@ p {
 
 @media screen and (min-width: 768px) {
     h1 {
-      font-size: 3.125rem;
+      font-size: 2rem;
     }
     
   }
@@ -48,17 +48,13 @@ p {
   /* landscape Tablet und größer */ 
   @media only screen and (min-width: 1200px) {
     h1 {
-      font-size:3.75rem;
+      font-size:3rem;
     }
   
     h2, h3 {
-      font-size: 2.2rem;
+      font-size: 2.125rem;
     }
   
-    h4 {
-      font-size: 1.563rem;
-    }
-    p {
-      font-size: 1.125rem;
-    }
+   
+   
   }

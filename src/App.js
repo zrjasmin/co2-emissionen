@@ -1,8 +1,9 @@
 import "./styles/styles.scss";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { I18nextProvider, useTranslation } from "react-i18next";
 
-import i18next from "i18next";
+import i18next, { changeLanguage, dir } from "i18next";
 import { initReactI18next } from "react-i18next";
 import translationDE from "./data/languages/german.json";
 import translationEN from "./data/languages/english.json";
@@ -37,6 +38,7 @@ i18next.use(initReactI18next).init({
 
 function App() {
   const { t } = useTranslation();
+  const [direction, setDirection] = React.useState("");
 
   return (
     <div className="App">

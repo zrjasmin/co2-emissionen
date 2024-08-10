@@ -7,6 +7,7 @@ import globeDesktop from "../assets/images/globe-desktop.png";
 import germanFlag from "../assets/images/german.png";
 import englandFlag from "../assets/images/united-kingdom.png";
 import arabicFlag from "../assets/images/united-arab-emirates.png";
+import i18next, { dir } from "i18next";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -16,6 +17,9 @@ const LanguageSwitcher = () => {
   //wechselt die Sprache
   const handleLanguageChange = (newLanguage) => {
     i18n.changeLanguage(newLanguage);
+
+    //wechselt Ausrichtung LTR oder RTL
+    document.body.dir = i18next.dir();
 
     // zeigt aktuelle Sprache an
     switch (newLanguage) {
@@ -27,6 +31,7 @@ const LanguageSwitcher = () => {
         break;
       case "ar":
         setLanguage("AR");
+
         break;
       default:
         setLanguage("Deutsch");
