@@ -38,7 +38,6 @@ i18next.use(initReactI18next).init({
 
 function App() {
   const { t } = useTranslation();
-  const [direction, setDirection] = React.useState("");
 
   return (
     <div className="App">

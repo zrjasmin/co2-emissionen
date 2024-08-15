@@ -21,13 +21,13 @@ const IndexEmissionen = () => {
         <aside className="sidebar">
           <h4 className="sidebar__heading">Auf dieser Seite</h4>
           <ul className="sidebar__list">
-            <Link to="section1">
+            <Link to="welcome" smooth>
               <li className="sidebar__item">{t("home.local-nav.0")}</li>
             </Link>
-            <Link to="section2">
+            <Link to="information" smooth>
               <li className="sidebar__item">{t("home.local-nav.1")}</li>
             </Link>
-            <Link to="section3">
+            <Link to="table" smooth>
               <li className="sidebar__item">{t("home.local-nav.2")}</li>
             </Link>
             <Link to="section2">
@@ -37,14 +37,14 @@ const IndexEmissionen = () => {
         </aside>
 
         <main id="main">
-          <div className="welcome">
+          <section className="welcome">
             <h2 className="welcome__heading">
               {t("emissionen.intro-heading")}
             </h2>
             <p className="welcome__heading">{t("emissionen.intro-text")}</p>
-          </div>
+          </section>
 
-          <div className="info">
+          <section className="information">
             <div className="info__flex">
               <img src={oceanImg} className="desktop" alt="picture of ocean" />
               <img
@@ -61,9 +61,11 @@ const IndexEmissionen = () => {
               <h4 className="info__heading">{t("emissionen.info2-heading")}</h4>
               <p className="info__text">{t("emissionen.info2-text")}</p>
             </div>
-          </div>
+          </section>
 
-          <StackTable />
+          <section className="table">
+            <StackTable />
+          </section>
         </main>
       </div>
     </>

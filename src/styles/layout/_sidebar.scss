@@ -20,6 +20,8 @@
         list-style-type: none;
         margin-bottom: 15px;
         color: var( --text-color-dark);
+        padding:  3px 5px ;
+        border-radius: 5px;
     }
 
 }
@@ -33,6 +35,8 @@
 
 @media screen and (min-width: 992px) {
     .sidebar {
+        top: 50px;
+        position: sticky;
         background-color: transparent;
         box-shadow: none;
 
@@ -41,8 +45,8 @@
             margin-bottom: 15px;
         }
     
-        &__item:active,
-        &__item:focus {
+        &__item:hover,
+        &__item:active {
             background-color: #282828;
             color: white;
         }
