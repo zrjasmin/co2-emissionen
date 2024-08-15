@@ -2,8 +2,8 @@
   "home": {
     "local-nav": [
       "01 Wilkommen",
-      "02 Unsere Werte",
-      "03 Emissionen",
+      "02 Unsere Motivation",
+      "03 Unsere Lösung",
       "04 Kontakt"
     ],
     "hero-heading": "Für eine grünere Zukunft: Gemeinsam gegen CO2-Emissionen kämpfen!",
@@ -21,6 +21,11 @@
     "contact-btn": "Kontakt"
   },
   "emissionen": {
+    "local-nav": [
+      "01 Intro",
+      "02 Wissenwertes",
+      "03 Tabelle"
+    ],
     "hero-Heading": "Klimawandel verstehen, gemeinsam handeln: Informieren Sie sich hier",
     "hero-btn": "Mehr erfahren",
     "intro-heading": "Willkommen auf unserer Informationsseite zum Klimawandel und CO²-Emissionen",
@@ -33,6 +38,12 @@
     "table-text": "In der folgenden Tabelle sind die jährlichen CO²-Emissionen der führenden Unternehmen und Länder aufgeführt, um einen Überblick über ihre Umweltauswirkungen zu geben."
   },
   "about-us": { 
+    "local-nav": [
+      "01 Wilkommen",
+      "02 Unsere Mission",
+      "03 Unsere Werte",
+      "04 Kontakt"
+    ],
     "hero-heading": "Unsere Mission: Transparenz schaffen, den Klimawandel bekämpfen",
     "welcome-heading": "Willkommen bei EcoTransparency ",
     "welcome-text": "Wir sind eine führende Non-Profit-Organisation, die sich leidenschaftlich für den Kampf gegen den Klimawandel einsetzt. Unser Ziel ist es, durch Transparenz und Datenvisualisierung das Bewusstsein für die Auswirkungen von CO²-Emissionen zu schärfen und Maßnahmen zur Reduzierung von Treibhausgasen zu fördern",

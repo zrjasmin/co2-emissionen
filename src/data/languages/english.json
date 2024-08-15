@@ -1,11 +1,12 @@
 {
     "home": {
-      "local-nav": [
-        "01 Welcome",
-        "02 Our Values",
-        "03 Emissions",
-        "04 Contact"
+      "local-nav": [ 
+        "01 Welcome", 
+        "02 Our Motivation", 
+        "03 Our Solution", 
+        "04 Contact" 
       ],
+
       "hero-heading": "For a greener future: Fighting CO2 emissions together!",
       "hero-btn": "Learn more",
       "quote": "Nature is our most precious asset, Let's protect it with heart and courage.",
@@ -21,6 +22,12 @@
       "contact-btn": "Contact"
     }, 
     "emissionen": {
+      "local-nav": [ 
+        "01 Intro", 
+        "02 Things to Know", 
+        "03 Table"
+      ],
+
         "Hero-Heading": "Understanding Climate Change, Acting Together: Get Informed Here",
         "hero-btn": "Learn more",
         "intro-heading": "Welcome to our information page on climate change and CO2 emissions",
@@ -34,6 +41,12 @@
     },
 
     "about-us": {
+      "local-nav": [ 
+        "01 Welcome", 
+        "02 Our Mission", 
+        "03 Our Values", 
+        "04 Contact" ],
+
         "hero-heading": "Unsere Mission: Transparenz schaffen, den Klimawandel bekämpfen",
         "welcome-heading": "Willkommen bei EcoTransparency ",
         "welcome-text": "Wir sind eine führende Non-Profit-Organisation, die sich leidenschaftlich für den Kampf gegen den Klimawandel einsetzt. Unser Ziel ist es, durch Transparenz und Datenvisualisierung das Bewusstsein für die Auswirkungen von CO²-Emissionen zu schärfen und Maßnahmen zur Reduzierung von Treibhausgasen zu fördern",

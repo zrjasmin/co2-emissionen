@@ -4,11 +4,12 @@ import HeroSectionEmissionen from "./hero";
 import WelcomeSection from "./welcome";
 
 import StackTable from "./tabelle/TanStackTable";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import { t } from "i18next";
 
 import oceanImg from "../../assets/images/emissionen-text-desktop.jpg";
 import oceanImgMobile from "../../assets/images/emissionen-text-mobile.jpg";
+import Footer from "../../components/footer";
 
 const IndexEmissionen = () => {
   return (
@@ -21,18 +22,15 @@ const IndexEmissionen = () => {
         <aside className="sidebar">
           <h4 className="sidebar__heading">Auf dieser Seite</h4>
           <ul className="sidebar__list">
-            <Link to="welcome" smooth>
-              <li className="sidebar__item">{t("home.local-nav.0")}</li>
-            </Link>
-            <Link to="information" smooth>
-              <li className="sidebar__item">{t("home.local-nav.1")}</li>
-            </Link>
-            <Link to="table" smooth>
-              <li className="sidebar__item">{t("home.local-nav.2")}</li>
-            </Link>
-            <Link to="section2">
-              <li className="sidebar__item">{t("home.local-nav.3")}</li>
-            </Link>
+            <ScrollLink to="welcome" smooth>
+              <li className="sidebar__item">{t("emissionen.local-nav.0")}</li>
+            </ScrollLink>
+            <ScrollLink to="information" smooth>
+              <li className="sidebar__item">{t("emissionen.local-nav.1")}</li>
+            </ScrollLink>
+            <ScrollLink to="table" smooth>
+              <li className="sidebar__item">{t("emissionen.local-nav.2")}</li>
+            </ScrollLink>
           </ul>
         </aside>
 
@@ -68,6 +66,8 @@ const IndexEmissionen = () => {
           </section>
         </main>
       </div>
+
+      <Footer />
     </>
   );
 };
