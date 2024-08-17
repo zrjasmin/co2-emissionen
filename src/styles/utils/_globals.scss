@@ -31,6 +31,12 @@ body {
     height: 40px;
     border-radius: 20px;
   }
+
+button:hover {
+    border: 1px var(--text-color-dark) solid;
+    font-weight: 500;
+    cursor: pointer;
+}
   
   
 .hidden {
@@ -41,12 +47,23 @@ body {
     display: block;
 }
 
-.desktop {
+.desktop, .tablet {
   display: none;
 }
 
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
+}
 
-@media screen and (min-width: 992px) {
+
+
+
+@media screen and (min-width: 768px) {
   .mobile {
     display: none;
   }

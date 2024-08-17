@@ -28,7 +28,7 @@ const Navbar = () => {
         onClick={toggleNavItems}
         src={hamburgermenu}
         alt="menu"
-        className="nav__hamburger mobile"
+        className="nav__hamburger mobile tablet"
       />
 
       <div className={showNav} id="menu">
@@ -36,7 +36,7 @@ const Navbar = () => {
           <img
             src={closeImg}
             onClick={toggleNavItems}
-            className="nav-closeImg mobile"
+            className="nav__closeImg mobile tablet"
             alt="close"
           />
           <Link to="/" onClick={toggleNavItems}>

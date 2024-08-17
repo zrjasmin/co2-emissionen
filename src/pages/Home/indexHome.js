@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Nav";
 import HeroSectionHome from "../Home/hero";
-import Quote from "./quote";
 import Contact from "../../components/contact";
 import Footer from "../../components/footer";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
@@ -11,6 +10,10 @@ import { t } from "i18next";
 
 import treeImgMobile from "../../assets/images/tree-img-mobile.jpg";
 import treeImgDesktop from "../../assets/images/tree-img-desktop.jpg";
+import treeImgTablet from "../../assets/images/tree-img-tablet.jpg";
+import tableMockupMobile from "../../assets/images/Table-Mockup-mobile.png";
+import tableMockup from "../../assets/images/Table-Mockup-mobile1.png";
+
 import leafImg from "../../assets/images//leaves-img.jpg";
 
 const IndexHome = () => {
@@ -24,16 +27,16 @@ const IndexHome = () => {
         <aside className="sidebar">
           <h4 className="sidebar__heading">Auf dieser Seite</h4>
           <ul className="sidebar__list">
-            <ScrollLink to="welcome">
+            <ScrollLink to="home-welcome" smooth>
               <li className="sidebar__item">{t("home.local-nav.0")}</li>
             </ScrollLink>
-            <ScrollLink to="mission-snippet">
+            <ScrollLink to="mission-snippet" smooth>
               <li className="sidebar__item">{t("home.local-nav.1")}</li>
             </ScrollLink>
-            <ScrollLink to="Solution">
+            <ScrollLink to="solution" smooth>
               <li className="sidebar__item">{t("home.local-nav.2")}</li>
             </ScrollLink>
-            <ScrollLink to="contact">
+            <ScrollLink to="contact" smooth>
               <li className="sidebar__item">{t("home.local-nav.3")}</li>
             </ScrollLink>
           </ul>
@@ -63,6 +66,12 @@ const IndexHome = () => {
               className="mobile"
               alt="picture of a tree"
             />
+
+            <img
+              src={treeImgTablet}
+              className="tablet"
+              alt="picture of a tree"
+            />
             <div className="mission-snippet__container">
               <h2>{t("home.motivation-heading")}</h2>
               <p>{t("home.motivation-text")}</p>
@@ -76,10 +85,18 @@ const IndexHome = () => {
             <div className="solution__text">
               <h2>{t("home.solution-heading")}</h2>
               <p>{t("home.solution-text")}</p>
-              <button>{t("home.solution-btn")}</button>
+              <a href="/emissionen">
+                <button>{t("home.solution-btn")}</button>
+              </a>
             </div>
-            <img src={leafImg} alt="picture of leaves" />
-            <img src="" alt="" />
+
+            <img src={tableMockup} className="mobile" alt="picture of leaves" />
+
+            <img
+              src={tableMockupMobile}
+              className="desktop tablet"
+              alt="picture of leaves"
+            />
           </section>
 
           <section className="contact">

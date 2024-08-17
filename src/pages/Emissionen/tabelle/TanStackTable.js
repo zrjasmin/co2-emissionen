@@ -38,13 +38,6 @@ const StackTable = () => {
     }
   }
 
-  const [currentColumn, setCurrentColumn] = React.useState([]);
-
-  function handleColumn(column) {
-    setCurrentColumn(column);
-    console.log("active column");
-  }
-
   const tableInstance = useReactTable({
     columns: columns,
     data: data,

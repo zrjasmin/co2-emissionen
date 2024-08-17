@@ -8,11 +8,6 @@ import serviceDesktop from "../assets/images/service-desktop.jpg";
 const Contact = () => {
   return (
     <div className="contactForm">
-      <img
-        src={serviceMobile}
-        className="contactForm__img mobile"
-        alt="Bild von einer Frau vor ihren Computer"
-      />
       <div className="contactForm__container">
         <h1>{t("home.contact-heading")}</h1>
         <p>{t("home.contact-text")}</p>
