@@ -10,6 +10,7 @@ import OurValues from "./value";
 
 import Contact from "../../components/contact";
 import Footer from "../../components/footer";
+import Sidebar from "../../components/sidebar";
 
 const IndexAboutUs = () => {
   return (
@@ -19,35 +20,19 @@ const IndexAboutUs = () => {
       </HeroSectionAboutUs>
 
       <div className="pageContent">
-        <aside className="sidebar">
-          <h4 className="sidebar__heading">Auf dieser Seite</h4>
-          <ul className="sidebar__list">
-            <ScrollLink to="Welcome-Section" smooth duration={500}>
-              <li className="sidebar__item">{t("about-us.local-nav.0")}</li>
-            </ScrollLink>
-            <ScrollLink to="OurMission" smooth duration={500}>
-              <li className="sidebar__item">{t("about-us.local-nav.1")}</li>
-            </ScrollLink>
-            <ScrollLink to="OurValues" smooth duration={500}>
-              <li className="sidebar__item">{t("about-us.local-nav.2")}</li>
-            </ScrollLink>
-            <ScrollLink to="Contact" smooth duration={500}>
-              <li className="sidebar__item">{t("about-us.local-nav.3")}</li>
-            </ScrollLink>
-          </ul>
-        </aside>
+        <Sidebar page="aboutUs" />
 
         <main id="main">
-          <section className="Welcome-Section">
+          <section className="Welcome-Section aboutUs-section0">
             <Welcome />
           </section>
-          <section className="OurMission">
+          <section className="OurMission aboutUs-section1">
             <OurMission />
           </section>
-          <section className="OurValues">
+          <section className="OurValues aboutUs-section2">
             <OurValues />
           </section>
-          <section className="Contact">
+          <section className="Contact aboutUs-section3">
             <Contact />
           </section>
         </main>

@@ -1,57 +1,53 @@
 import React from "react";
 import Navbar from "../../components/Nav";
-import HeroSectionEmissionen from "./hero";
-import WelcomeSection from "./welcome";
 
 import StackTable from "./tabelle/TanStackTable";
-import { Link as ScrollLink } from "react-scroll";
+import { Link as ScrollLink, Element } from "react-scroll";
 import { t } from "i18next";
+import { Link } from "react-router-dom";
 
 import oceanImg from "../../assets/images/emissionen-text-desktop.jpg";
 import oceanImgMobile from "../../assets/images/emissionen-text-mobile.jpg";
 import Footer from "../../components/footer";
+import Sidebar from "../../components/sidebar";
 
 const IndexEmissionen = () => {
   return (
     <>
-      <HeroSectionEmissionen page="emissionen">
+      <div className="hero" id="emissionen">
         <Navbar />
-      </HeroSectionEmissionen>
+        <div class="hero__overlay"></div>
+        <div className="hero__wrapper">
+          <h1 className="hero__heading">{t("emissionen.hero-heading")}</h1>
+
+          {/* ändern damit es innerhalb der Seite scrollt*/}
+          <Link to="/information">
+            <button className="hero__button">Erfahre mehr</button>
+          </Link>
+        </div>
+      </div>
 
       <div className="pageContent">
-        <aside className="sidebar">
-          <h4 className="sidebar__heading">Auf dieser Seite</h4>
-          <ul className="sidebar__list">
-            <ScrollLink to="welcome" smooth>
-              <li className="sidebar__item">{t("emissionen.local-nav.0")}</li>
-            </ScrollLink>
-            <ScrollLink to="information" smooth>
-              <li className="sidebar__item">{t("emissionen.local-nav.1")}</li>
-            </ScrollLink>
-            <ScrollLink to="table" smooth>
-              <li className="sidebar__item">{t("emissionen.local-nav.2")}</li>
-            </ScrollLink>
-          </ul>
-        </aside>
+        <Sidebar page="emissionen" />
 
         <main id="main">
-          <section className="welcome">
+          <section className="welcome emissionen-section0">
             <h2 className="welcome__heading">
               {t("emissionen.intro-heading")}
             </h2>
             <p className="welcome__heading">{t("emissionen.intro-text")}</p>
           </section>
 
-          <section className="information">
+          <section className="information info emissionen-section1">
             <div className="info__flex">
               <img src={oceanImg} className="desktop" alt="picture of ocean" />
               <img
                 src={oceanImgMobile}
-                className="mobile"
+                className="mobile tablet"
                 alt="picture of ocean"
               />
             </div>
-            <div className="info__aspects">
+            <div className="info__aspects emissionen-section2">
               <h4 className="info__heading">{t("emissionen.info1-heading")}</h4>
               <p className="info__text">{t("emissionen.info1-text")}</p>
             </div>
@@ -61,7 +57,7 @@ const IndexEmissionen = () => {
             </div>
           </section>
 
-          <section className="table">
+          <section className="table" id="emissionen-section3">
             <StackTable />
           </section>
         </main>

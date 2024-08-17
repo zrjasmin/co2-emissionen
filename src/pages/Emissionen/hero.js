@@ -13,10 +13,10 @@ const HeroSectionEmissionen = ({ children, page }) => {
       {children}
       <div class="hero__overlay"></div>
       <div className="hero__wrapper">
-        <h1 className="hero__heading">{t("emissionen.Hero-Heading")}</h1>
+        <h1 className="hero__heading">{t("emissionen.hero-heading")}</h1>
 
         {/* ändern damit es innerhalb der Seite scrollt*/}
-        <Link to="/contact">
+        <Link to="/information">
           <button className="hero__button">Erfahre mehr</button>
         </Link>
       </div>

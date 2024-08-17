@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import "../../styles/styles.scss";
 import Navbar from "../../components/Nav";
 import { t } from "i18next";
-import { type } from "@testing-library/user-event/dist/type";
-import Quote from "./quote";
 
 const HeroSectionHome = ({ children, page }) => {
   return (

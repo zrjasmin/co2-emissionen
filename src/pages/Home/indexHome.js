@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "../../components/Nav";
-import HeroSectionHome from "../Home/hero";
 import Contact from "../../components/contact";
 import Footer from "../../components/footer";
+import Sidebar from "../../components/sidebar";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { Link } from "react-router-dom";
 
@@ -14,48 +14,32 @@ import treeImgTablet from "../../assets/images/tree-img-tablet.jpg";
 import tableMockupMobile from "../../assets/images/Table-Mockup-mobile.png";
 import tableMockup from "../../assets/images/Table-Mockup-mobile1.png";
 
-import leafImg from "../../assets/images//leaves-img.jpg";
-
 const IndexHome = () => {
   return (
     <div className="home">
-      <HeroSectionHome page="home">
+      <div className="hero" id="home">
         <Navbar />
-      </HeroSectionHome>
+        <div class="hero__overlay"></div>
+        <div className="hero__wrapper">
+          <h1 className="hero__heading">{t("home.hero-heading")}</h1>
+
+          {/* ändern damit es innerhalb der Seite scrollt*/}
+          <Link to="/contact">
+            <button className="hero__button">{t("home.hero-btn")}</button>
+          </Link>
+        </div>
+      </div>
 
       <div className="pageContent">
-        <aside className="sidebar">
-          <h4 className="sidebar__heading">Auf dieser Seite</h4>
-          <ul className="sidebar__list">
-            <ScrollLink to="home-welcome" smooth>
-              <li className="sidebar__item">{t("home.local-nav.0")}</li>
-            </ScrollLink>
-            <ScrollLink to="mission-snippet" smooth>
-              <li className="sidebar__item">{t("home.local-nav.1")}</li>
-            </ScrollLink>
-            <ScrollLink to="solution" smooth>
-              <li className="sidebar__item">{t("home.local-nav.2")}</li>
-            </ScrollLink>
-            <ScrollLink to="contact" smooth>
-              <li className="sidebar__item">{t("home.local-nav.3")}</li>
-            </ScrollLink>
-          </ul>
-        </aside>
+        <Sidebar page="home" />
 
         <main id="main">
-          <section className="home-welcome">
+          <section className="home-welcome home-section0">
             <h1>{t("home.quote")}</h1>
             <p>{t("home.quote-subtext")}</p>
-
-            <div className="gallery">
-              {/* <img src={gallery1} alt="Wald" />
-             <img src={gallery2} alt="Wald" />
-             <img src={gallery3} alt="Wald" />
-            <img src={gallery4} alt="Wald" /> */}
-            </div>
           </section>
 
-          <section className="mission-snippet">
+          <section className="mission-snippet home-section1">
             <img
               src={treeImgDesktop}
               className="desktop"
@@ -81,7 +65,7 @@ const IndexHome = () => {
             </div>
           </section>
 
-          <section className="solution solution__grid">
+          <section className="solution solution__grid home-section2">
             <div className="solution__text">
               <h2>{t("home.solution-heading")}</h2>
               <p>{t("home.solution-text")}</p>
@@ -99,7 +83,7 @@ const IndexHome = () => {
             />
           </section>
 
-          <section className="contact">
+          <section className="contact home-section3">
             <Contact />
           </section>
         </main>
