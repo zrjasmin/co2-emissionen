@@ -1,8 +1,7 @@
 import React from "react";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { t } from "i18next";
 
-import HeroSectionAboutUs from "./hero";
+import HeroSection from "../../components/hero";
 import Navbar from "../../components/Nav";
 import Welcome from "./welcome";
 import OurMission from "./mission";
@@ -15,9 +14,9 @@ import Sidebar from "../../components/sidebar";
 const IndexAboutUs = () => {
   return (
     <>
-      <HeroSectionAboutUs page="aboutUs">
+      <HeroSection page="about-us">
         <Navbar />
-      </HeroSectionAboutUs>
+      </HeroSection>
 
       <div className="pageContent">
         <Sidebar page="aboutUs" />

@@ -1,8 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Nav";
-
+import HeroSection from "../../components/hero";
 import StackTable from "./tabelle/TanStackTable";
-import { Link as ScrollLink, Element } from "react-scroll";
 import { t } from "i18next";
 import { Link } from "react-router-dom";
 
@@ -14,18 +13,9 @@ import Sidebar from "../../components/sidebar";
 const IndexEmissionen = () => {
   return (
     <>
-      <div className="hero" id="emissionen">
+      <HeroSection page="emissionen">
         <Navbar />
-        <div class="hero__overlay"></div>
-        <div className="hero__wrapper">
-          <h1 className="hero__heading">{t("emissionen.hero-heading")}</h1>
-
-          {/* ändern damit es innerhalb der Seite scrollt*/}
-          <Link to="/information">
-            <button className="hero__button">Erfahre mehr</button>
-          </Link>
-        </div>
-      </div>
+      </HeroSection>
 
       <div className="pageContent">
         <Sidebar page="emissionen" />

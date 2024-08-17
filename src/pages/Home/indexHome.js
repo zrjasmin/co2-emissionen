@@ -3,6 +3,7 @@ import Navbar from "../../components/Nav";
 import Contact from "../../components/contact";
 import Footer from "../../components/footer";
 import Sidebar from "../../components/sidebar";
+import HeroSection from "../../components/hero";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { Link } from "react-router-dom";
 
@@ -17,18 +18,9 @@ import tableMockup from "../../assets/images/Table-Mockup-mobile1.png";
 const IndexHome = () => {
   return (
     <div className="home">
-      <div className="hero" id="home">
+      <HeroSection page="home">
         <Navbar />
-        <div class="hero__overlay"></div>
-        <div className="hero__wrapper">
-          <h1 className="hero__heading">{t("home.hero-heading")}</h1>
-
-          {/* ändern damit es innerhalb der Seite scrollt*/}
-          <Link to="/contact">
-            <button className="hero__button">{t("home.hero-btn")}</button>
-          </Link>
-        </div>
-      </div>
+      </HeroSection>
 
       <div className="pageContent">
         <Sidebar page="home" />
