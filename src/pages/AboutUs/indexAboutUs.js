@@ -19,7 +19,7 @@ const IndexAboutUs = () => {
       </HeroSection>
 
       <div className="pageContent">
-        <Sidebar page="aboutUs" />
+        <Sidebar page="about-us" />
 
         <main id="main">
           <section className="Welcome-Section aboutUs-section0">

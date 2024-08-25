@@ -47,9 +47,15 @@ button:hover {
     display: block;
 }
 
+
+//breakpoints
 .desktop, .tablet {
   display: none;
 }
+
+
+
+
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .mobile {
@@ -58,6 +64,8 @@ button:hover {
   .tablet {
     display: block;
   }
+
+  
 }
 
 

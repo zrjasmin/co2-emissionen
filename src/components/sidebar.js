@@ -40,7 +40,7 @@ const Sidebar = ({ page }) => {
               );
             })
           : null}
-        {page === "abouts"
+        {page === "about-us"
           ? aboutUsLinks.map((item) => {
               return (
                 <ScrollLink

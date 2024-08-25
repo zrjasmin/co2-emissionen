@@ -1,25 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { t } from "i18next";
 
 const Footer = () => {
   return (
     <div className="footer grid">
       <div className="footer__grid1">
         <h4>EcoTransparency</h4>
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
+        <a href="#">{t("footer.impressum")}</a>
+        <a href="#">{t("footer.data-security")}</a>
       </div>
       <div className="footer__grid2">
-        <a href="/">Home</a>
-        <a href="/emissionen">Emissionen</a>
-        <a href="/aboutUs">Über uns</a>
-        <a href="/contact">Kontakt</a>
+        <a href="/">{t("nav.home")}</a>
+        <a href="/emissionen">{t("nav.emissions")}</a>
+        <a href="/aboutUs">{t("nav.aboutUs")}</a>
+        <a href="/contact">{t("nav.contact")}</a>
       </div>
       <div className="footer__grid3">
-        <h4>Anschrift</h4>
-        <p>EcoTransparency GmbH</p>
-        <p>Musterstraße 21</p>
-        <p>10178 Berlin</p>
+        <h4>{t("footer.adress")}</h4>
+        <p>{t("footer.company")}</p>
+        <p>{t("footer.street")} 21</p>
+        <p>{t("footer.city")}</p>
+        <p>{t("footer.phone")}</p>
       </div>
     </div>
   );

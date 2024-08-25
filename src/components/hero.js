@@ -1,8 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { t } from "i18next";
+import { animateScroll, Link as ScrollLink } from "react-scroll";
 
 const HeroSection = ({ children, page }) => {
+  const scrollTo = () => {
+    animateScroll.scrollTo(500);
+  };
+
   return (
     <div className="hero" id={page}>
       {children}
@@ -12,9 +16,11 @@ const HeroSection = ({ children, page }) => {
         <h1 className="hero__heading">{t(page + ".hero-heading")}</h1>
 
         {/* ändern damit es innerhalb der Seite scrollt*/}
-        <Link to="/contact">
-          <button className="hero__button">Erfahre mehr</button>
-        </Link>
+        <ScrollLink>
+          <button className="hero__button" onClick={scrollTo}>
+            Erfahre mehr
+          </button>
+        </ScrollLink>
       </div>
     </div>
   );

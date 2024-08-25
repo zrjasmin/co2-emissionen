@@ -46,7 +46,7 @@
         background-color: white;
         right: 0;
         top: 0;
-        height: 41rem;
+        height: 44rem;
         width: 85%;
         padding-left: 3.75rem;
         z-index: 0;
@@ -54,7 +54,7 @@
 
     &__links {
         display: block;
-        margin-top: 2.188rem;
+        margin-top: 5rem;
     }
 
     &__links > a {
@@ -65,9 +65,15 @@
         display: block;
         margin-bottom: 2.5rem;
     }
-
+    .language-selection-desktop {
+        display: none;
+    }
   
 }
+
+
+
+
 
 /* tablet or bigger */
 @media screen and (min-width: 992px) {
@@ -92,7 +98,9 @@
         &__logo {
             display: flex;
         }
-
+        &__hamburger, &__closeImg {
+            display: none;
+        }
         &__links {
             position: relative;
             background-color: rgb(35, 35, 36, .6);
@@ -115,6 +123,12 @@
         &__links > a:focus {
             background-color: rgb(35, 35, 36, .6);
             font-weight: 500;
+        }
+        .language-selection-mobile {
+            display: none;
+        }
+        .language-selection-desktop {
+            display: block;
         }
     }
 }

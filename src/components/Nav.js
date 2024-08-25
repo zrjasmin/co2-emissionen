@@ -28,7 +28,7 @@ const Navbar = () => {
         onClick={toggleNavItems}
         src={hamburgermenu}
         alt="menu"
-        className="nav__hamburger mobile tablet"
+        className="nav__hamburger"
       />
 
       <div className={showNav} id="menu">
@@ -36,7 +36,7 @@ const Navbar = () => {
           <img
             src={closeImg}
             onClick={toggleNavItems}
-            className="nav__closeImg mobile tablet"
+            className="nav__closeImg "
             alt="close"
           />
           <Link to="/" onClick={toggleNavItems}>
@@ -53,12 +53,12 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="language-selection mobile">
+        <div className="language-selection-mobile">
           <LanguageSwitcher />
         </div>
       </div>
 
-      <div className="language-selection desktop">
+      <div className="language-selectiondesktop">
         <LanguageSwitcher />
       </div>
     </div>

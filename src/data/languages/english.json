@@ -61,5 +61,21 @@
         "values3-text": "Glaube an die Bedeutung von Partnerschaften und Zusammenarbeit, um gemeinsam einen positiven Einfluss auf den Klimawandel auszuüben.",
         "values4-heading": "Nachhaltigkeit",
         "values4-text": "Wir streben danach, langfristige Lösungen zu fördern, die den Schutz unseres Planeten und das Wohlergehen zukünftiger Generationen sicherstellen"
-      }
+      },
+    "nav": { 
+      "home": "home", 
+      "emissions": "emissions", 
+      "aboutUs": "about Us", 
+      "contact": "contact"
+    },
+    "footer": { 
+      "impressum": "Imprint", 
+      "data-security": "Data Protection", 
+      "adress": "Address", 
+      "company": "EcoTransparency Ltd.", 
+      "street": "Musterstraße 21", 
+      "city": "10178 Berlin",
+      "phone": "+49 1234 56789"
+
+  }
   }
