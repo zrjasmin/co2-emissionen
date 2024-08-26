@@ -16,11 +16,11 @@ const Footer = () => {
         <a href="/Kontakt">{t("nav.contact")}</a>
       </div>
       <div className="footer__grid3">
-        <h4>{t("footer.adress")}</h4>
-        <p>{t("footer.company")}</p>
-        <p>{t("footer.street")} 21</p>
-        <p>{t("footer.city")}</p>
-        <p>{t("footer.phone")}</p>
+        <h4>{t("footer.adress-heading")}</h4>
+        <p>{t("company-info.company")}</p>
+        <p>{t("company-info.street")} 21</p>
+        <p>{t("company-info.city")}</p>
+        <p>{t("company-info.phone")}</p>
       </div>
     </div>
   );
