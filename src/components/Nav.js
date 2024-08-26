@@ -42,13 +42,13 @@ const Navbar = () => {
           <Link to="/" onClick={toggleNavItems}>
             Home
           </Link>
-          <Link to="/emissionen" onClick={toggleNavItems}>
+          <Link to="/Emissionen" onClick={toggleNavItems}>
             Emissionen
           </Link>
-          <Link to="/aboutUs" onClick={toggleNavItems}>
+          <Link to="/AboutUs" onClick={toggleNavItems}>
             Über uns
           </Link>
-          <Link to="/contact" onClick={toggleNavItems}>
+          <Link to="/Kontakt" onClick={toggleNavItems}>
             Kontakt
           </Link>
         </div>

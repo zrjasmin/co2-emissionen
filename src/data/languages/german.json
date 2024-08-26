@@ -76,5 +76,41 @@
     "street": "Musterstraße 21",
     "city": "10178 Berlin",
     "phone": "+49 1234 56789"
+  },
+
+  "impressum": {
+    "hero-heading":"Impressum",
+    "company-heading": "Umweltorganisation EcoTransparency GmbH",
+    "straße":"Musterstraße 21",
+    "stadt": "10178 Berlin",
+    
+    "ceo-heading": "Vertreten durch:",
+    "ceo-1": "Max Mustermann (1. Vorsitzender)",
+    "ceo-2": "Erika Beispiel (2. Vorsitzende)",
+
+    "contact-heading": "Kontakt",
+    "phone": "Telefon: +29 1234 56789",
+    "e-mail": "E-Mail: info@EcoTransparency.com",
+    "register-heading": "Registereintrag",
+    "register-info": "Eingetragen im Vereinsregister des Amtsgerichts Musterstadt unter der Registernummer VR 1234.",
+    "ID-heading": "Umsatzsteuer-ID:",
+    "ID": "DE123456789",
+
+    "disclaimer-heading": "Haftungsausschluss",
+    "disclaimer": "Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.",
+    "copyright-heading": "Urheberrecht",
+    "copyright": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.",
+    "data-security-heading": "Datenschutz",
+    "data-security": "Informationen zum Datenschutz finden Sie in unserer Datenschutzerklärung auf unserer Website."
+
+
+  },
+  "data-security": {
+    "introduction-heading": "",
+    "introduction": "",
+    "responsibility-heading": "",
+    "responsibility-heading": ""
+  
+
   }
 }

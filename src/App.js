@@ -14,6 +14,8 @@ import IndexHome from "./pages/Home/indexHome";
 import IndexContact from "./pages/Contact/indexContact";
 import IndexEmissionen from "./pages/Emissionen/indexEmissionen";
 import IndexAboutUs from "./pages/AboutUs/indexAboutUs";
+import Impressum from "./pages/impressum";
+import DataSecurity from "./pages/data-security";
 
 const resources = {
   de: {
@@ -45,9 +47,11 @@ function App() {
         <div>
           <Routes>
             <Route exact path="/" element={<IndexHome />} />
-            <Route path="/emissionen" element={<IndexEmissionen />} />
-            <Route path="/contact" element={<IndexContact />} />
-            <Route path="/aboutUs" element={<IndexAboutUs />} />
+            <Route path="/Emissionen" element={<IndexEmissionen />} />
+            <Route path="/Kontakt" element={<IndexContact />} />
+            <Route path="/AboutUs" element={<IndexAboutUs />} />
+            <Route path="/Impressum" element={<Impressum />} />
+            <Route path="/Datenschutz" element={<DataSecurity />} />
           </Routes>
         </div>
       </I18nextProvider>

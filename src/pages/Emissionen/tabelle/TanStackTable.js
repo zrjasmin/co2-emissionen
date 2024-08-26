@@ -12,6 +12,8 @@ import {
 import { columnDef } from "./colums";
 import DATA from "../../../data/emissionen/Länder2.json";
 import FilterFunction from "./FilterFunction";
+import ArrowUp from "../../../assets/images/table-asc.png";
+import ArrowDown from "../../../assets/images/table-desc.png";
 
 const StackTable = () => {
   // Definition of columns and data
@@ -78,10 +80,7 @@ const StackTable = () => {
                 <>
                   {columnEl.column.getCanFilter() ? (
                     <>
-                      <FilterFunction
-                        column={columnEl.column}
-                        reset={handleReset}
-                      />
+                      <FilterFunction column={columnEl.column} />
                     </>
                   ) : null}
                 </>
@@ -120,9 +119,20 @@ const StackTable = () => {
                                     columnEl.getContext()
                                   )}
                                   {
-                                    { asc: " 🔼", desc: " 🔽" }[
-                                      columnEl.column.getIsSorted() ?? null
-                                    ]
+                                    {
+                                      asc: (
+                                        <img
+                                          src={ArrowDown}
+                                          className="sorting-arrow"
+                                        />
+                                      ),
+                                      desc: (
+                                        <img
+                                          src={ArrowUp}
+                                          className="sorting-arrow"
+                                        />
+                                      ),
+                                    }[columnEl.column.getIsSorted() ?? null]
                                   }
                                 </p>
                               </>

@@ -6,7 +6,7 @@ import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 import { FormControl, FormLabel, InputLabel, Select } from "@mui/material";
 
-function FilterFunction({ column, reset }) {
+function FilterFunction({ column }) {
   const filterVariant = column.columnDef.filterVariant;
 
   const columnFilterValue = column.getFilterValue();

@@ -77,5 +77,27 @@
       "city": "10178 Berlin",
       "phone": "+49 1234 56789"
 
-  }
+  },
+  "impressum": { 
+  "hero-heading": "Imprint", 
+  "company-heading": "Environmental Organization EcoTransparency Ltd.", 
+  "straße": "Sample Street 21", 
+  "stadt": "10178 Berlin", 
+  "ceo-heading": "Represented by:", 
+  "ceo-1": "Max Mustermann (Chairman)", 
+  "ceo-2": "Erika Beispiel (Vice Chair)", 
+  "contact-heading": "Contact", 
+  "phone": "Phone: +49 1234 56789", 
+  "e-mail": "Email: info@EcoTransparency.com", 
+  "register-heading": "Register Entry", 
+  "register-info": "Registered in the association register of the local court Musterstadt under registration number VR 1234.", 
+  "ID-heading": "VAT ID:", 
+  "ID": "DE123456789", 
+  "disclaimer-heading": "Disclaimer", 
+  "disclaimer": "The content of our pages has been created with the utmost care. However, we cannot guarantee the accuracy, completeness, and timeliness of the content.", 
+  "copyright-heading": "Copyright", 
+  "copyright": "The content and works created by the site operators on these pages are subject to German copyright law. The reproduction, editing, distribution, and any form of exploitation beyond the limits of copyright require the written consent of the respective author or creator.", 
+  "data-security-heading": "Data Protection", 
+  "data-security": "Information on data protection can be found in our privacy policy on our website." 
+}
   }
