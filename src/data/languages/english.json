@@ -4,7 +4,8 @@
       "company": "EcoTransparency Ltd.", 
       "street": "Musterstraße 21", 
       "city": "10178 Berlin",
-      "phone": "+49 1234 56789"
+      "phone": "+49 1234 56789",
+      "email": "info@EcoTransparency.com"
     },
     "home": {
       "local-nav": [ 
@@ -85,14 +86,10 @@
   "impressum": { 
   "hero-heading": "Imprint", 
   "company-heading": "Environmental Organization EcoTransparency Ltd.", 
-  "straße": "Sample Street 21", 
-  "stadt": "10178 Berlin", 
   "ceo-heading": "Represented by:", 
   "ceo-1": "Max Mustermann (Chairman)", 
   "ceo-2": "Erika Beispiel (Vice Chair)", 
   "contact-heading": "Contact", 
-  "phone": "Phone: +49 1234 56789", 
-  "e-mail": "Email: info@EcoTransparency.com", 
   "register-heading": "Register Entry", 
   "register-info": "Registered in the association register of the local court Musterstadt under registration number VR 1234.", 
   "ID-heading": "VAT ID:", 
@@ -103,5 +100,44 @@
   "copyright": "The content and works created by the site operators on these pages are subject to German copyright law. The reproduction, editing, distribution, and any form of exploitation beyond the limits of copyright require the written consent of the respective author or creator.", 
   "data-security-heading": "Data Protection", 
   "data-security": "Information on data protection can be found in our privacy policy on our website." 
+},
+"data-security": { 
+  "introduction-heading": "1. Introduction", 
+  "introduction": "We are pleased about your interest in our website. The protection of your personal data is very important to us. In this privacy policy, we inform you about which data we collect, how we use it, and what rights you have regarding your data.", 
+  "responsibility-heading": "2. Responsible Entity", 
+  "responsibility-info": "Responsible for data processing on this website is:", 
+  "persona-heading": "3. Collection and Processing of Personal Data", 
+  "persona-info": "We collect personal data when you visit our website or use our services. Personal data includes, for example:", 
+  "persona-list": [ 
+    "Name", 
+    "Email Address", 
+    "Phone Number", 
+    "IP Address" 
+  ], 
+  "persona-info2": "This data is only collected if you voluntarily provide it to us, e.g., by filling out contact forms or signing up for our newsletter.", 
+  "data-security-heading": "4. Purpose of Data Processing", 
+  "data-security-info": "We use your personal data for the following purposes:", 
+  "data-security-list": [ 
+    "To provide you with information about our activities and projects.", 
+    "To respond to your inquiries.", 
+    "To send you our newsletter (if you have signed up for it)." 
+  ], 
+  "data-publishment-heading": "5. Disclosure of Data", 
+  "data-publishment-info": "Your personal data will not be shared with third parties unless this is necessary to fulfill a contract or you have expressly consented.", 
+  "cookies-heading": "6. Cookies", 
+  "cookies-info": "Our website uses cookies to improve user experience. Cookies are small text files that are stored on your device. You can disable the use of cookies in your browser settings; however, this may result in some features of our website no longer being available.", 
+  "yourRights-heading": "7. Your Rights", 
+  "yourRights-info": "You have the right:", 
+  "yourRights-list": [ 
+    "To obtain information about the personal data we process.", 
+    "To request the correction of inaccurate or incomplete data.", 
+    "To request the deletion of your personal data unless there are legal retention obligations preventing this.", 
+    "To request the restriction of processing your personal data.", 
+    "To object to the processing of your personal data."  
+  ],  
+  "changes-heading": "8. Changes to This Privacy Policy",  
+  "changes-info": "We reserve the right to occasionally adjust this privacy policy to comply with current legal requirements or changes in our services.",
+   "kontakt-heading": "9. Contact",  
+   "kontakt-info": "If you have questions about data protection or wish to exercise your rights, please contact us at:"  
 }
   }

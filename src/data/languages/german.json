@@ -86,16 +86,12 @@
   "impressum": {
     "hero-heading":"Impressum",
     "company-heading": "Umweltorganisation EcoTransparency GmbH",
-    "straße":"Musterstraße 21",
-    "stadt": "10178 Berlin",
     
     "ceo-heading": "Vertreten durch:",
     "ceo-1": "Max Mustermann (1. Vorsitzender)",
     "ceo-2": "Erika Beispiel (2. Vorsitzende)",
 
     "contact-heading": "Kontakt",
-    "phone": "Telefon: +29 1234 56789",
-    "e-mail": "E-Mail: info@EcoTransparency.com",
     "register-heading": "Registereintrag",
     "register-info": "Eingetragen im Vereinsregister des Amtsgerichts Musterstadt unter der Registernummer VR 1234.",
     "ID-heading": "Umsatzsteuer-ID:",
@@ -111,11 +107,49 @@
 
   },
   "data-security": {
-    "introduction-heading": "",
-    "introduction": "",
-    "responsibility-heading": "",
-    "responsibility-heading": ""
-  
+    "introduction-heading": "1. Einleitung",
+    "introduction": "Wir freuen uns über Ihr Interesse an unserer Webseite. Der Schutz Ihrer personenbezogenen Daten ist uns sehr wichtig. In dieser Datenschutzerklärung informieren wir Sie darüber, welche Daten wir erheben, wie wir sie verwenden und welche Rechte Sie in Bezug auf Ihre Daten haben.",
+    
+    "responsibility-heading": "2. Verantwortliche Stelle",
+    "responsibility-info": "Verantwortlich für die Datenverarbeitung auf dieser Webseite ist:",
+
+    "persona-heading":"3. Erhebung und Verarbeitung personenbezogener Daten",
+    "persona-info":"Wir erheben personenbezogene Daten, wenn Sie unsere Webseite besuchen oder unsere Dienste in Anspruch nehmen. Zu den personenbezogenen Daten gehören beispielsweise:",
+    "persona-list": [
+      "Name",
+      "E-Mail-Adresse",
+      "Telefonnummer",
+      "IP-Adresse"
+    ],
+    "persona-info2":"Diese Daten werden nur erhoben, wenn Sie uns diese freiwillig zur Verfügung stellen, z.B. durch das Ausfüllen von Kontaktformularen oder bei der Anmeldung zu unserem Newsletter.",
+    
+    "data-security-heading":"4. Zweck der Datenverarbeitung",
+    "data-security-info":"Wir verwenden Ihre personenbezogenen Daten zu folgenden Zwecken",
+    "data-security-list": [
+      "Um Ihnen Informationen über unsere Aktivitäten und Projekte zukommen zu lassen",
+      "Um Ihre Anfragen zu beantworten.",
+      "Um Ihnen unseren Newsletter zuzusenden (sofern Sie sich dafür angemeldet haben)."
+    ],
+
+    "data-publishment-heading":"5. Weitergabe von Daten",
+    "data-publishment-info":"Eine Weitergabe Ihrer personenbezogenen Daten an Dritte erfolgt nicht, es sei denn, dies ist zur Erfüllung eines Vertrages erforderlich oder Sie haben ausdrücklich eingewilligt.",
+
+    "cookies-heading":"6. Cookies",
+    "cookies-info":"Unsere Webseite verwendet Cookies, um die Benutzererfahrung zu verbessern. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden. Sie können die Verwendung von Cookies in den Einstellungen Ihres Browsers deaktivieren; dies kann jedoch dazu führen, dass einige Funktionen unserer Webseite nicht mehr verfügbar sind.",
+
+    "yourRights-heading":"7. Ihre Rechte",
+    "yourRights-info":"Sie haben das Recht",
+    "yourRights-list": [
+      "Auskunft über die von uns verarbeiteten personenbezogenen Daten zu erhalten",
+      "Die Berichtigung unrichtiger oder unvollständiger Daten zu verlangen.",
+      "Die Löschung Ihrer personenbezogenen Daten zu verlangen, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen",
+      "Die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.",
+      "Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten einzulegen."
+    ],
+    "changes-heading":"8. Änderungen dieser Datenschutzerklärung",
+    "changes-info":"Wir behalten uns vor, diese Datenschutzerklärung gelegentlich anzupassen, um sie an aktuelle rechtliche Vorgaben oder Änderungen unserer Dienstleistungen anzupassen.",
+    "kontakt-heading":"9. Kontakt",
+    "kontakt-info":"Wenn Sie Fragen zum Datenschutz haben oder Ihre Rechte ausüben möchten, kontaktieren Sie uns bitte unter:"
 
   }
 }
