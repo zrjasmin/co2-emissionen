@@ -12,7 +12,7 @@ const Contact = () => {
         <h1>{t("home.contact-heading")}</h1>
         <p>{t("home.contact-text")}</p>
         <button>
-          <Link to="/contact">{t("home.contact-btn")}</Link>
+          <Link to="/Kontakt">{t("home.contact-btn")}</Link>
         </button>
       </div>
 

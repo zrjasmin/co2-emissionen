@@ -70,6 +70,12 @@
         "values4-heading": "Nachhaltigkeit",
         "values4-text": "Wir streben danach, langfristige Lösungen zu fördern, die den Schutz unseres Planeten und das Wohlergehen zukünftiger Generationen sicherstellen"
       },
+
+    "contact": { 
+      "hero-heading": "Contact Us", 
+      "info": "We look forward to hearing from you! If you have any questions, suggestions, or concerns, we are always here to help. Please use the following contact options to get in touch with us.", 
+      "ourData": "Our Contact Information:" 
+      },  
     "nav": { 
       "home": "home", 
       "emissions": "emissions", 

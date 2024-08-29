@@ -52,7 +52,7 @@ const IndexHome = () => {
               <h2>{t("home.motivation-heading")}</h2>
               <p>{t("home.motivation-text")}</p>
               <button>
-                <Link to="/contact">{t("home.motivation-btn")}</Link>
+                <Link to="/AboutUs">{t("home.motivation-btn")}</Link>
               </button>
             </div>
           </section>
@@ -61,7 +61,7 @@ const IndexHome = () => {
             <div className="solution__text">
               <h2>{t("home.solution-heading")}</h2>
               <p>{t("home.solution-text")}</p>
-              <a href="/emissionen">
+              <a href="/Emissionen">
                 <button>{t("home.solution-btn")}</button>
               </a>
             </div>

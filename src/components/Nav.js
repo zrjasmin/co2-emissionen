@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { Link } from "react-router-dom";
 
-import logo from "../assets/images/leaf.png";
+import logo from "../assets/images/ECO.png";
 import hamburgermenu from "../assets/images/menu.png";
 import closeImg from "../assets/images/close.png";
 
@@ -58,7 +58,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="language-selectiondesktop">
+      <div className="language-selection-desktop">
         <LanguageSwitcher />
       </div>
     </div>

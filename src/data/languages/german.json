@@ -7,6 +7,19 @@
     "email": "info@EcoTransparency.com"
   },
 
+  "nav": {
+    "home": "Home",
+    "emissions": "Emissionen",
+    "aboutUs": "Über uns",
+    "contact": "Kontakt"
+
+  },
+
+  "footer": {
+    "impressum": "Impressum",
+    "data-security": "Datenschutz",
+    "adress-heading": "Anschrift"
+  },
 
   "home": {
     "local-nav": [
@@ -29,6 +42,7 @@
     "contact-text": "Haben Sie Fragen, Anregungen oder möchten Sie mit uns zusammenarbeiten? Zögern Sie nicht, uns zu kontaktieren!",
     "contact-btn": "Kontakt"
   },
+
   "emissionen": {
     "local-nav": [
       "01 Intro",
@@ -46,6 +60,7 @@
     "table-heading": "Emissionen-Tabelle",
     "table-text": "In der folgenden Tabelle sind die jährlichen CO²-Emissionen der führenden Unternehmen und Länder aufgeführt, um einen Überblick über ihre Umweltauswirkungen zu geben."
   },
+
   "about-us": { 
     "local-nav": [
       "01 Wilkommen",
@@ -69,18 +84,11 @@
     "values4-text": "Wir streben danach, langfristige Lösungen zu fördern, die den Schutz unseres Planeten und das Wohlergehen zukünftiger Generationen sicherstellen"
   },
 
-  "nav": {
-    "home": "Home",
-    "emissions": "Emissionen",
-    "aboutUs": "Über uns",
-    "contact": "Kontakt"
+  "contact": {
+    "hero-heading":"Kontaktieren Sie uns",
+    "info":"Wir freuen uns, von Ihnen zu hören! Bei Fragen, Anregungen oder Anliegen stehen wir Ihnen jederzeit zur Verfügung. Nutzen Sie die folgenden Kontaktmöglichkeiten, um mit uns in Verbindung zu treten.",
+    "ourData":"Unsere Kontaktdaten:"
 
-  },
-
-  "footer": {
-    "impressum": "Impressum",
-    "data-security": "Datenschutz",
-    "adress-heading": "Anschrift"
   },
 
   "impressum": {
@@ -106,6 +114,7 @@
 
 
   },
+  
   "data-security": {
     "introduction-heading": "1. Einleitung",
     "introduction": "Wir freuen uns über Ihr Interesse an unserer Webseite. Der Schutz Ihrer personenbezogenen Daten ist uns sehr wichtig. In dieser Datenschutzerklärung informieren wir Sie darüber, welche Daten wir erheben, wie wir sie verwenden und welche Rechte Sie in Bezug auf Ihre Daten haben.",
