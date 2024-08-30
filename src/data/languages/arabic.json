@@ -1,4 +1,12 @@
 {
+    "explore-more":"اكتشف المزيد",
+    "on-this-page": "في هذه الصفحة",
+    "pagenames": {
+        "home": "الرئيسية",
+        "emissions": "الانبعاثات",
+        "aboutus": "معلومات عنا",
+        "contact": "اتصل بنا"
+    },
 
     "company-info": {
         "company": "EcoTransparency GmbH", 

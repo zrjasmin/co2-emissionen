@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/images/ECO.png";
 import hamburgermenu from "../assets/images/menu.png";
 import closeImg from "../assets/images/close.png";
+import { t } from "i18next";
 
 const Navbar = () => {
   let [showNav, setShowNav] = useState("hidden");
@@ -40,16 +41,16 @@ const Navbar = () => {
             alt="close"
           />
           <Link to="/" onClick={toggleNavItems}>
-            Home
+            {t("pagenames.home")}
           </Link>
           <Link to="/Emissionen" onClick={toggleNavItems}>
-            Emissionen
+            {t("pagenames.emissions")}
           </Link>
           <Link to="/AboutUs" onClick={toggleNavItems}>
-            Über uns
+            {t("pagenames.aboutus")}
           </Link>
           <Link to="/Kontakt" onClick={toggleNavItems}>
-            Kontakt
+            {t("pagenames.contact")}
           </Link>
         </div>
 

@@ -18,7 +18,7 @@ const HeroSection = ({ children, page }) => {
         {/* ändern damit es innerhalb der Seite scrollt*/}
         <ScrollLink>
           <button className="hero__button" onClick={scrollTo}>
-            Erfahre mehr
+            {t("explore-more")}
           </button>
         </ScrollLink>
       </div>

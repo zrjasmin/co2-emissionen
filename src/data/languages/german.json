@@ -1,4 +1,13 @@
 {
+  "explore-more":"Erfahre mehr",
+  "on-this-page": "Auf dieser Seite",
+  "pagenames": {
+    "home": "Home",
+    "emissions": "Emissionen",
+    "aboutus": "Über uns",
+    "contact": "Kontakt"
+  },
+
   "company-info" : {
     "company": "EcoTransparency GmbH",
     "adress": "Musterstraße 21",

@@ -10,7 +10,7 @@ const Sidebar = ({ page }) => {
 
   return (
     <div className="sidebar">
-      <h4 className="sidebar__heading">Auf dieser Seite</h4>
+      <h4 className="sidebar__heading">{t("on-this-page")}</h4>
       <ul className="sidebar__list">
         {page === "emissionen"
           ? emissionenLinks.map((item) => {

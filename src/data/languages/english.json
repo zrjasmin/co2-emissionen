@@ -1,4 +1,13 @@
 {
+  "explore-more":"Learn more",
+  "on-this-page": "On this page",
+  "pagenames": {
+      "home": "Home",
+      "emissions": "Emissions",
+      "aboutus": "About us",
+      "contact": "Contact"
+    },
+  
 
     "company-info": {
       "company": "EcoTransparency Ltd.", 
@@ -36,7 +45,7 @@
         "03 Table"
       ],
 
-        "Hero-Heading": "Understanding Climate Change, Acting Together: Get Informed Here",
+        "hero-heading": "Understanding Climate Change, Acting Together: Get Informed Here",
         "hero-btn": "Learn more",
         "intro-heading": "Welcome to our information page on climate change and CO2 emissions",
         "intro-text": "Climate change is one of the greatest challenges of our time and has far-reaching impacts on our planet. To provide a better understanding of this important issue, we would like to share some basic information with you about climate change and the associated CO2 emissions.",
@@ -55,20 +64,22 @@
         "03 Our Values", 
         "04 Contact" ],
 
-        "hero-heading": "Unsere Mission: Transparenz schaffen, den Klimawandel bekämpfen",
-        "welcome-heading": "Willkommen bei EcoTransparency ",
-        "welcome-text": "Wir sind eine führende Non-Profit-Organisation, die sich leidenschaftlich für den Kampf gegen den Klimawandel einsetzt. Unser Ziel ist es, durch Transparenz und Datenvisualisierung das Bewusstsein für die Auswirkungen von CO²-Emissionen zu schärfen und Maßnahmen zur Reduzierung von Treibhausgasen zu fördern",
-        "mission-heading": "Unsere Mission",
-        "mission-text": "Bei ClimateWatch glauben wir an die Kraft der Information. Indem wir Daten über CO²-Emissionen von Unternehmen und Ländern sammeln, analysieren und veröffentlichen, möchten wir eine informierte Diskussion über den Klimawandel anregen. Unsere Mission ist es, Entscheidungsträger zu ermutigen, verantwortungsbewusste Maßnahmen zu ergreifen und gemeinsam an nachhaltigen Lösungen zu arbeiten.",
-        "values-heading": "Unsere Werte",
-        "values1-heading": "Transparenz",
-        "values1-text": "Wir setzen uns für offene und transparente Kommunikation ein, um die Öffentlichkeit über die Umweltauswirkungen von CO²-Emissionen aufzuklären.",
-        "values2-heading": "Innovation",
-        "values2-text": "Nutzung innovativer Technologien und Datenvisualisierungen, um komplexe Umweltdaten zugänglich und verständlich zu machen und neue Wege im Kampf gegen den Klimawandel zu finden.",
-        "values3-heading": "Zusammenarbeit",
-        "values3-text": "Glaube an die Bedeutung von Partnerschaften und Zusammenarbeit, um gemeinsam einen positiven Einfluss auf den Klimawandel auszuüben.",
-        "values4-heading": "Nachhaltigkeit",
-        "values4-text": "Wir streben danach, langfristige Lösungen zu fördern, die den Schutz unseres Planeten und das Wohlergehen zukünftiger Generationen sicherstellen"
+        
+          "hero-heading": "Our Mission: Creating Transparency, Combating Climate Change",
+          "welcome-heading": "Welcome to EcoTransparency",
+          "welcome-text": "We are a leading non-profit organization passionately committed to fighting climate change. Our goal is to raise awareness of the impacts of CO² emissions through transparency and data visualization and to promote actions to reduce greenhouse gases.",
+          "mission-heading": "Our Mission",
+          "mission-text": "At ClimateWatch, we believe in the power of information. By collecting, analyzing, and publishing data on CO² emissions from companies and countries, we aim to stimulate an informed discussion about climate change. Our mission is to encourage decision-makers to take responsible action and work together towards sustainable solutions.",
+          "values-heading": "Our Values",
+          "values1-heading": "Transparency",
+          "values1-text": "We are committed to open and transparent communication to educate the public about the environmental impacts of CO² emissions.",
+          "values2-heading": "Innovation",
+          "values2-text": "Utilizing innovative technologies and data visualizations to make complex environmental data accessible and understandable, and finding new ways to combat climate change.",
+          "values3-heading": "Collaboration",
+          "values3-text": "Believing in the importance of partnerships and collaboration to collectively make a positive impact on climate change.",
+          "values4-heading": "Sustainability",
+          "values4-text": "We strive to promote long-term solutions that ensure the protection of our planet and the well-being of future generations."
+        
       },
 
     "contact": { 
