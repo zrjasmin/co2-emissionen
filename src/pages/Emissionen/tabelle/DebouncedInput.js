@@ -1,5 +1,4 @@
 import React from "react";
-import searchTable from "../../../assets/images/search-table.png";
 
 function DebouncedInput({
   value: initialValue,
