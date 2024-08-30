@@ -4,17 +4,16 @@ import Navbar from "../components/Nav";
 import Footer from "../components/footer";
 import { t } from "i18next";
 import teamImg from "../assets/images/teamImg.jpg";
-import teamImgMobile from "../assets/images/teamImg-mobile.jpg";
 
 function Contact() {
   return (
-    <>
+    <div className="contactPage">
       <HeroSection page="contact">
         <Navbar />
       </HeroSection>
 
-      <div className="wrapper">
-        <div className="grid">
+      <div className="contactPage__grid wrapper">
+        <div className="contactInfo">
           <p>{t("contact.info")}</p>
           <h4>{t("contact.ourData")}</h4>
           <ul>
@@ -30,14 +29,9 @@ function Contact() {
           className="desktop"
           alt="mehere Händer die auf einen Baumstamm liegen"
         />
-        <img
-          src={teamImgMobile}
-          className="tablet mobile"
-          alt="mehere Händer die auf einen Baumstamm liegen"
-        />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

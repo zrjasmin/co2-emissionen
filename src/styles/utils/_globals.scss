@@ -20,12 +20,13 @@ body {
   }
 
   .wrapper {
-    padding: 2.188rem 0rem 2.188rem 1.875rem;
+    padding: 2.188rem 1.875rem 2.188rem 1.875rem;
+    margin: auto;
 
     @media screen and (min-width: 992px) {
       width: 90%;
       max-width: 1300px;
-      margin: auto;
+      
     }
   }
   
