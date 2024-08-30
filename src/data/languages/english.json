@@ -56,6 +56,28 @@
         "table-heading": "Emissions Table",
         "table-text": "The following table lists the annual CO2 emissions of leading companies and countries to provide an overview of their environmental impacts."
     },
+    
+      "table": {
+          "text-label": "Search for Company/Country",
+          "typ-label": "Type",
+          "typ-options": {
+              "all": "All",
+              "company": "Company",
+              "country": "Country"
+          },
+          "continent-label": "Continent",
+          "continent-options": {
+              "all": "All",
+              "asia": "Asia",
+              "europe": "Europe",
+              "america": "America",
+              "africa": "Africa",
+              "australia": "Australia",
+              "antarctica": "Antarctica"
+          },
+          "delete": "Delete"
+      },
+  
 
     "about-us": {
       "local-nav": [ 

@@ -1,5 +1,3 @@
-import { defaultColumn } from "react-table";
-
 export const columnDef = [
   {
     id: "0",
@@ -45,3 +43,9 @@ export const columnDef = [
     enableColumnFilter: false,
   },
 ];
+
+{
+  /* rowItem.getValue(2) === "Company" ||
+                  rowItem.getValue(2) === "Unternehmen" ||
+                  rowItem.getValue(2) === "شركة" */
+}

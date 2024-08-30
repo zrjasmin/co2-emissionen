@@ -3,6 +3,7 @@ import Navbar from "../components/Nav";
 import HeroSection from "../components/hero";
 import StackTable from "./tabelle/TanStackTable";
 import { t } from "i18next";
+import i18next from "i18next";
 
 import oceanImg from "../assets/images/emissionen-text-desktop.jpg";
 import oceanImgMobile from "../assets/images/emissionen-text-mobile.jpg";

@@ -54,6 +54,28 @@
         "table-heading": "جدول انبعاثات",
         "table-text": "في الجدول التالي يُذكر انبعاثات ثاني أكسيد الكربون السنوية لأبرز الشركات والدول، لإعطاء نظرة عامة على تأثيراتهم على البيئة."
     },
+    
+        "table": {
+            "text-label": "البحث عن شركة/دولة",
+            "typ-label": "النوع",
+            "typ-options": {
+                "all": "الكل",
+                "company": "شركة",
+                "country": "دولة"
+            },
+            "continent-label": "القارة",
+            "continent-options": {
+                "all": "الكل",
+                "asia": "آسيا",
+                "europe": "أوروبا",
+                "america": "أمريكا",
+                "africa": "أفريقيا",
+                "australia": "أستراليا",
+                "antarctica": "القطب الجنوبي"
+            },
+            "delete": "حذف"
+        },
+    
     "about-us": {
         "local-nav": [ 
             "01 مرحبا", 

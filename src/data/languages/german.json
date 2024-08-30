@@ -69,6 +69,26 @@
     "table-heading": "Emissionen-Tabelle",
     "table-text": "In der folgenden Tabelle sind die jährlichen CO²-Emissionen der führenden Unternehmen und Länder aufgeführt, um einen Überblick über ihre Umweltauswirkungen zu geben."
   },
+  "table": {
+    "text-label": "Suche nach Unternehmen/Land",
+    "typ-label": "Typ",
+    "typ-options": {
+      "all": "Alle",
+      "company": "Unternehmen",
+      "country": "Land"
+    },
+    "continent-label": "Kontinent",
+    "continent-options":{
+      "all": "Alle",
+      "asia":"Asien",
+      "europe":"Europa",
+      "america":"Amerika",
+      "africa":"Afrika",
+      "australia":"Australien",
+      "antarctica":"Antarktis"
+    },
+    "delete": "Löschen"
+  },
 
   "about-us": { 
     "local-nav": [

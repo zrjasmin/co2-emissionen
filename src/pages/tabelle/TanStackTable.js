@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   flexRender,
   useReactTable,
@@ -10,15 +10,28 @@ import {
   getPaginationRowModel,
 } from "@tanstack/react-table";
 import { columnDef } from "./colums";
-import DATA from "../../data/emissionen/Länder2.json";
+import DATAgerman from "../../data/emissionen/data-german.json";
+import DATAEnglisch from "../../data/emissionen/data-english.json";
+import DATAarabic from "../../data/emissionen/data-arabic.json";
 import FilterFunction from "./FilterFunction";
 import ArrowUp from "../../assets/images/table-asc.png";
 import ArrowDown from "../../assets/images/table-desc.png";
+import i18next, { t, use } from "i18next";
 
 const StackTable = () => {
   // Definition of columns and data
   const columns = React.useMemo(() => columnDef);
-  const data = React.useMemo(() => DATA, []);
+  const [data, setData] = React.useState(() => DATAgerman, []);
+
+  useEffect(() => {
+    if (document.documentElement.lang === "de") {
+      setData(DATAgerman);
+    } else if (document.documentElement.lang === "en") {
+      setData(DATAEnglisch);
+    } else if (document.documentElement.lang === "ar") {
+      setData(DATAarabic);
+    }
+  }, [document.documentElement.lang]);
 
   // filtering und sorting
   const [columnFilter, setColumFilter] = React.useState();
@@ -28,7 +41,6 @@ const StackTable = () => {
   const [openRows, setOpenRows] = React.useState([]);
 
   function handelToggle({ row, index }) {
-    console.log(openRows);
     // adding active row to array
     if (openRows != index) {
       setOpenRows([...openRows, index]);
@@ -87,7 +99,7 @@ const StackTable = () => {
               );
             })}
             <button onClick={handleReset} className="filter__delete">
-              Löschen
+              {t("table.delete")}
             </button>
           </div>
         );
@@ -150,7 +162,9 @@ const StackTable = () => {
             {tableInstance.getRowModel().rows.map((rowItem, index) => {
               return (
                 <>
-                  {rowItem.getValue(2) === "Unternehmen" ? (
+                  {rowItem.getValue(2) === "Company" ||
+                  rowItem.getValue(2) === "Unternehmen" ||
+                  rowItem.getValue(2) === "شركة" ? (
                     <tr
                       key={index}
                       className="collapsible tBody__row"
@@ -185,7 +199,9 @@ const StackTable = () => {
                   )}
 
                   {/* company details */}
-                  {rowItem.getValue(2) === "Unternehmen" ? (
+                  {rowItem.getValue(2) === "Company" ||
+                  rowItem.getValue(2) === "Unternehmen" ||
+                  rowItem.getValue(2) === "شركة" ? (
                     <>
                       {openRows.includes(rowItem.getValue(0) - 1) ? (
                         <tr

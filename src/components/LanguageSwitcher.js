@@ -20,6 +20,7 @@ const LanguageSwitcher = () => {
 
     //wechselt Ausrichtung LTR oder RTL
     document.body.dir = i18next.dir();
+    document.documentElement.lang = newLanguage;
 
     // zeigt aktuelle Sprache an
     switch (newLanguage) {
@@ -56,8 +57,6 @@ const LanguageSwitcher = () => {
           src={globeDesktop}
           alt="Welt icon"
         />
-
-        <p className="activeLanguage__text">{language}</p>
       </div>
 
       {/* zeigt alle Sprachoptionen */}

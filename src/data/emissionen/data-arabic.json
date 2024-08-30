@@ -1,0 +1,392 @@
+[
+   {
+      "id":1,
+      "name":"فرنسا",
+      "kontinent":"أوروبا",
+      "typ":"دولة",
+      "emissionen":400000000
+   },
+   {
+      "id":2,
+      "name":"ألمانيا",
+      "kontinent":"أوروبا",
+      "typ":"دولة",
+      "emissionen":450000000
+   },
+   {
+      "id":3,
+      "name":"إيطاليا",
+      "kontinent":"أوروبا",
+      "typ":"دولة",
+      "emissionen":35000000
+   },
+   {
+      "id":4,
+      "name":"إسبانيا",
+      "kontinent":"أوروبا",
+      "typ":"دولة",
+      "emissionen":3000
+   },
+   {
+      "id":5,
+      "name":"السويد",
+      "kontinent":"أوروبا",
+      "typ":"دولة",
+      "emissionen":2000
+   },
+   {
+      "id":6,
+      "name":"النرويج",
+      "kontinent":"أوروبا",
+      "typ":"دولة",
+      "emissionen":1500
+   },
+   {
+      "id":7,
+      "name":"اليونان",
+      "kontinent":"أوروبا",
+      "typ":"دولة",
+      "emissionen":1800
+   },
+   {
+      "id":8,
+      "name":"البرتغال",
+      "kontinent":"أوروبا",
+      "typ":"دولة",
+      "emissionen":1200
+   },
+   {
+      "id":9,
+      "name":"هولندا",
+      "kontinent":"أوروبا",
+      "typ":"دولة",
+      "emissionen":1600
+   },
+   {
+      "id":10,
+      "name":"بلجيكا",
+      "kontinent":"أوروبا",
+      "typ":"دولة",
+      "emissionen":1400
+   },
+   {
+      "id":11,
+      "name":"الولايات المتحدة الأمريكية",
+      "kontinent":"أمريكا الشمالية",
+      "typ":"دولة",
+      "emissionen":5500
+   },
+   {
+      "id":12,
+      "name":"كندا",
+      "kontinent":"أمريكا الشمالية",
+      "typ":"دولة",
+      "emissionen":3000
+   },
+   {
+      "id":13,
+      "name":"المكسيك",
+      "kontinent":"أمريكا الشمالية",
+      "typ":"دولة",
+      "emissionen":2500
+   },
+   {
+      "id":14,
+      "name":"كوبا",
+      "kontinent":"أمريكا الشمالية",
+      "typ":"دولة",
+      "emissionen":80000
+   },
+   {
+      "id":15,
+      "name":"جامايكا",
+      "kontinent":"أمريكا الشمالية",
+      "typ":"دولة",
+      "emissionen":60000
+   },
+   {
+      "id":16,
+      "name":"البرازيل",
+      "kontinent":"أمريكا الجنوبية",
+      "typ":"دولة",
+      "emissionen":4800
+   },
+   {
+      "id":17,
+      "name":"الأرجنتين",
+      "kontinent":"أمريكا الجنوبية",
+      "typ":"دولة",
+      "emissionen":2200
+   },
+   {
+      "id":18,
+      "name":"كولومبيا",
+      "kontinent":"أمريكا الجنوبية",
+      "typ":"دولة",
+      "emissionen":1500
+   },
+   {
+      "id":19,
+      "name":"بيرو",
+      "kontinent":"أمريكا الجنوبية",
+      "typ":"دولة",
+      "emissionen":1000
+   },
+   {
+      "id":20,
+      "name":"تشيلي",
+      "kontinent":"أمريكا الجنوبية",
+      "typ":"دولة",
+      "emissionen":1300
+   },
+   {
+      "id":21,
+      "name":"الصين",
+      "kontinent":"آسيا",
+      "typ":"دولة",
+      "emissionen":900000000
+   },
+   {
+      "id":22,
+      "name":"الهند",
+      "kontinent":"آسيا",
+      "typ":"دولة",
+      "emissionen":700000000
+   },
+   {
+      "id":23,
+      "name":"اليابان",
+      "kontinent":"آسيا",
+      "typ":"دولة",
+      "emissionen":400000000
+   },
+   {
+      "id":24,
+      "name":"كوريا الجنوبية",
+      "kontinent":"آسيا",
+      "typ":"دولة",
+      "emissionen":300000000
+   },
+   {
+      "id":25,
+      "name":"المملكة العربية السعودية",
+      "kontinent":"آسيا",
+      "typ":"دولة",
+      "emissionen":35000000
+   },
+   {
+      "id":26,
+      "name":"جنوب أفريقيا",
+      "kontinent":"أفريقيا",
+      "typ":"دولة",
+      "emissionen":20000000
+   },
+   {
+      "id":27,
+      "name":"مصر",
+      "kontinent":"أفريقيا",
+      "typ":"دولة",
+      "emissionen":1800000
+   },
+   {
+      "id":28,
+      "name":"نيجيريا",
+      "kontinent":"أفريقيا",
+      "typ":"دولة",
+      "emissionen":2500
+   },
+   {
+      "id":29,
+      "name":"تنزانيا",
+      "kontinent":"أفريقيا",
+      "typ":"دولة",
+      "emissions":1200
+   },
+   {
+      "id":30,
+      "name":"موزمبيق",
+      "kontinent":"أفريقيا",
+      "typ":"دولة",
+      "emissions":8000
+   },
+   {
+      "id":31,
+      "name":"EcoTech Innovations",
+      "kontinent":"أوروبا",
+      "typ":"شركة",
+      "branche":"تكنولوجيا البيئة",
+      "land":"ألمانيا",
+      "emissionen":8000
+   },
+   {
+      "id":32,
+      "name":"Zenith Global Solutions",
+      "kontinent":"أمريكا الشمالية",
+      "typ":"شركة",
+      "branche":"خدمات تكنولوجيا المعلومات",
+      "land":"الولايات المتحدة الأمريكية",
+      "emissionen":6000
+   },
+   {
+      "id":33,
+      "name":"AquaLux Marine Adventures",
+      "kontinent":"آسيا",
+      "typ":"شركة",
+      "branche":"السياحة والترفيه",
+      "land":"تايلاند",
+      "emissionen":7000
+   },
+   {
+      "id":34,
+      "name":"Solaris Energy Solutions",
+      "kontinent":"أستراليا",
+      "typ":"شركة",
+      "branche":"الطاقة المتجددة",
+      "land":"أستراليا",
+      "emissionen":5000
+   },
+   {
+      "id":35,
+      "name":"BioHarvest Health Foods",
+      "kontinent":"أفريقيا",
+      "typ":"شركة",
+      "branche":"الرعاية الصحية",
+      "land":"جنوب أفريقيا",
+      "emissionen":4000
+   },
+   {
+      "id":36,
+      "name":"InnovaTech Robotics",
+      "kontinent":"أوروبا",
+      "typ":"شركة",
+      "branche":"الروبوتات والأتمتة",
+      "country":"السويد",
+      "emissionen":3000
+   },
+   {
+      "id":37,
+      "name":"Oceanic Ventures",
+      "kontinent":"أمريكا الشمالية",
+      "typ":"شركة ",
+      "branche":"البحث البحري",
+      "country":"كندا ",
+      "emissionen":2500
+   },
+   {
+      "id":38,
+      "name":"Skyline Creations",
+      "kontinent":"آسيا ",
+      "typ":"شركة ",
+      "branch":"العمارة والتصميم ",
+      "country":"اليابان",
+      "emissionen":3500
+   },
+   {
+      "id":39,
+      "name":"Safari Spirit Safaris",
+      "kontinent":"أستراليا ",
+      "typ":"شركة",
+      "branche":"السياحة والمغامرة",
+      "country":"نيوزيلندا",
+      "emissionen":2000
+   },
+   {
+      "id":40,
+      "name":"Health Harmony Pharmaceuticals",
+      "kontinent":"أفريقيا",
+      "typ":"شركة",
+      "branch":"الأدوية والصحة",
+      "country":"نيجيريا ",
+      "emissionen":1800
+   },
+   {
+      "id":41,
+      "name":"GreenTech Solutions",
+      "kontinent":"أوروبا",
+      "typ":"شركة",
+      "branche":"تكنولوجيا البيئة",
+      "land":"إسبانيا",
+      "emissionen":75000
+   },
+   {
+      "id":42,
+      "name":"InnovateIT Consulting",
+      "kontinent":"أمريكا الشمالية",
+      "typ":"شركة",
+      "branche":"استشارات تكنولوجيا المعلومات",
+      "land":"كندا",
+      "emissionen":60000
+   },
+   {
+      "id":43,
+      "name":"ZenGarden Wellness Retreats",
+      "kontinent":"آسيا",
+      "typ":"شركة",
+      "branche":"العافية والصحة",
+      "land":"إندونيسيا",
+      "emissionen":70000
+   },
+   {
+      "id":44,
+      "name":"AquaVista EcoTours",
+      "kontinent":"أستراليا",
+      "typ":"شركة",
+      "branche":"السياحة المستدامة",
+      "land":"نيوزيلندا",
+      "emissionen":50000
+   },
+   {
+      "id":45,
+      "name":"BioTech Solutions",
+      "kontinent":"أفريقيا",
+      "typ":"شركة",
+      "branche":"التكنولوجيا الحيوية",
+      "land":"كينيا",
+      "emissionen":4000
+   },
+   {
+      "id":46,
+      "name":"FutureTech Innovations",
+      "kontinent":"أوروبا",
+      "typ":"شركة",
+      "branche":"التكنولوجيا والابتكار",
+      "land":"المملكة المتحدة",
+      "emissionen":3000
+   },
+   {
+      "id":47,
+      "name":"Harmony Health Foods",
+      "kontinent":"أمريكا الشمالية",
+      "typ":"شركة",
+      "branche":"الأكل الصحي",
+      "land":"الولايات المتحدة الأمريكية",
+      "emissions":2500
+   },
+   {
+      "id":48,
+      "name":"Skyline Architects",
+      "kontinent":"آسيا",
+      "typ":"شركة",
+      "branche":"العمارة والبناء",
+      "land":"الصين",
+      "emissions":3500
+   },
+   {
+      "id":49,
+      "name":"Wilderness Adventures",
+      "kontinent":"أستراليا",
+      "typ":"شركة",
+      "branche":"سياحة المغامرات",
+      "land":"أستراليا",
+      "emissions":2000
+   },
+   {
+      "id":50,
+      "name":"MediCare Pharmaceuticals",
+      "kontinent":"أفريقيا",
+      "typ":"شركة",
+      "branche":"الأدوية والمنتجات الطبية",
+      "land":"مصر",
+      "emissions":1800
+   }
+]

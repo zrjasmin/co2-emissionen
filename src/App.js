@@ -1,10 +1,10 @@
 import "./styles/styles.scss";
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { I18nextProvider, useTranslation } from "react-i18next";
-import i18next from "i18next";
-import { initReactI18next } from "react-i18next";
 
+import i18next, { changeLanguage, dir } from "i18next";
+import { initReactI18next } from "react-i18next";
 import translationDE from "./data/languages/german.json";
 import translationEN from "./data/languages/english.json";
 import translationAR from "./data/languages/arabic.json";
