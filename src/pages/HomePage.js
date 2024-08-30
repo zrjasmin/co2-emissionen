@@ -1,21 +1,20 @@
 import React from "react";
-import Navbar from "../../components/Nav";
-import Contact from "../../components/contact";
-import Footer from "../../components/footer";
-import Sidebar from "../../components/sidebar";
-import HeroSection from "../../components/hero";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import Navbar from "../components/Nav";
+import Contact from "../components/contact";
+import Footer from "../components/footer";
+import Sidebar from "../components/sidebar";
+import HeroSection from "../components/hero";
 import { Link } from "react-router-dom";
 
 import { t } from "i18next";
 
-import treeImgMobile from "../../assets/images/tree-img-mobile.jpg";
-import treeImgDesktop from "../../assets/images/tree-img-desktop.jpg";
-import treeImgTablet from "../../assets/images/tree-img-tablet.jpg";
-import tableMockupMobile from "../../assets/images/Table-Mockup-mobile.png";
-import tableMockup from "../../assets/images/Table-Mockup-mobile1.png";
+import treeImgMobile from "../assets/images/tree-img-mobile.jpg";
+import treeImgDesktop from "../assets/images/tree-img-desktop.jpg";
+import treeImgTablet from "../assets/images/tree-img-tablet.jpg";
+import tableMockupMobile from "../assets/images/Table-Mockup-mobile.png";
+import tableMockup from "../assets/images/Table-Mockup-mobile1.png";
 
-const IndexHome = () => {
+const HomePage = () => {
   return (
     <div className="home">
       <HeroSection page="home">
@@ -85,4 +84,4 @@ const IndexHome = () => {
   );
 };
 
-export default IndexHome;
+export default HomePage;

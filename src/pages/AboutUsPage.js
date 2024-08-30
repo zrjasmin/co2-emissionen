@@ -1,17 +1,17 @@
 import React from "react";
 import { t } from "i18next";
 
-import HeroSection from "../../components/hero";
-import Navbar from "../../components/Nav";
+import HeroSection from "../components/hero";
+import Navbar from "../components/Nav";
 
-import Contact from "../../components/contact";
-import Footer from "../../components/footer";
-import Sidebar from "../../components/sidebar";
+import Contact from "../components/contact";
+import Footer from "../components/footer";
+import Sidebar from "../components/sidebar";
 
-import plantImgDesktop from "../../assets/images/plantImg.jpg";
-import plantImgMobile from "../../assets/images/plantImg-mobile.jpg";
+import plantImgDesktop from "../assets/images/plantImg.jpg";
+import plantImgMobile from "../assets/images/plantImg-mobile.jpg";
 
-const IndexAboutUs = () => {
+const AboutUs = () => {
   return (
     <>
       <HeroSection page="about-us">
@@ -83,4 +83,4 @@ const IndexAboutUs = () => {
   );
 };
 
-export default IndexAboutUs;
+export default AboutUs;

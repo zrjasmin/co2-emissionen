@@ -1,16 +1,15 @@
 import React from "react";
-import Navbar from "../../components/Nav";
-import HeroSection from "../../components/hero";
+import Navbar from "../components/Nav";
+import HeroSection from "../components/hero";
 import StackTable from "./tabelle/TanStackTable";
 import { t } from "i18next";
-import { Link } from "react-router-dom";
 
-import oceanImg from "../../assets/images/emissionen-text-desktop.jpg";
-import oceanImgMobile from "../../assets/images/emissionen-text-mobile.jpg";
-import Footer from "../../components/footer";
-import Sidebar from "../../components/sidebar";
+import oceanImg from "../assets/images/emissionen-text-desktop.jpg";
+import oceanImgMobile from "../assets/images/emissionen-text-mobile.jpg";
+import Footer from "../components/footer";
+import Sidebar from "../components/sidebar";
 
-const IndexEmissionen = () => {
+const EmissionenPage = () => {
   return (
     <>
       <HeroSection page="emissionen">
@@ -58,4 +57,4 @@ const IndexEmissionen = () => {
   );
 };
 
-export default IndexEmissionen;
+export default EmissionenPage;

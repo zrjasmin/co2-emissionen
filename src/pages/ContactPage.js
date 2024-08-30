@@ -1,12 +1,12 @@
 import React from "react";
-import HeroSection from "../../components/hero";
-import Navbar from "../../components/Nav";
-import Footer from "../../components/footer";
+import HeroSection from "../components/hero";
+import Navbar from "../components/Nav";
+import Footer from "../components/footer";
 import { t } from "i18next";
-import teamImg from "../../assets/images/teamImg.jpg";
-import teamImgMobile from "../../assets/images/teamImg-mobile.jpg";
+import teamImg from "../assets/images/teamImg.jpg";
+import teamImgMobile from "../assets/images/teamImg-mobile.jpg";
 
-function IndexContact() {
+function Contact() {
   return (
     <>
       <HeroSection page="contact">
@@ -41,4 +41,4 @@ function IndexContact() {
   );
 }
 
-export default IndexContact;
+export default Contact;

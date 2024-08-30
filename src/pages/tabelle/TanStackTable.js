@@ -10,10 +10,10 @@ import {
   getPaginationRowModel,
 } from "@tanstack/react-table";
 import { columnDef } from "./colums";
-import DATA from "../../../data/emissionen/Länder2.json";
+import DATA from "../../data/emissionen/Länder2.json";
 import FilterFunction from "./FilterFunction";
-import ArrowUp from "../../../assets/images/table-asc.png";
-import ArrowDown from "../../../assets/images/table-desc.png";
+import ArrowUp from "../../assets/images/table-asc.png";
+import ArrowDown from "../../assets/images/table-desc.png";
 
 const StackTable = () => {
   // Definition of columns and data

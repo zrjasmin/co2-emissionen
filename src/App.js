@@ -1,19 +1,18 @@
 import "./styles/styles.scss";
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { I18nextProvider, useTranslation } from "react-i18next";
-
-import i18next, { changeLanguage, dir } from "i18next";
+import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
+
 import translationDE from "./data/languages/german.json";
 import translationEN from "./data/languages/english.json";
 import translationAR from "./data/languages/arabic.json";
 
-import Navbar from "./components/Nav";
-import IndexHome from "./pages/Home/indexHome";
-import IndexContact from "./pages/Contact/indexContact";
-import IndexEmissionen from "./pages/Emissionen/indexEmissionen";
-import IndexAboutUs from "./pages/AboutUs/indexAboutUs";
+import IndexHome from "./pages/HomePage";
+import IndexContact from "./pages/ContactPage";
+import IndexEmissionen from "./pages/EmissionenPage";
+import IndexAboutUs from "./pages/AboutUsPage";
 import Impressum from "./pages/impressum";
 import DataSecurity from "./pages/data-security";
 
