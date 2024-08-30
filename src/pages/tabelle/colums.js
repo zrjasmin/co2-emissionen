@@ -13,13 +13,13 @@ export const columnDef = [
   },
   {
     id: "2",
-    header: "Typ",
+    header: "Type",
     accessorKey: "typ",
     filterVariant: "select-typ",
   },
   {
     id: "3",
-    header: "Kontinent",
+    header: "Continent",
     accessorKey: "kontinent",
     filterVariant: "select-kontinent",
   },
@@ -27,18 +27,18 @@ export const columnDef = [
   // unternehmen spezifische Attribute
   {
     id: "4",
-    header: "Branche",
+    header: "Industry",
     accessorKey: "branche",
     filterVariant: "select",
   },
 
   {
     id: "5",
-    header: "Land",
+    header: "Country",
     accessorKey: "land",
   },
   {
-    header: "Emissionswerte",
+    header: "Emissions",
     accessorKey: "emissionen",
     enableColumnFilter: false,
   },

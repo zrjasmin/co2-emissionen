@@ -1,0 +1,55 @@
+body[dir="rtl"] {
+    .nav {
+        padding-right: 1.875rem;
+        &__logo {
+            img {
+                margin-right: auto;
+                margin-left: 0.5rem;
+            }
+        }
+        &__hamburger {
+            float:left;
+        }
+        &__closeImg {
+            margin-right: auto;
+        }
+        #menu {
+            float: left;
+            left: 0;
+            right: auto;
+           
+            padding-right: 3.75rem;
+
+
+        }
+
+        
+    }
+    .languageSwitcher {
+        margin: 0 0 0 1.875rem;
+        .options {
+            float: right;
+            left: 2%;
+            right: auto;
+        }
+    }
+    .hero {
+        &__button {
+            float:right;
+        }
+    }
+
+    .sidebar {
+        &__heading {
+            text-align: right;
+        }
+    }
+
+    .tHead {
+        &__row {
+            td:nth-child(4) {
+                width: 150px;
+            }
+        }
+    }
+}

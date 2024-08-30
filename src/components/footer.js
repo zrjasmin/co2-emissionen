@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { t } from "i18next";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div className="footer grid">
       <div className="footer__grid1">
         <h4>EcoTransparency</h4>
-        <a href="/Impressum">{t("footer.impressum")}</a>
-        <a href="/Datenschutz">{t("footer.data-security")}</a>
+        <Link to="/Impressum">{t("footer.impressum")}</Link>
+        <Link to="/Datenschutz" scrollTo="top">
+          {t("footer.data-security")}
+        </Link>
       </div>
       <div className="footer__grid2">
-        <a href="/">{t("nav.home")}</a>
-        <a href="/Emissionen">{t("nav.emissions")}</a>
-        <a href="/AboutUs">{t("nav.aboutUs")}</a>
-        <a href="/Kontakt">{t("nav.contact")}</a>
+        <Link to="/" scroll="top">
+          {t("nav.home")}
+        </Link>
+        <Link to="/Emissionen">{t("nav.emissions")}</Link>
+        <Link to="/AboutUs">{t("nav.aboutUs")}</Link>
+        <Link to="/Kontakt">{t("nav.contact")}</Link>
       </div>
       <div className="footer__grid3">
         <h4>{t("footer.adress-heading")}</h4>

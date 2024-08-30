@@ -15,6 +15,7 @@ import IndexEmissionen from "./pages/EmissionenPage";
 import IndexAboutUs from "./pages/AboutUsPage";
 import Impressum from "./pages/impressum";
 import DataSecurity from "./pages/data-security";
+import ScrollTop from "./components/ScrollToTop";
 
 const resources = {
   de: {
@@ -44,6 +45,7 @@ function App() {
     <div className="App">
       <I18nextProvider i18n={i18next}>
         <div>
+          <ScrollTop />
           <Routes>
             <Route exact path="/" element={<IndexHome />} />
             <Route path="/Emissionen" element={<IndexEmissionen />} />

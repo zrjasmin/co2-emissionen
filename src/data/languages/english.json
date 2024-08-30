@@ -141,6 +141,7 @@
   "data-security": "Information on data protection can be found in our privacy policy on our website." 
 },
 "data-security": { 
+  "hero-heading": "Data Protection",
   "introduction-heading": "1. Introduction", 
   "introduction": "We are pleased about your interest in our website. The protection of your personal data is very important to us. In this privacy policy, we inform you about which data we collect, how we use it, and what rights you have regarding your data.", 
   "responsibility-heading": "2. Responsible Entity", 

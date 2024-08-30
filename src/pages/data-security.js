@@ -7,7 +7,7 @@ import Footer from "../components/footer";
 const DataSecurity = () => {
   return (
     <>
-      <HeroSection page="impressum">
+      <HeroSection page="data-security">
         <Navbar />
       </HeroSection>
 
