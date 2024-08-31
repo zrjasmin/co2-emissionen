@@ -10,7 +10,7 @@
 
     "company-info": {
         "company": "EcoTransparency GmbH", 
-        "street": "Musterstraße 21", 
+        "adress": "Musterstraße 21", 
         "city": "10178 برلين",
         "phone": "+49 1234 56789",
         "email": "info@EcoTransparency.com"

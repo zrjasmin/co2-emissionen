@@ -14,7 +14,7 @@ const Impressum = () => {
       <div className="wrapper impressum-text">
         <div>
           <h4>{t("impressum.company-heading")}</h4>
-          <p>{t("company-info.street")}</p>
+          <p>{t("company-info.adress")}</p>
           <p>{t("company-info.city")}</p>
         </div>
 

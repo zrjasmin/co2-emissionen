@@ -39,7 +39,7 @@
 @media screen and (min-width: 992px) {
     .contactPage {
         &__grid {
-            width: 70%;
+            grid-template-columns: 4fr 2fr;
         }
     }
 }

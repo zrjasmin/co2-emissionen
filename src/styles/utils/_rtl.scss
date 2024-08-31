@@ -52,4 +52,25 @@ body[dir="rtl"] {
             }
         }
     }
+
+    .contactForm {
+        justify-content: space-between;
+        img {
+            margin-left: 0;
+            margin-right: 1.875;
+        }
+    }
+
+    .info {
+        @media screen and (min-width: 768px){
+            &__imgContainer {
+                float:right;
+                width: 250px;
+                margin-left: 2rem;
+                margin-right: 0rem;
+    
+            }
+        }
+        
+    }
 }

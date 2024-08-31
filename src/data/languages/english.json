@@ -11,7 +11,7 @@
 
     "company-info": {
       "company": "EcoTransparency Ltd.", 
-      "street": "Musterstraße 21", 
+      "adress": "Musterstraße 21", 
       "city": "10178 Berlin",
       "phone": "+49 1234 56789",
       "email": "info@EcoTransparency.com"

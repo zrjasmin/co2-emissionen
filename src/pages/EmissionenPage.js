@@ -28,8 +28,8 @@ const EmissionenPage = () => {
             <p className="welcome__heading">{t("emissionen.intro-text")}</p>
           </section>
 
-          <section className="information info emissionen-section1">
-            <div className="info__flex">
+          <section className="information info info__flex emissionen-section1">
+            <div className="info__imgContainer">
               <img src={oceanImg} className="desktop" alt="picture of ocean" />
               <img
                 src={oceanImgMobile}
@@ -37,13 +37,19 @@ const EmissionenPage = () => {
                 alt="picture of ocean"
               />
             </div>
-            <div className="info__aspects emissionen-section2">
-              <h4 className="info__heading">{t("emissionen.info1-heading")}</h4>
-              <p className="info__text">{t("emissionen.info1-text")}</p>
-            </div>
-            <div className="info__aspects">
-              <h4 className="info__heading">{t("emissionen.info2-heading")}</h4>
-              <p className="info__text">{t("emissionen.info2-text")}</p>
+            <div className="info__textContainer">
+              <div className="info__aspects emissionen-section2">
+                <h4 className="info__heading">
+                  {t("emissionen.info1-heading")}
+                </h4>
+                <p className="info__text">{t("emissionen.info1-text")}</p>
+              </div>
+              <div className="info__aspects">
+                <h4 className="info__heading">
+                  {t("emissionen.info2-heading")}
+                </h4>
+                <p className="info__text">{t("emissionen.info2-text")}</p>
+              </div>
             </div>
           </section>
 
