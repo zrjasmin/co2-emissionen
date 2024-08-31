@@ -21,7 +21,7 @@
 
     }
 
-    &__globeImg {
+    &__globeImg, &__globeImg_mobile {
         width: 25px;
         height: 25px;
         margin-right: 0.5rem;
@@ -65,6 +65,12 @@
     .languageSwitcher {
         padding: 7px 0 0 0;
     }
+
+    .activeLanguage__globeImg_mobile {
+        display: none;
+        
+    }
+    
 
     
     .activeLanguage {
