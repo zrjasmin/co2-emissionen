@@ -17,6 +17,7 @@ const LanguageSwitcher = () => {
   //wechselt die Sprache
   const handleLanguageChange = (newLanguage) => {
     i18n.changeLanguage(newLanguage);
+    //wechselt html lang=""
     document.documentElement.lang = newLanguage;
 
     //wechselt Ausrichtung LTR oder RTL
@@ -45,7 +46,7 @@ const LanguageSwitcher = () => {
 
   return (
     <div className="languageSwitcher">
-      {/* zeigt aktuelle Sprache */}
+      {/* zeigt Button für Sprachauswahl*/}
       <div className="activeLanguage" onClick={toggleLanguageMenu}>
         <img
           className="activeLanguage__globeImg_mobile"

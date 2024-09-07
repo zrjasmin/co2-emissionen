@@ -21,6 +21,7 @@ const EmissionenPage = () => {
         <Sidebar page="emissionen" />
 
         <main id="main">
+          {/* Wilkommen Section */}
           <section className="welcome emissionen-section0">
             <h2 className="welcome__heading">
               {t("emissionen.intro-heading")}
@@ -28,6 +29,7 @@ const EmissionenPage = () => {
             <p className="welcome__heading">{t("emissionen.intro-text")}</p>
           </section>
 
+          {/* Informationen Section */}
           <section className="information info info__flex emissionen-section1">
             <div className="info__imgContainer">
               <img src={oceanImg} className="desktop" alt="picture of ocean" />
@@ -53,6 +55,7 @@ const EmissionenPage = () => {
             </div>
           </section>
 
+          {/* Tabelle */}
           <section className="table" id="emissionen-section3">
             <StackTable />
           </section>

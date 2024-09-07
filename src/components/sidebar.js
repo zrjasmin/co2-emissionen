@@ -4,6 +4,7 @@ import { Link as ScrollLink, Element, scroller } from "react-scroll";
 import lang from "../data/languages/german.json";
 
 const Sidebar = ({ page }) => {
+  // laden der verschiedenen Inhalte
   let homeLinks = lang.home["local-nav"];
   let aboutUsLinks = lang["about-us"]["local-nav"];
   let emissionenLinks = lang.emissionen["local-nav"];
@@ -12,6 +13,7 @@ const Sidebar = ({ page }) => {
     <div className="sidebar">
       <h4 className="sidebar__heading">{t("on-this-page")}</h4>
       <ul className="sidebar__list">
+        {/* laden der verschieden Inhalte abhängig von der Seite */}
         {page === "emissionen"
           ? emissionenLinks.map((item) => {
               return (

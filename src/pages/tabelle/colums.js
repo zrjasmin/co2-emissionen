@@ -43,9 +43,3 @@ export const columnDef = [
     enableColumnFilter: false,
   },
 ];
-
-{
-  /* rowItem.getValue(2) === "Company" ||
-                  rowItem.getValue(2) === "Unternehmen" ||
-                  rowItem.getValue(2) === "شركة" */
-}

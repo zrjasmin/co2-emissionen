@@ -16,13 +16,13 @@ import DATAarabic from "../../data/emissionen/data-arabic.json";
 import FilterFunction from "./FilterFunction";
 import ArrowUp from "../../assets/images/table-asc.png";
 import ArrowDown from "../../assets/images/table-desc.png";
-import i18next, { t, use } from "i18next";
 
 const StackTable = () => {
-  // Definition of columns and data
+  // Definition von Daten und Spalten
   const columns = React.useMemo(() => columnDef);
   const [data, setData] = React.useState(() => DATAgerman, []);
 
+  //Daten abhängig von Sprache laden
   useEffect(() => {
     if (document.documentElement.lang === "de") {
       setData(DATAgerman);
@@ -33,25 +33,26 @@ const StackTable = () => {
     }
   }, [document.documentElement.lang]);
 
-  // filtering und sorting
+  // Filterung und Sortierung
   const [columnFilter, setColumFilter] = React.useState();
   const [sorting, setSorting] = React.useState([]);
 
-  // toggle for hididng/showing details
+  // toggle für zusätzliche Unternehmensinfos
   const [openRows, setOpenRows] = React.useState([]);
 
   function handelToggle({ row, index }) {
-    // adding active row to array
+    // aktive Zeile zu Array hinzufügen
     if (openRows != index) {
       setOpenRows([...openRows, index]);
     }
 
-    // deleting active row from array
+    // löscht die Zeile aus Array
     if (openRows.includes(index)) {
       setOpenRows(openRows.filter((element) => element !== index));
     }
   }
 
+  //Tabelleninstanz definieren
   const tableInstance = useReactTable({
     columns: columns,
     data: data,
@@ -76,6 +77,7 @@ const StackTable = () => {
     getPaginationRowModel: getPaginationRowModel(),
   });
 
+  // Funktion für den Löschen-Button
   function handleReset() {
     tableInstance.resetColumnFilters();
     tableInstance.resetSorting();
@@ -84,6 +86,7 @@ const StackTable = () => {
 
   return (
     <>
+      {/* Filterfunktion implementieren */}
       {tableInstance.getHeaderGroups().map((headerEl) => {
         return (
           <div className="filter">
@@ -107,6 +110,7 @@ const StackTable = () => {
 
       <div className="mobile-scroll">
         <table>
+          {/* Tabellen Head generieren */}
           <thead className="tHead">
             {tableInstance.getHeaderGroups().map((headerEl) => {
               return (
@@ -130,6 +134,8 @@ const StackTable = () => {
                                     columnEl.column.columnDef.header,
                                     columnEl.getContext()
                                   )}
+
+                                  {/* Icons für Sortierung */}
                                   {
                                     {
                                       asc: (
@@ -158,10 +164,13 @@ const StackTable = () => {
               );
             })}
           </thead>
+
+          {/* Tabellen Inhalt generieren  */}
           <tbody className="tBody">
             {tableInstance.getRowModel().rows.map((rowItem, index) => {
               return (
                 <>
+                  {/* prüfen ob es ein Unternehmen ist */}
                   {rowItem.getValue(2) === "Company" ||
                   rowItem.getValue(2) === "Unternehmen" ||
                   rowItem.getValue(2) === "شركة" ? (
@@ -184,6 +193,7 @@ const StackTable = () => {
                       })}
                     </tr>
                   ) : (
+                    // keine Unternehmen
                     <tr key={index} className="tBody__row">
                       {rowItem.getVisibleCells().map((cellItem) => {
                         return (
@@ -198,7 +208,7 @@ const StackTable = () => {
                     </tr>
                   )}
 
-                  {/* company details */}
+                  {/* Unternehmensdetails */}
                   {rowItem.getValue(2) === "Company" ||
                   rowItem.getValue(2) === "Unternehmen" ||
                   rowItem.getValue(2) === "شركة" ? (

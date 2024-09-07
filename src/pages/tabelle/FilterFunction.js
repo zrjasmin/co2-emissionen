@@ -6,6 +6,7 @@ function FilterFunction({ column }) {
   const filterVariant = column.columnDef.filterVariant;
   const columnFilterValue = column.getFilterValue();
 
+  //filtervalue nach Sprache formatieren
   function formatValues(column, e) {
     let values = e.target.value.split(":");
     let lang = document.documentElement.lang;
@@ -32,6 +33,7 @@ function FilterFunction({ column }) {
 
   return (
     <>
+      {/* Filter für Land oder Unternehmen */}
       {filterVariant === "select-typ" ? (
         <div className="filter__container_typ">
           <label id="typ-select">{t("table.typ-label")}</label>
@@ -41,6 +43,7 @@ function FilterFunction({ column }) {
             defaultValue={"Alle:All:الكل"}
             onChange={(e) => formatValues(column, e)}
           >
+            {/* Alle optionen */}
             <option value="" key="">
               --
             </option>
@@ -56,7 +59,8 @@ function FilterFunction({ column }) {
             </option>
           </select>
         </div>
-      ) : filterVariant === "select-kontinent" ? (
+      ) : //filter für Kontinent
+      filterVariant === "select-kontinent" ? (
         <div className="filter__container_kontinent">
           <label id="kontinent-select">{t("table.continent-label")}</label>
 
@@ -94,6 +98,7 @@ function FilterFunction({ column }) {
         </div>
       ) : (
         <>
+          {/* filter für Text-Input */}
           <datalist id={column.id + "list"}>
             {sortedUniqueValues.slice(0, 5000).map((value) => (
               <option value={value} key={value} />

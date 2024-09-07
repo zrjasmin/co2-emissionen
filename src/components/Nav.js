@@ -10,6 +10,7 @@ import { t } from "i18next";
 const Navbar = () => {
   let [showNav, setShowNav] = useState("hidden");
 
+  // wechselt zwischen offenen und geschlossenen Menu
   function toggleNavItems() {
     if (showNav === "hidden") {
       setShowNav("visible");

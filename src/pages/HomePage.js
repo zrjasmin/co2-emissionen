@@ -25,11 +25,13 @@ const HomePage = () => {
         <Sidebar page="home" />
 
         <main id="main">
+          {/* Wilkommen Section */}
           <section className="home-welcome home-section0">
             <h1>{t("home.quote")}</h1>
             <p>{t("home.quote-subtext")}</p>
           </section>
 
+          {/* Ausschnitt aus Mission */}
           <section className="mission-snippet home-section1">
             <img
               src={treeImgDesktop}
@@ -56,6 +58,7 @@ const HomePage = () => {
             </div>
           </section>
 
+          {/* Ausschnitt aus unser Lösung/Tabelle */}
           <section className="solution solution__grid home-section2">
             <div className="solution__text">
               <h2>{t("home.solution-heading")}</h2>
@@ -74,6 +77,7 @@ const HomePage = () => {
             />
           </section>
 
+          {/* Link zu Kontaktseite */}
           <section className="contact home-section3">
             <Contact />
           </section>

@@ -46,6 +46,7 @@ function App() {
       <I18nextProvider i18n={i18next}>
         <div>
           <ScrollTop />
+          {/* Pfade deklarieren */}
           <Routes>
             <Route exact path="/" element={<IndexHome />} />
             <Route path="/Emissionen" element={<IndexEmissionen />} />
