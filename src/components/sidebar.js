@@ -28,20 +28,7 @@ const Sidebar = ({ page }) => {
               );
             })
           : null}
-        {page === "home"
-          ? homeLinks.map((item) => {
-              return (
-                <ScrollLink
-                  to={page + "-section" + homeLinks.indexOf(item)}
-                  smooth
-                >
-                  <li className="sidebar__item">
-                    {t(page + ".local-nav." + homeLinks.indexOf(item))}
-                  </li>
-                </ScrollLink>
-              );
-            })
-          : null}
+       
         {page === "about-us"
           ? aboutUsLinks.map((item) => {
               return (
