@@ -16,6 +16,7 @@ import DATAarabic from "../../data/emissionen/data-arabic.json";
 import FilterFunction from "./FilterFunction";
 import ArrowUp from "../../assets/images/table-asc.png";
 import ArrowDown from "../../assets/images/table-desc.png";
+import { t } from "i18next";
 
 const StackTable = () => {
   // Definition von Daten und Spalten
